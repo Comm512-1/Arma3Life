@@ -4,13 +4,14 @@
 */
 private["_side", "_markers", "_i", "_houses", "_house", "_mk", "_mkName"];
 _side = [_this,0,civilian,[civilian]] call BIS_fnc_param;
+_markers = [];
 
 //Spawn Marker, Spawn Name, PathToImage
 switch (_side) do
 {
 	case west:
 	{
-		_markers = [
+		_markers = _markers + [
 			["cop_spawn_1","Kavala HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 			["cop_spawn_2","Pyrgos HQ","\a3\ui_f\data\map\MapControl\fuelstation_ca.paa"],
 			["cop_spawn_3","Athira HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
@@ -21,12 +22,20 @@ switch (_side) do
 	
 	case civilian:
 	{
-		_markers = [
+		_markers = _markers + [
 			["civ_spawn_1","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 			["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 			["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 			["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 		];
+		
+		if(license_civ_rebel && playerSide == civilian) then {
+			_markers = _markers + [
+                ["rebel_spawn_1","Rebel HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+                ["rebel_spawn_2","Rebel Outpost - North","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+                ["rebel_spawn_3","Rebel Outpost - South","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+            ];
+        };
 		
 		if(__GETC__(life_donator) >= __GETC__(HOUSING_DONATOR_LEVEL) && license_civ_home) then {		
 		
