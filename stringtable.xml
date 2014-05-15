@@ -10,6 +10,9 @@
 		<Key ID="STR_Global_Buy">
 			<Original>Buy</Original>
 		</Key>
+		<Key ID="STR_Global_BuyPerm">
+			<Original>Buy permanently</Original>
+		</Key>
 		<Key ID="STR_Global_Give">
 			<Original>Give</Original>
 		</Key>
