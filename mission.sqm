@@ -8298,7 +8298,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_BarGate_F";
 			skill=0.60000002;
-			text="schrankeMarkt_1";
+			text="rebelGate";
 			init="this allowDamage false;";
 		};
 		class Item476
@@ -10353,10 +10353,10 @@ class Mission
 	};
 	class Sensors
 	{
-		items=2;
+		items=3;
 		class Item0
 		{
-			position[]={3624.1226,10.09004,13113.035};
+			position[]={3624.4185,10.090229,13113.11};
 			a=8;
 			b=6;
 			angle=-174.55099;
@@ -10366,8 +10366,8 @@ class Mission
 			interruptable=1;
 			type="SWITCH";
 			age="UNKNOWN";
-			expActiv="[schrankeMarkt,""enter"",thislist] spawn life_fnc_gateAct;";
-			expDesactiv="[schrankeMarkt,""exit"",thislist] spawn life_fnc_gateAct;";
+			expActiv="[schrankeMarkt,""enter"",thisList] spawn life_fnc_gateAct;";
+			expDesactiv="[schrankeMarkt,""exit"",thisList] spawn life_fnc_gateAct;";
 			class Effects
 			{
 			};
@@ -10384,8 +10384,27 @@ class Mission
 			interruptable=1;
 			type="SWITCH";
 			age="UNKNOWN";
-			expActiv="[schrankeKavHQ,""enter"",thislist] spawn life_fnc_gateAct;";
-			expDesactiv="[schrankeKavHQ,""exit"",thislist] spawn life_fnc_gateAct;";
+			expActiv="[schrankeKavHQ,""enter"",thisList] spawn life_fnc_gateAct;";
+			expDesactiv="[schrankeKavHQ,""exit"",thisList] spawn life_fnc_gateAct;";
+			class Effects
+			{
+			};
+		};
+		class Item2
+		{
+			position[]={20716.152,31.393898,7213.3291};
+			a=8;
+			b=5;
+			angle=-217;
+			rectangular=1;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			type="SWITCH";
+			age="UNKNOWN";
+			name="rebelGateTrigger";
+			expActiv="nul = [rebelGate,""enter"",thisList] spawn life_fnc_gateAct;";
+			expDesactiv="nul = [rebelGate,""exit"",thisList] spawn life_fnc_gateAct;";
 			class Effects
 			{
 			};
