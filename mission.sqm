@@ -8143,7 +8143,7 @@ class Mission
 		};
 		class Item460
 		{
-			position[]={3659.6567,10.384511,13110.337};
+			position[]={3655.7874,10.324597,13108.501};
 			id=676;
 			side="EMPTY";
 			vehicle="Land_HelipadCircle_F";
@@ -8153,7 +8153,7 @@ class Mission
 		};
 		class Item461
 		{
-			position[]={3647.8914,10.207408,13110.937};
+			position[]={3640.7434,10.142974,13112.576};
 			id=677;
 			side="EMPTY";
 			vehicle="Land_HelipadCircle_F";
@@ -10229,7 +10229,7 @@ class Mission
 		};
 		class Item228
 		{
-			position[]={3659.6467,10.382096,13110.69};
+			position[]={3649.0227,10.226185,13111.346};
 			name="civ_air_3_1_2";
 			type="Empty";
 			angle=208.408;
