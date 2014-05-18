@@ -6,6 +6,7 @@ class Life_Client_Core
 	{
 		file = "core";
 		class setupActions {};
+		class perfActions {};
 		class setupEVH {};
 		class initCiv {};
 		class initCop {};
