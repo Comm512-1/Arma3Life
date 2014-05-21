@@ -13,6 +13,6 @@ Garages in alle dorpen
 
 -- todo fixen ----
 
-Donator level dusdanig aanpassen dat iedereen 1 huis mag kopen
+Donator level dusdanig aanpassen dat iedereen <donatorlevel+1> huizen mag kopen
 Check ff of garage objecten toegevoegd kunnen worden EN gekocht kunnen worden
 
