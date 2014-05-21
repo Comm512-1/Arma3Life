@@ -32,17 +32,19 @@ switch(_shop) do
 						["arifle_sdar_F","Taser Rifle",20000],
 						["hgun_P07_snds_F","Stun Pistol",2000],
 						["hgun_P07_F",nil,7500],
-                                                ["launch_NLAW_F",nil,25000],
 						["Binocular",nil,150],
 						["ItemGPS",nil,100],
 						["ToolKit",nil,250],
 						["muzzle_snds_L",nil,650],
-                                                ["NLAW_F",nil,100],
 						["FirstAidKit",nil,150],
 						["Medikit",nil,1000],
+						["optic_Holosight",nil,1200],
 						["NVGoggles",nil,2000],
 						["16Rnd_9x21_Mag",nil,50],
-						["20Rnd_556x45_UW_mag","Taser Rifle Magazine",125]
+						["20Rnd_556x45_UW_mag","Taser Rifle Magazine",125],
+						["Chemlight_yellow",nil,300],
+						["Chemlight_green",nil,300],
+						["Chemlight_blue",nil,300]
 					]
 				];
 			};
@@ -59,17 +61,25 @@ switch(_shop) do
 			{
 				["Altis Patrol Officer Shop",
 					[
-						["arifle_MX_F",nil,35000],
-						["SMG_02_ACO_F",nil,30000],
-                                                ["launch_NLAW_F",nil,25000],
+						["SMG_02_ACO_F",nil,15000],
+						["arifle_MXC_Black_F",nil,30000],
+						["arifle_TRG20_F",nil,35000],
+						["arifle_Mk20_F",nil,35000],
+						                        ["launch_RPG32_F",nil,250000],
+						                        //["RPG32_AA_F",nil,2500],
+												["RPG32_F",nil,1000],
 						["MineDetector",nil,1000],
+						["SmokeShell",nil,2000],
 						["acc_flashlight",nil,750],
-						["optic_Holosight",nil,1200],
 						["optic_Arco",nil,2500],
-						["muzzle_snds_H",nil,2750],
-                                                ["NLAW_F",nil,100],
-						["30Rnd_65x39_caseless_mag",nil,130],
-						["30Rnd_9x21_Mag",nil,250]
+						["optic_MRCO",nil,4000],
+						["30Rnd_65x39_caseless_mag",nil,250],
+						["30Rnd_65x39_caseless_mag_Tracer",nil,250],
+						["30Rnd_9x21_Mag",nil,250],
+						["30Rnd_556x45_Stanag",nil,200],
+						["30Rnd_556x45_Stanag_Tracer_Red",nil,200],
+						["30Rnd_556x45_Stanag_Tracer_Green",nil,200],
+						["30Rnd_556x45_Stanag_Tracer_Yellow",nil,200]
 					]
 				];
 			};
@@ -85,17 +95,32 @@ switch(_shop) do
 			default
 			{
 				["Altis Sergeant Officer Shop",
-					[
-						["SMG_02_ACO_F",nil,15000],
+					[																		
+						["arifle_MXM_Black_F",nil, 40000],
 						["hgun_ACPC2_F",nil,17500],
-						["arifle_MXC_F",nil,30000],
-                                                ["launch_NLAW_F",nil,25000],
-						["optic_Arco",nil,2500],
-						["muzzle_snds_H",nil,2750],
-                                                ["NLAW_F",nil,100],
+						["srifle_EBR_F",nil,50000],
+						["srifle_GM6_SOS_F",nil,25000],
+						                        ["launch_RPG32_F",nil,250000],
+						                        //["RPG32_AA_F",nil,2500],
+												["RPG32_F",nil,1000],
+					    ["11Rnd_45ACP_Mag",nil,500],
+						["5Rnd_127x108_Mag",nil,500],
+						["20Rnd_762x51_Mag",nil,2000],
 						["30Rnd_65x39_caseless_mag",nil,100],
-						["30Rnd_9x21_Mag",nil,60],
-						["9Rnd_45ACP_Mag",nil,200]
+						["9Rnd_45ACP_Mag",nil,200],						
+						["11Rnd_45ACP_Mag",nil,500],
+						["6Rnd_45ACP_Cylinder",nil,500],
+						["30Rnd_65x39_caseless_mag",nil,1000],
+						["30Rnd_65x39_caseless_mag_Tracer",nil,1500],
+						["DemoCharge_Remote_Mag",nil,10000],
+						["ATMine_Range_Mag",nil,2000],
+						["Rangefinder",nil,5000],
+						["acc_pointer_IR",nil, 3000],
+						["optic_Hamr",nil,2500],
+						["optic_MRD",nil, 5000],
+						["optic_Yorris",nil, 5000],																		
+						["acc_pointer_IR",nil, 3000],
+						["Laserdesignator",nil,10000]
 					]
 				];
 			};
@@ -114,14 +139,17 @@ switch(_shop) do
 					[
 						["arifle_TRG20_F",nil,25000],
 						["arifle_Katiba_F",nil,30000],
+						["arifle_Katiba_C_F",nil,50000],
 						["srifle_DMR_01_F",nil,50000],
 						["arifle_SDAR_F",nil,20000],
-                                                ["launch_NLAW_F",nil,250000],
+                                                ["launch_RPG32_F",nil,250000],
 						["optic_ACO_grn",nil,3500],
 						["optic_Holosight",nil,3600],
 						["acc_flashlight",nil,1000],
 						["optic_Hamr",nil,7500],
-                                                ["NLAW_F",nil,1000],
+                                                //["RPG32_AA_F",nil,2500],
+												["RPG32_F",nil,1000],
+						["DemoCharge_Remote_Mag",nil,10000],
 						["30Rnd_9x21_Mag",nil,200],
 						["20Rnd_556x45_UW_mag",nil,125],
 						["30Rnd_556x45_Stanag",nil,300],
@@ -205,13 +233,16 @@ switch(_shop) do
 						["hgun_PDW2000_F",nil,6500],
 						["hgun_pistol_heavy_01_F",nil,5850],
 						["arifle_Mk20C_plain_F",nil,25000],
+						["srifle_GM6_SOS_F",nil,25000],
 						["optic_ACO_grn_smg",nil,750],
 						["optic_MRCO",nil,10000],
 						["NVGoggles",nil,350],
+						["DemoCharge_Remote_Mag",nil,1000],
 						["ToolKit",nil,50],
 						["itemgps",nil,50],
 						["FirstAidKit",nil,25],
 						["16Rnd_9x21_Mag",nil,25],
+						["5Rnd_127x108_Mag",nil,25],
 						["30Rnd_9x21_Mag",nil,75],
 						["11Rnd_45ACP_Mag",nil,85],
 						["30Rnd_556x45_Stanag",nil,125]

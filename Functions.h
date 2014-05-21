@@ -161,6 +161,7 @@ class Life_Client_Core
 		class receiveItem {};
 		class giveDiff {};
 		class receiveMoney {};
+                class setUniformTexture {};
 		class playerTags {};
 		class clearVehicleAmmo {};
 		class pulloutVeh {};
@@ -168,6 +169,7 @@ class Life_Client_Core
 		class fedSuccess {};
 		class actionKeyHandler {};
 		class gateAct {};
+                class holsterHandgun {};
 
 		//Housing
         class updateCash {};
@@ -313,6 +315,7 @@ class Life_Client_Core
 		class lockpick {};
 		class spikeStrip {};
 		class jerryRefuel {};
+                class bankalarmsound {};
 	};
 	
 	class Dialog_Controls

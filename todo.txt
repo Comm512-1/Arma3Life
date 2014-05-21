@@ -1,0 +1,18 @@
+-- todo testen ---
+Shops
+	cops
+	donator
+	rebel
+	
+bank alarm - fed overvallen
+Holster weapon Shift H. Check ook na repawn - Marcel
+ATM's in alle dorpen
+Garages in alle dorpen
+
+
+
+-- todo fixen ----
+
+Donator level dusdanig aanpassen dat iedereen 1 huis mag kopen
+Check ff of garage objecten toegevoegd kunnen worden EN gekocht kunnen worden
+

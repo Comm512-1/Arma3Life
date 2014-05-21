@@ -22,9 +22,15 @@ switch (_vehicle) do
 			case 3: {_color = "Blue";};
 			case 4: {_color = "Dark Red";};
 			case 5: {_color = "Blue / White"};
-			case 6: {_color = "Black"};
-			case 7: {_color = "Black"};
-			case 8: {_color = "Taxi"};
+			case 6: {_color = "Fed";};
+			case 7: {_color = "Cop"};			
+            case 8: {_color = "Mint Green"};
+            case 9: {_color = "Taxi"};
+			case 10: {_color = "Tan"};
+			case 11: {_color = "Creamy Lady"};
+			case 12: {_color = "Bimbo Gurl"};
+			case 13: {_color = "Shiny Maid"};
+			case 14: {_color = "Burning Sun"};
 		};
 	};
 	
@@ -40,6 +46,11 @@ switch (_vehicle) do
 			case 5: {_color = "White"};
 			case 6: {_color = "Grey"};
 			case 7: {_color = "Black"};
+			case 8: {_color = "Blue Smile"};
+			case 9: {_color = "Grandpa"};
+			case 10: {_color = "Sunset"};
+			case 11: {_color = "Tuning"};
+			case 12: {_color = "Wave"};
 		};
 	};
 	
@@ -54,6 +65,11 @@ switch (_vehicle) do
 			case 4: {_color = "Tan"};
 			case 5: {_color = "Green"};
 			case 6: {_color = "Cop"};
+			case 7: {_color = "Blue Smile"};
+			case 8: {_color = "Grandpa"};
+			case 9: {_color = "Sunset"};
+			case 10: {_color = "Tuning"};
+			case 11: {_color = "Wave"};
 		};
 	};
 	
@@ -66,6 +82,11 @@ switch (_vehicle) do
 			case 2: {_color = "Silver";};
 			case 3: {_color = "Orange";};
 			case 4: {_color = "Cop";};
+			case 5: {_color = "Bimbo Gurl";};
+			case 6: {_color = "Grandpa";};
+			case 7: {_color = "Poison Green";};
+			case 8: {_color = "Oxygen";};
+			case 9: {_color = "Sunset";};
 		};
 	};
 	

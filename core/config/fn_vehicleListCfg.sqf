@@ -325,7 +325,7 @@ switch (_shop) do
 			_return set[count _return,
 		    ["B_MBT_01_cannon_F",500000]];
 			_return set[count _return,
-		    ["B_UGV_01_rcws_F",500000]];			
+		    ["I_APC_Wheeled_03_cannon_F",500000]];			
 		};
 	};
 	
@@ -350,7 +350,7 @@ switch (_shop) do
 			_return set[count _return,
 		    ["B_MBT_01_cannon_F",500000]];
 			_return set[count _return,
-		    ["B_UGV_01_rcws_F",500000]];			
+		    ["I_APC_Wheeled_03_cannon_F",500000]];			
 		};
 	};
 	
@@ -471,6 +471,8 @@ switch (_shop) do
 		{
 			_return set[count _return,
 			["B_Heli_Transport_01_F",200000]];
+		    _return set[count _return,
+            ["B_Heli_Attack_01_F",250000]];
 		};
 	};
 	

@@ -35,8 +35,8 @@ life_clothing_purchase = [-1,-1,-1,-1,-1];
 ****** Weight Variables *****
 *****************************
 */
-life_maxWeight = 24; //Identifies the max carrying weight (gets adjusted throughout game when wearing different types of clothing).
-life_maxWeightT = 24; //Static variable representing the players max carrying weight on start.
+life_maxWeight = 30; //Identifies the max carrying weight (gets adjusted throughout game when wearing different types of clothing).
+life_maxWeightT = 30; //Static variable representing the players max carrying weight on start.
 life_carryWeight = 0; //Represents the players current inventory weight (MUST START AT 0).
 
 /*
@@ -72,9 +72,9 @@ life_thirst = 100;
 life_hunger = 100;
 life_paycheck_period = 5; //Five minutes
 life_cash = 0;
-life_impound_car = 350;
-life_impound_boat = 250;
-life_impound_air = 850;
+life_impound_car = 500;
+life_impound_boat = 350;
+life_impound_air = 1200;
 life_istazed = false;
 life_my_gang = ObjNull;
 
@@ -84,13 +84,13 @@ switch (playerSide) do
 {
 	case west: 
 	{
-		life_atmcash = 7000; //Starting Bank Money
-		life_paycheck = 500; //Paycheck Amount
+		life_atmcash = 70000; //Starting Bank Money
+		life_paycheck = 1000; //Paycheck Amount
 	};
 	case civilian: 
 	{
-		life_atmcash = 3000; //Starting Bank Money
-		life_paycheck = 350; //Paycheck Amount
+		life_atmcash = 30000; //Starting Bank Money
+		life_paycheck = 500; //Paycheck Amount
 	};
 };
 

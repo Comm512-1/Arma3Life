@@ -53,7 +53,7 @@ class Life_Clothing {
 		{
 			idc = -1;
 			text = "$STR_Global_Close";
-			onButtonClick = "closeDialog 0;";
+			onButtonClick = "closeDialog 0;[] spawn {sleep 1;[player, uniform player] call life_fnc_setUniformTexture;};";
 			x = -0.14;
 			y = 0.54 - (1 / 25);
 			w = (6.25 / 40);
