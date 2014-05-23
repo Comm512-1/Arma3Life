@@ -65,9 +65,9 @@ switch(_shop) do
 						["arifle_MXC_Black_F",nil,30000],
 						["arifle_TRG20_F",nil,35000],
 						["arifle_Mk20_F",nil,35000],
-						                        ["launch_RPG32_F",nil,250000],
-						                        //["RPG32_AA_F",nil,2500],
-												["RPG32_F",nil,1000],
+						["launch_RPG32_F",nil,250000],
+						//["RPG32_AA_F",nil,2500],
+						["RPG32_F",nil,1000],
 						["MineDetector",nil,1000],
 						["SmokeShell",nil,2000],
 						["acc_flashlight",nil,750],
@@ -100,9 +100,9 @@ switch(_shop) do
 						["hgun_ACPC2_F",nil,17500],
 						["srifle_EBR_F",nil,50000],
 						["srifle_GM6_SOS_F",nil,25000],
-						                        ["launch_RPG32_F",nil,250000],
-						                        //["RPG32_AA_F",nil,2500],
-												["RPG32_F",nil,1000],
+						["launch_RPG32_F",nil,250000],
+						//["RPG32_AA_F",nil,2500],
+						["RPG32_F",nil,1000],
 					    ["11Rnd_45ACP_Mag",nil,500],
 						["5Rnd_127x108_Mag",nil,500],
 						["20Rnd_762x51_Mag",nil,2000],
@@ -120,7 +120,9 @@ switch(_shop) do
 						["optic_MRD",nil, 5000],
 						["optic_Yorris",nil, 5000],																		
 						["acc_pointer_IR",nil, 3000],
-						["Laserdesignator",nil,10000]
+						["Laserdesignator",nil,10000],
+						["srifle_DMR_01_DMS_pointer_snds_F", 30000],
+						["10Rnd_762x51_Mag", 500]
 					]
 				];
 			};
