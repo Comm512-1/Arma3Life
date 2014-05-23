@@ -121,8 +121,8 @@ switch(_shop) do
 						["optic_Yorris",nil, 5000],																		
 						["acc_pointer_IR",nil, 3000],
 						["Laserdesignator",nil,10000],
-						["srifle_DMR_01_DMS_pointer_snds_F", 30000],
-						["10Rnd_762x51_Mag", 500]
+						["srifle_DMR_01_DMS_pointer_snds_F", nil,30000],
+						["10Rnd_762x51_Mag", nil, 500]
 					]
 				];
 			};
