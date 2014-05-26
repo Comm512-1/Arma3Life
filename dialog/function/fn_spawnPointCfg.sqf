@@ -16,7 +16,8 @@ switch (_side) do
 			["cop_spawn_2","Pyrgos HQ","\a3\ui_f\data\map\MapControl\fuelstation_ca.paa"],
 			["cop_spawn_3","Athira HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
 			["cop_spawn_4","Air HQ","\a3\ui_f\data\map\Markers\NATO\b_air.paa"],
-			["cop_spawn_5","HW Patrol","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]
+			["cop_spawn_5","HW Patrol","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
+			["cop_spawn_6","HW Checkpoint","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]
 		];
 	};
 	
@@ -31,7 +32,8 @@ switch (_side) do
 		
 		if(license_civ_rebel && playerSide == civilian) then {
 			_markers = _markers + [
-                ["rebel_spawn_1","Rebel HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+                ["rebel_spawn_1","Rebel Air HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+				["rebel_spawn_5","Rebel Land HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
                 ["rebel_spawn_2","Rebel Outpost - North","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
                 ["rebel_spawn_3","Rebel Outpost - South","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
             ];
