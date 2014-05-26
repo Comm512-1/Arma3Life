@@ -21715,7 +21715,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=252;
+		items=255;
 		class Item0
 		{
 			position[]={8459.6777,104.56568,25131.203};
@@ -23385,7 +23385,7 @@ class Mission
 		{
 			position[]={20853.512,27.506012,7278.9834};
 			name="Rebel_hq";
-			text="Rebel Headquarters";
+			text="Rebel Air Headquarters";
 			type="KIA";
 			colorName="ColorRed";
 		};
@@ -23712,10 +23712,31 @@ class Mission
 			type="mil_box";
 			colorName="ColorBlue";
 		};
+		class Item252
+		{
+			position[]={10241.315,120.87738,15914.692};
+			name="Cop_spawn_6";
+			type="Empty";
+			angle=163.11447;
+		};
+		class Item253
+		{
+			position[]={8660.9307,176.42873,18382.525};
+			name="Rebel_spawn_5";
+			type="Empty";
+		};
+		class Item254
+		{
+			position[]={8644.2295,183.17982,18248.797};
+			name="Rebel_hq_1";
+			text="Rebel Land Headquarters";
+			type="KIA";
+			colorName="ColorRed";
+		};
 	};
 	class Sensors
 	{
-		items=13;
+		items=14;
 		class Item0
 		{
 			position[]={3624.4185,10.090229,13113.11};
@@ -23952,6 +23973,25 @@ class Mission
 			age="UNKNOWN";
 			expActiv="[gate4_1,""enter"",thislist] spawn life_fnc_gateAct;";
 			expDesactiv="[gate4_1,""exit"",thislist] spawn life_fnc_gateAct;";
+			class Effects
+			{
+			};
+		};
+		class Item13
+		{
+			position[]={8602.1602,170.71819,18462.551};
+			a=60;
+			b=120;
+			angle=55;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			type="SWITCH";
+			age="UNKNOWN";
+			text="Service vehicle";
+			name="reload_4_1";
+			expCond="(getPos ((list reload_4) select 0) select 2) <= 1";
+			expActiv="_xhandle= (thislist select 0) execVM ""x_reload.sqf"";";
 			class Effects
 			{
 			};
