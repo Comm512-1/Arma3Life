@@ -315,6 +315,25 @@ switch (_shop) do
 		};
 	};
 	
+	case "cop_car_6":
+	{
+		_return set[count _return, ["C_Offroad_01_F",5000]];
+		if(__GETC__(life_coplevel) > 2) then
+		{			
+			_return set[count _return, ["C_SUV_01_F",20000]];
+		};
+		if(__GETC__(life_coplevel) > 3) then
+		{
+			_return set[count _return, ["B_MRAP_01_F",30000]];
+		};
+		if(__GETC__(life_coplevel) > 4) then
+		{
+			_return set[count _return, ["C_Hatchback_01_sport_F",50000]];
+			_return set[count _return, ["B_MBT_01_cannon_F",500000]];
+			_return set[count _return, ["B_UGV_01_rcws_F",500000]];			
+		};
+	};
+	
 	case "fed_car":
 	{
 		_return set[count _return, ["B_Quadbike_01_F",0]];

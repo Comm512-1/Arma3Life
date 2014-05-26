@@ -1823,6 +1823,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_polo_4_F_euro";
 					skill=0.60000002;
+					text="Kavala_Heli_shop";
 					init="this enableSimulation false; this allowDamage false; this addAction[""Helicopter Shop"",life_fnc_vehicleShop,""civ_air_3""]; this addAction[""Rob Helicopter Shop"",life_fnc_robShops];";
 				};
 				class Item2
@@ -1846,6 +1847,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_polo_2_F_euro";
 					skill=0.60000002;
+					text="Gas_station_2";
 					init="this enableSimulation false; this allowDamage false; this;  this addAction[""Rob Gas station"",life_fnc_robShops];";
 				};
 				class Item4
@@ -1858,6 +1860,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_polo_2_F_euro";
 					skill=0.60000002;
+					text="Gas_station_3";
 					init="this enableSimulation false; this allowDamage false; this;  this addAction[""Rob Gas station"",life_fnc_robShops];";
 				};
 				class Item5
@@ -1869,6 +1872,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_polo_5_F_euro";
 					skill=0.60000002;
+					text="Gas_station_4";
 					init="this enableSimulation false; this allowDamage false; this;  this addAction[""Rob Gas station"",life_fnc_robShops];";
 				};
 			};
@@ -2087,6 +2091,7 @@ class Mission
 					vehicle="C_man_1";
 					leader=1;
 					skill=0.60000002;
+					text="Kavala_Market";
 					init="this allowDamage false; this enableSimulation false; this addAction[""Market"",life_fnc_virt_menu,""market""]; this addAction[""Rob Market"",life_fnc_robShops];";
 				};
 			};
@@ -2657,6 +2662,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_1";
 					skill=0.60000002;
+					text="Kavala_Clothing_store";
 					init="this allowDamage false; this enableSimulation false; this addAction[""Clothing Store"",life_fnc_clothingMenu,""bruce""]; this addAction[""Rob Clothing Store"",life_fnc_robShops];";
 				};
 				class Item42
@@ -2680,7 +2686,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_p_beggar_F_afro";
 					skill=0.60000002;
-					text="carshop1";
+					text="Kavala_Car_dealer";
 					init="this enableSimulation false; this allowDamage false; this addAction[""Car Shop"",life_fnc_vehicleShop,""civ_car_1""]; this addAction[""Rob Car Dealer"",life_fnc_robShops];";
 				};
 				class Item44
@@ -2691,7 +2697,7 @@ class Mission
 					side="CIV";
 					vehicle="C_man_p_fugitive_F_asia";
 					skill=0.60000002;
-					text="carshop1_3";
+					text="Kavala_Weapon_shop";
 					init="this enableSimulation false; this allowDamage false; this addAction[""General Store"",life_fnc_weaponShopMenu,""genstore""]; this addAction[""Rob Weapon Store"",life_fnc_robShops];";
 				};
 				class Item45
@@ -3717,6 +3723,7 @@ class Mission
 					vehicle="C_man_polo_1_F";
 					leader=1;
 					skill=0.60000002;
+					text="Gas_station_1";
 					init="this enableSimulation false; this allowDamage false; this;  this addAction[""Rob Gas station"",life_fnc_robShops];";
 				};
 			};
@@ -3816,7 +3823,7 @@ class Mission
 					side="WEST";
 					vehicle="B_Soldier_F";
 					skill=0.60000002;
-					init="this enableSimulation false; this allowDamage false;  this addAction[""Car Shop"",life_fnc_vehicleShop,""cop_car_6""]; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Car"",player],""STS_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""cop_car_6""; life_garage_type = ""Car"";  }]; this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];";
+					init="this enableSimulation false; this allowDamage false;  this addAction[""Car Shop"",life_fnc_vehicleShop,""cop_car_6""]; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""cop_car_6""; life_garage_type = ""Car"";  }]; this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];";
 				};
 			};
 		};
@@ -23736,7 +23743,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=14;
+		items=19;
 		class Item0
 		{
 			position[]={3624.4185,10.090229,13113.11};
@@ -23992,6 +23999,96 @@ class Mission
 			name="reload_4_1";
 			expCond="(getPos ((list reload_4) select 0) select 2) <= 1";
 			expActiv="_xhandle= (thislist select 0) execVM ""x_reload.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item14
+		{
+			position[]={8516.3232,177.97801,18256.363};
+			a=8;
+			b=4;
+			angle=39.049137;
+			rectangular=1;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			type="SWITCH";
+			age="UNKNOWN";
+			expActiv="[gate3,""enter"",thislist] spawn life_fnc_gateAct;";
+			expDesactiv="[gate3,""exit"",thislist] spawn life_fnc_gateAct;";
+			class Effects
+			{
+			};
+		};
+		class Item15
+		{
+			position[]={8592.4727,172.88144,18387.822};
+			a=8;
+			b=4;
+			angle=234.21567;
+			rectangular=1;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			type="SWITCH";
+			age="UNKNOWN";
+			expActiv="[gate3,""enter"",thislist] spawn life_fnc_gateAct;";
+			expDesactiv="[gate3,""exit"",thislist] spawn life_fnc_gateAct;";
+			class Effects
+			{
+			};
+		};
+		class Item16
+		{
+			position[]={8654.9102,172.32686,18428.912};
+			a=8;
+			b=4;
+			angle=55.318302;
+			rectangular=1;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			type="SWITCH";
+			age="UNKNOWN";
+			expActiv="[gate3,""enter"",thislist] spawn life_fnc_gateAct;";
+			expDesactiv="[gate3,""exit"",thislist] spawn life_fnc_gateAct;";
+			class Effects
+			{
+			};
+		};
+		class Item17
+		{
+			position[]={8626.3066,171.61055,18427.898};
+			a=8;
+			b=4;
+			angle=-123.2296;
+			rectangular=1;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			type="SWITCH";
+			age="UNKNOWN";
+			expActiv="[gate3,""enter"",thislist] spawn life_fnc_gateAct;";
+			expDesactiv="[gate3,""exit"",thislist] spawn life_fnc_gateAct;";
+			class Effects
+			{
+			};
+		};
+		class Item18
+		{
+			position[]={8588.4795,188.45155,18087.459};
+			a=8;
+			b=4;
+			angle=85.765015;
+			rectangular=1;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			type="SWITCH";
+			age="UNKNOWN";
+			expActiv="[gate3,""enter"",thislist] spawn life_fnc_gateAct;";
+			expDesactiv="[gate3,""exit"",thislist] spawn life_fnc_gateAct;";
 			class Effects
 			{
 			};

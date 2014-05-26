@@ -21,11 +21,11 @@ if !(alive _robber) exitWith {};
 if (currentWeapon _robber == "") exitWith { hint "HaHa, you do not threaten me! Get out of here you hobo!" };
 if (_kassa == 0) exitWith { hint "There is no cash in the register!" };
 _rip = true;
-_kassa = 3000 + round(random 12000);
+_kassa = 3000 + round(random 20000);
 _shop removeAction _action;
 _shop switchMove "AmovPercMstpSsurWnonDnon";
 _chance = random(100);
-if(_chance >= 85) then { hint "The cashier hit the silent alarm, police has been alerted!"; [[0,format["ALARM! - Gasstation: %1 is being robbed!", _shop]],"life_fnc_broadcast",west,false] spawn life_fnc_MP; };
+if(_chance >= 50) then { hint "The cashier hit the silent alarm, police has been alerted!"; [[0,format["ALARM! - Shop: %1 is being robbed!", _shop]],"life_fnc_broadcast",west,false] spawn life_fnc_MP; };
  
 //Setup our progress bar.
 disableSerialization;
@@ -60,8 +60,8 @@ if(_rip) then
 	sleep (30 + random(180));
 	life_use_atm = true;
 	if!(alive _robber) exitWith {};
-	[[0,format["911 - Gasstation: %2 was just robbed by %1 for a total of $%3",_robber, _shop, [_kassa] call life_fnc_numberText]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
-	[[0,format["NEWS: Gasstation: %1 was just robbed for a total of $%2", _shop, [_kassa] call life_fnc_numberText]],"life_fnc_broadcast",civilian,false] spawn life_fnc_MP;
+	[[0,format["911 - Shop: %2 was just robbed by %1 for a total of $%3",_robber, _shop, [_kassa] call life_fnc_numberText]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+	[[0,format["NEWS: Shop: %1 was just robbed for a total of $%2", _shop, [_kassa] call life_fnc_numberText]],"life_fnc_broadcast",civilian,false] spawn life_fnc_MP;
 	[[getPlayerUID _robber,name _robber,"211A"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
 };
 sleep 300;

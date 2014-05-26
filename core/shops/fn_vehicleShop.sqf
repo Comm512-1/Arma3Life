@@ -139,6 +139,12 @@ switch (life_veh_shop) do
 		ctrlSetText[2301,"Cop Car Shop"];
 	};
 	
+	case "cop_car_6":
+	{
+		if(playerSide == civilian) exitWith {_kill =  "You are not a cop."};
+		ctrlSetText[2301,"Cop Car Shop"];
+	};
+	
 	case "fed_car":
 	{
 		if(playerSide == civilian) exitWith {_kill =  "You are not a cop."};
