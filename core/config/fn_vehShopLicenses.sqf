@@ -44,6 +44,7 @@ switch (life_veh_shop) do
 	case "cop_car_2": {_ret = true;};
 	case "cop_car_3": {_ret = true;};
 	case "cop_car_5": {_ret = true;};
+	case "cop_car_6": {_ret = true;};
 	case "fed_car": {_ret = true;};
 	case "fed_air": {_ret = true;};
 	case "cop_ship_1": {_ret = true;}; 

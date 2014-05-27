@@ -92,6 +92,12 @@ switch(life_veh_shop) do
 		_dir = markerDir "cop_car_5";
 	};
 	
+		case "cop_car_6":
+	{
+		_sp = getMarkerPos "cop_car_6";
+		_dir = markerDir "cop_car_6";
+	};
+	
 	case "fed_car":
 	{
 		_sp = getMarkerPos "fed_car_1";
