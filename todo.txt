@@ -1,22 +1,18 @@
 -- todo testen ---
 Shops
-	cops       : HW control testen
-	donator    : Alle donators testen
-	rebel      : Rebel Land HQ testen
+	cops
+	donator
+	rebel
 	
 bank alarm - fed overvallen
-Holster weapon Shift H. Check ook na respawn - Marcel
+Holster weapon Shift H. Check ook na repawn - Marcel
 ATM's in alle dorpen
 Garages in alle dorpen
-Rob Shop/gasstation/bank testen :)
-
 
 
 
 -- todo fixen ----
-Drop weapon bug!!!!
 
-Donator level dusdanig aanpassen dat iedereen <donatorlevel+1> huizen mag kopen.
-
-Check ff of garage objecten toegevoegd kunnen worden EN gekocht kunnen worden : Jaaaaa dat kan.
+Donator level dusdanig aanpassen dat iedereen <donatorlevel+1> huizen mag kopen
+Check ff of garage objecten toegevoegd kunnen worden EN gekocht kunnen worden
 

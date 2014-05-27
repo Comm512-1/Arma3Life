@@ -66,7 +66,21 @@ switch (life_veh_shop) do
 		if(__GETC__(life_donator) == 0) exitWith {_kill = "You are not a donator!"};
 		ctrlSetText[2301,"Service Truck Shop"];
 	};
+
+	case "donator_3":
+	{
+		if(playerSide == west) exitWith {_kill = "You are not a civilian."};
+		if(__GETC__(life_donator) == 0) exitWith {_kill = "You are not a donator!"};
+		ctrlSetText[2301,"Service Truck Shop"];
+	};
 	
+	case "donator_4":
+	{
+		if(playerSide == west) exitWith {_kill = "You are not a civilian."};
+		if(__GETC__(life_donator) == 0) exitWith {_kill = "You are not a donator!"};
+		ctrlSetText[2301,"Service Truck Shop"];
+	};
+		
 	case "reb_v_1":
 	{
 		if(playerSide == west) exitWith {_kill =  "You are not a civilian."};

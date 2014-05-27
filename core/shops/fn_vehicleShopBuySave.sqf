@@ -44,6 +44,28 @@ switch(life_veh_shop) do
 		};
 	};
 	
+	case "donator_3":
+	{
+		_sp = getMarkerPos "donator_All_vehicle_spawn";
+		_dir = markerDir "donator_All_vehicle_spawn";
+		if(count(nearestObjects[_sp,["Car","Ship","Air"],2]) > 0) then 
+		{
+			_sp = getMarkerPos "donator_All_vehicle_spawn";
+			_dir = markerDir "donator_All_vehicle_spawn";
+		};
+	};
+	
+	case "donator_4":
+	{
+		_sp = getMarkerPos "donator_4";
+		_dir = markerDir "donator_4";
+		if(count(nearestObjects[_sp,["Car","Ship","Air"],5]) > 0) then 
+		{
+			_sp = getMarkerPos "donator_4";
+			_dir = markerDir "donator_4";
+		};
+	};
+		
 	case "civ_car_2":
 	{
 		_sp = getMarkerPos "civ_car_2";
@@ -222,8 +244,8 @@ switch(life_veh_shop) do
 
 	case "reb_air_2":
 	{
-		_sp = getMarkerPos "reb_air_2";
-		_dir = markerDir "reb_air_2";
+		_sp = getMarkerPos "donator_All_vehicle_spawn";
+		_dir = markerDir "donator_All_vehicle_spawn";
 	};
 
 	case "reb_air_3":

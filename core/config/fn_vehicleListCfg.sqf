@@ -132,8 +132,58 @@ switch (_shop) do
 			_return set[count _return,["B_Heli_Attack_01_F",1500000]];
 		};
 	};
-	
+
 	case "donator_2":
+	{
+		_return =
+		[
+			["B_Quadbike_01_F",500],
+			["C_Offroad_01_F",2500],
+			["C_SUV_01_F",20000]
+		];
+
+		if(__GETC__(life_donator) > 1) then
+		{
+			_return set[count _return,["C_Van_01_Fuel_F",7500]];
+			_return set[count _return,["B_Truck_01_box_F",250000]];
+			_return set[count _return,["B_Heli_Light_01_F",200000]];
+			_return set[count _return,["O_Heli_Light_02_unarmed_F",600000]];
+			_return set[count _return,["I_Heli_Transport_02_F",600000]];
+		};
+		if(__GETC__(life_donator) > 2) then
+		{
+			_return set[count _return,["C_Hatchback_01_sport_F",10000]];
+			_return set[count _return,["B_Plane_CAS_01_F",3000000]];
+			_return set[count _return,["B_Heli_Attack_01_F",1500000]];
+		};
+	};
+	
+	case "donator_3":
+	{
+		_return =
+		[
+			["B_Quadbike_01_F",500],
+			["C_Offroad_01_F",2500],
+			["C_SUV_01_F",20000]
+		];
+
+		if(__GETC__(life_donator) > 1) then
+		{
+			_return set[count _return,["C_Van_01_Fuel_F",7500]];
+			_return set[count _return,["B_Truck_01_box_F",250000]];
+			_return set[count _return,["B_Heli_Light_01_F",200000]];
+			_return set[count _return,["O_Heli_Light_02_unarmed_F",600000]];
+			_return set[count _return,["I_Heli_Transport_02_F",600000]];
+		};
+		if(__GETC__(life_donator) > 2) then
+		{
+			_return set[count _return,["C_Hatchback_01_sport_F",10000]];
+			_return set[count _return,["B_Plane_CAS_01_F",3000000]];
+			_return set[count _return,["B_Heli_Attack_01_F",1500000]];
+		};
+	};
+
+	case "donator_4":
 	{
 		_return =
 		[
