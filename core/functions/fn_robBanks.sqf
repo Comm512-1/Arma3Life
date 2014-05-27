@@ -4,7 +4,7 @@
 			Made from MrKrakens bare-bones shop robbing tutorial on www.altisliferpg.com forums
 			Description:
 			Executes the rob shob action!
-			Idea developed by PEpwnzya v1.0
+			Idea developed by PEpwnzya v2.0
 			
 */ 
 private["_cops","_robber","_shop","_kassa","_ui","_progress","_pgText","_cP","_rip"];
@@ -16,21 +16,16 @@ _shop = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param; //The object that has th
 _robber = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param; //Can you guess? Alright, it's the player, or the "caller". The object is 0, the person activating the object is 1
 //_kassa = 1000; //The amount the shop has to rob, you could make this a parameter of the call (https://community.bistudio.com/wiki/addAction). Give it a try and post below ;)
 _action = [_this,2] call BIS_fnc_param;//Action name
-if(side _robber != civilian) exitWith { hint "You can not rob this station!" };
-if(_robber distance _shop > 3) exitWith { hint "You need to be within 3m of the cashier to rob him!" };
-if !(_kassa) then { _kassa = 1000; }; 
-if (_rip) exitWith { hint "Robbery already in progress!" };
-if (vehicle player != _robber) exitWith { hint "Get out of your vehicle!" };
+
 if !(alive _robber) exitWith {};
-if (currentWeapon _robber == "") exitWith { hint "HaHa, you do not threaten me! Get out of here you hobo!" };
-if (_kassa == 0) exitWith { hint "There is no cash in the register!" };
+
 _rip = true;
-_kassa = 300000 + round(random 700000);
-_shop removeAction _action;
-_shop switchMove "AmovPercMstpSsurWnonDnon";
-_chance = random(100);
-if(_chance >= 1) then { hint "The cashier hit the silent alarm, police has been alerted!"; [[0,format["ALARM! - Bank: %1 is being robbed!", _shop]],"life_fnc_broadcast",west,false] spawn life_fnc_MP; };
- 
+_kassa = 30000 + round(random 1200000); //setting the money in the registry, anywhere from 3000 to 15000. 
+[[_shop,_robber,_action,-1],"TON_fnc_shopState",false,false] spawn life_fnc_MP; //sending information to the server so the animations and removeaction can be performed for all players if the checks clear. 
+
+_chance = random(100); //calling a random number between 0-100. 
+if(_chance >= 0) then { hint "The cashier hit the silent alarm, police has been alerted!"; [[0,format["ALARM! - Bank: %1 is being robbed!", _shop]],"life_fnc_broadcast",west,false] spawn life_fnc_MP; }; //We set a 15% chance that the silent alarm is being triggered, wich sends a 911-message to the police. 
+
 //Setup our progress bar.
 disableSerialization;
 5 cutRsc ["life_progress","PLAIN"];
@@ -40,7 +35,7 @@ _pgText = _ui displayCtrl 38202;
 _pgText ctrlSetText format["Robbery in Progress, stay close (10m) (1%1)...","%"];
 _progress progressSetPosition 0.01;
 _cP = 0.01;
- 
+
 if(_rip) then
 {
 	while{true} do
@@ -53,24 +48,19 @@ if(_rip) then
 		if(_robber distance _shop > 10) exitWith { };
 		if!(alive _robber) exitWith {};
 		
-	};
+	}; // the loop continues til the progressbar is full, distance is exceeded or robber dies. 
 	if!(alive _robber) exitWith { _rip = false; };
-	if(_robber distance _shop > 10) exitWith { _shop switchMove ""; hint "You need to stay within 10m to Rob registry! - Now the registry is locked."; 5 cutText ["","PLAIN"]; _rip = false; };
+	if(_robber distance _shop > 10) exitWith { hint "You need to stay within 10m to Rob the bank! - Now the bank is locked."; 5 cutText ["","PLAIN"]; _rip = false; };
 	5 cutText ["","PLAIN"];
 	titleText[format["You have stolen $%1, now get away before the cops arrive!",[_kassa] call life_fnc_numberText],"PLAIN"];
-	life_cash = life_cash + _kassa;
+	life_cash = life_cash + _kassa; //I am using a moneylaundry system on my server, but if you do not change this to life_cash instead.
 	_rip = false;
 	life_use_atm = false;
-	sleep (30 + random(180));
-	life_use_atm = true;
+	sleep (1 + random(60)); //Clerk in the store takes between 1-60 seconds before he manage to warn the police about the robbery. 
+	life_use_atm = true; // Robber can not use the ATM at this point.
 	if!(alive _robber) exitWith {};
-	[[0,format["911 - Bank: %2 was just robbed by %1 for a total of $%3",_robber, _shop, [_kassa] call life_fnc_numberText]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
+	[[0,format["911 - Bank: %2 was just robbed by %1 for a total of $%3",name _robber, _shop, [_kassa] call life_fnc_numberText]],"life_fnc_broadcast",west,false] spawn life_fnc_MP;
 	[[0,format["NEWS: Bank: %1 was just robbed for a total of $%2", _shop, [_kassa] call life_fnc_numberText]],"life_fnc_broadcast",civilian,false] spawn life_fnc_MP;
-	[[getPlayerUID _robber,name _robber,"211"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP;
+	[[getPlayerUID _robber,name _robber,"211"],"life_fnc_wantedAdd",false,false] spawn life_fnc_MP; //Sending out broadcasts about the robbery after the fact. Also adds robber to wantedlist. In serverside wantedAdd, add a new case for 211A or just use 211 if you want. 211 is already setup as robbery.
 };
-sleep 300;
-_action = _shop addAction["Rob the Gas Station",life_fnc_robBanks];
-_shop switchMove "";
- 
- 
- 
+[[_shop,_robber,_action,0],"TON_fnc_shopState",false,false] spawn life_fnc_MP; //We are now calling the serverside script again to tell it about the fact that robbery script is finnished clientside and the outcome.

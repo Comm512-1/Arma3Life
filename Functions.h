@@ -70,8 +70,6 @@ class Life_Client_Core
 		class storeVehicle {};
 		class robAction {};
 		class sellTurtle {};
-                class robShops {}; //Rob Gas Station & Shops Script
-                class robBanks {}; //Rob Banks Script
 
 	};
 	
@@ -172,6 +170,10 @@ class Life_Client_Core
 		class fedSuccess {};
 		class actionKeyHandler {};
 		class gateAct {};
+                class robBanks {};
+                class robShops {};  
+                class robShops2 {}; 
+                class shopState {};
                 class holsterHandgun {};
 
 		//Housing
@@ -226,6 +228,7 @@ class Life_Client_Core
 		class robPerson {};
 		class removeLicenses {};
 		class zoneCreator {};
+
 	};
 	
 	class Vehicle
