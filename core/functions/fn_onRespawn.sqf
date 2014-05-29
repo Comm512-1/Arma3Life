@@ -20,10 +20,7 @@ switch(playerSide) do
 {
 	case west: 
 	{
-		_handle = [] spawn life_fnc_loadGear;
-		waitUntil {scriptDone _handle};
-		sleep 5;
-		[_unit, uniform _unit] call life_fnc_setUniformTexture;
+		[] spawn life_fnc_loadGear;
 	};
 	
 	case civilian:
@@ -50,11 +47,11 @@ if(life_is_arrested) then
 	waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
 };
 
-_unit addRating 100000; life_holstered = false;
+_unit addRating 100000;
 
 [[_unit,life_sidechat,playerSide],"TON_fnc_managesc",false,false] spawn life_fnc_MP;
 [] call life_fnc_hudUpdate;
 cutText ["","BLACK IN"];
 
 [] call life_fnc_civFetchGear;
-[1,true] call life_fnc_sessionHandle;
+[] call SOCK_fnc_updateRequest;

@@ -18,7 +18,6 @@ if(_funds < 50000) exitWith{[[_vault,-1],"TON_fnc_robberyState",false,false] spa
 _timer = time + (10 * 60); //Default timer is 10 minutes to rob.
 titleText["Cracking the safe...","PLAIN"];
 [[2,"$$$ THE FEDERAL RESERVE IS BEING ROBBED!!! $$$"],"life_fnc_broadcast",nil,false] spawn life_fnc_MP;
-[[_vault],"life_fnc_bankalarmsound",nil,true] spawn life_fnc_MP;
 
 
 while {true} do

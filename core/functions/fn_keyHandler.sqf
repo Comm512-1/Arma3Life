@@ -25,12 +25,40 @@ if(life_action_inUse) exitWith {
 };
 
 switch (_code) do
-{	
+{
+	//Space key for Jumping
+	case 57:
+	{
+		if(_shift && {animationState player != "AovrPercMrunSrasWrflDf"} && {isTouchingGround player} && {stance player == "STAND"} && {speed player > 2} && {!life_is_arrested}) then {
+			[player,true] spawn life_fnc_jumpFnc; //Local execution
+			[[player,false],"life_fnc_jumpFnc",nil,FALSE] call life_fnc_MP; //Global execution 
+			_handled = true;
+		};
+	};
+	
 	//Map Key
 	case _mapKey:
 	{
-		if(playerSide == west && !visibleMap) then {
-			[] spawn life_fnc_copMarkers;
+		switch (playerSide) do 
+		{
+			case west: {if(!visibleMap) then {[] spawn life_fnc_copMarkers;}};
+			case independent: {if(!visibleMap) then {[] spawn life_fnc_medicMarkers;}};
+		};
+	};
+	
+	//Holster / recall weapon.
+	case 35:
+	{
+		if(_shift && !_ctrlKey && currentWeapon player != "") then {
+			life_curWep_h = currentWeapon player;
+			player action ["SwitchWeapon", player, player, 100];
+			player switchcamera cameraView;
+		};
+		
+		if(!_shift && _ctrlKey && !isNil "life_curWep_h" && {(life_curWep_h != "")}) then {
+			if(life_curWep_h in [primaryWeapon player,secondaryWeapon player,handgunWeapon player]) then {
+				player selectWeapon life_curWep_h;
+			};
 		};
 	};
 	
@@ -48,42 +76,25 @@ switch (_code) do
 		};
 	};
 	
-	//Restraining or robbing (Shift + R)
+	//Restraining (Shift + R)
 	case 19:
 	{
 		if(_shift) then {_handled = true;};
-		if(_shift && playerSide == west && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget == civilian) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1) then
+		if(_shift && playerSide == west && !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && (side cursorTarget in [civilian,independent]) && alive cursorTarget && cursorTarget distance player < 3.5 && !(cursorTarget getVariable "Escorting") && !(cursorTarget getVariable "restrained") && speed cursorTarget < 1) then
 		{
 			[] call life_fnc_restrainAction;
 		};
-		
-//Robbing
-		if(_shift && playerSide == civilian && !isNull cursorTarget && cursorTarget isKindOf "Man" && isPlayer cursorTarget && alive cursorTarget && cursorTarget distance player < 4 && speed cursorTarget < 1) then
-		{
-			if((animationState cursorTarget) != "Incapacitated" && (currentWeapon player == primaryWeapon player OR currentWeapon player == handgunWeapon player) && currentWeapon player != "" && !life_knockout && !(player getVariable["restrained",false]) && !life_istazed && !(player getVariable["surrender",false])) then
-			{
-				[cursorTarget] spawn life_fnc_knockoutAction;
-			};
-			_handled = true;
-		};
 	};
 	
-//surrender... shift + g
+	//Knock out, this is experimental and yeah...
 	case 34:
 	{
 		if(_shift) then {_handled = true;};
-
-		if (_shift) then
+		if(_shift && playerSide == civilian && !isNull cursorTarget && cursorTarget isKindOf "Man" && isPlayer cursorTarget && alive cursorTarget && cursorTarget distance player < 4 && speed cursorTarget < 1) then
 		{
-			if (vehicle player == player && !(player getVariable ["restrained", false]) && (animationState player) != "Incapacitated" && !life_istazed) then
+			if((animationState cursorTarget) != "Incapacitated" && (currentWeapon player == primaryWeapon player OR currentWeapon player == handgunWeapon player) && currentWeapon player != "" && !life_knockout && !(player getVariable["restrained",false]) && !life_istazed) then
 			{
-				if (player getVariable ["surrender", false]) then
-				{
-					player setVariable ["surrender", false, true];
-				} else
-				{
-					[] spawn life_fnc_surrender;
-				};
+				[cursorTarget] spawn life_fnc_knockoutAction;
 			};
 		};
 	};
@@ -166,17 +177,7 @@ switch (_code) do
 			};
 		};
 	};
-	// Shift + H, Holster
-	case 35: 
-	{
-		if (_shift && !_alt && !_ctrlKey) then {
-			if ((time - life_holster_time) > 4) then {
-				life_holster_time = time;
-				[] spawn life_fnc_holsterHandgun;
-			};
-		};
-	};
-	//U Key
+    //U Key
 	case 22:
 	{
 		if(!_alt && !_ctrlKey) then
@@ -205,7 +206,7 @@ switch (_code) do
 						[[_veh,0], "life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 					};
 					systemChat "You have unlocked your vehicle.";
-					player say3D "car_lock";
+					player say3D "car_unlock";
 				}
 					else
 				{
@@ -218,7 +219,7 @@ switch (_code) do
 						[[_veh,2], "life_fnc_lockVehicle",_veh,false] spawn life_fnc_MP;
 					};
 					systemChat "You have locked your vehicle.";
-					player say3D "unlock";
+					player say3D "car_lock";
 				};
 			};
 		};

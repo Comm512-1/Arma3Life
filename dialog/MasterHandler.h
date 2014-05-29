@@ -21,6 +21,7 @@
 #include "spawnSelection.hpp"
 #include "chop_shop.h"
 #include "pInteraction.h"
-
-#include "trunkHouse.hpp"
-#include "house.hpp"
+#include "deathScreen.h"
+#include "vehicleShop.h"
+#include "common_EditorWrapper.hpp"
+#include "market.hpp"

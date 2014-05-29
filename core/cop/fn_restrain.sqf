@@ -26,7 +26,6 @@ if(isNull _cop) exitWith {};
 	};
 };
 
-if((player getVariable["surrender",FALSE])) then { player setVariable["surrender",FALSE,TRUE]; player switchMove ""; };
 titleText[format["You have been restrained by %1",name _cop],"PLAIN"];
 				
 while {player getVariable "restrained"} do

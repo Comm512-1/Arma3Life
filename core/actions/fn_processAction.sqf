@@ -14,17 +14,25 @@ if(isNull _vendor OR _type == "" OR (player distance _vendor > 10)) exitWith {};
 //unprocessed item,processed item, cost if no license,Text to display (I.e Processing  (percent) ..."
 _itemInfo = switch (_type) do
 {
-	case "oil": {["oilu","oilp",1200,"Processing Oil"];};
-	case "diamond": {["diamond","diamondc",1350,"Processing Diamond"]};
-	case "heroin": {["heroinu","heroinp",2100,"Processing Heroin"]};
-	case "copper": {["copperore","copper_r",750,"Processing Copper"]};
-	case "iron": {["ironore","iron_r",1120,"Processing Iron"]};
-	case "sand": {["sand","glass",650,"Processing Sand"]};
-	case "salt": {["salt","salt_r",450,"Processing Salt"]};
-	case "cocaine": {["cocaine","cocainep",1500,"Processing Cocaine"]};
-	case "marijuana": {["cannabis","marijuana",500,"Processing Marijuana"]};
-	case "heroin": {["heroinu","heroinp",1720,"Processing Heroin"]};
-	case "cement": {["rock","cement",350,"Mixing Cement"]};
+	case "oil": {[["oilu"],"oilp",1200,"Processing Oil",0];};
+	case "diamond": {[["diamond"],"diamondc",1350,"Processing Diamond",0]};
+	case "heroin": {[["heroinu"],"heroinp",2100,"Processing Heroin",0]};
+	case "copper": {[["copperore"],"copper_r",750,"Processing Copper",0]};
+	case "iron": {[["ironore"],"iron_r",1120,"Processing Iron",0]};
+	case "sand": {[["sand"],"glass",650,"Processing Sand",0]};
+	case "salt": {[["salt"],"salt_r",450,"Processing Salt",0]};
+	case "cocaine": {[["cocaine"],"cocainep",1500,"Processing Cocaine",0]};
+	case "marijuana": {[["cannabis"],"marijuana",500,"Processing Marijuana",0]};
+	case "heroin": {[["heroinu"],"heroinp",1720,"Processing Heroin",0]};
+	case "cement": {[["rock"],"cement",350,"Mixing Cement",0]};
+	case "platinum": {[["platinum"],"platinumr",1550,"Processing Platinum",0]};
+	case "silver": {[["silver"],"silverr",1150,"Processing Silver",0]};
+	case "frog": {[["frog"],"frogp",1700,"Processing Frog LSD",0]};
+	case "methu": {[["lithium","phosphorous","ephedra"],"methu",500,"Processing Unprocessed Meth",0]};
+	case "crystalmeth": {[["methu"],"crystalmeth",2300,"Breaking up the Ice",0]};
+	//case "beer": {[["barley","hops"],"beer",1800,"Brewing Beer",0]};
+	case "mashu": {[["sugar","yeast","corn"],"mashu",500,"Processing into Sour Mash",0]};
+	case "moonshine": {[["mashu"],"moonshine",2200,"Brewing Moonshine",0]};
 	default {[]};
 };
 

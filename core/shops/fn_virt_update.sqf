@@ -6,13 +6,36 @@
 	Description:
 	Update and fill the virtual shop menu.
 */
-private["_display","_item_list","_gear_list","_shop_data","_name","_price"];
+private["_display","_item_list","_gear_list","_shop_data","_name","_price","_marketprice"];
 disableSerialization;
 
 //Setup control vars.
 _display = findDisplay 2400;
 _item_list = _display displayCtrl 2401;
 _gear_list = _display displayCtrl 2402;
+
+switch(playerSide) do
+{
+	case west: 
+	{
+		ctrlShow[2011,false];
+		if(__GETC__(life_coplevel) < 2) then
+		{
+			ctrlShow[2495,false];
+		};
+	};
+	
+	case civilian:
+	{
+		ctrlShow[2495,false];
+	};
+	
+	case independent:
+	{
+		ctrlShow[2495,false];
+	};
+	
+};
 
 //Purge list
 lbClear _item_list;
@@ -27,6 +50,13 @@ ctrlSetText[2403,format["%1", _shop_data select 0]];
 	if(_index != -1) then
 	{
 		_price = (__GETC__(buy_array) select _index) select 1;
+		
+		_marketprice = [_x] call life_fnc_marketGetBuyPrice;
+		if(_marketprice != -1) then
+		{
+			_price = _marketprice;
+		};
+		
 		_item_list lbAdd format["%1  ($%2)",_name,[_price] call life_fnc_numberText];
 		_item_list lbSetData [(lbSize _item_list)-1,_x];
 		_item_list lbSetValue [(lbSize _item_list)-1,_price];
@@ -44,3 +74,5 @@ ctrlSetText[2403,format["%1", _shop_data select 0]];
 		_gear_list lbSetData [(lbSize _gear_list)-1,_x];
 	};
 } foreach (_shop_data select 1);
+
+//[_shop_data select 1] spawn life_fnc_marketShortView;

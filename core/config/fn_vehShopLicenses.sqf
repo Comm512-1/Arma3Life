@@ -15,8 +15,10 @@ _ret = false;
 
 if(_veh == "B_Quadbike_01_F") exitWith {true}; //ATV's don't need to require a license anymore.
 
-switch (life_veh_shop) do
+switch (life_veh_shop select 0) do
 {
+	case "med_shop": {_ret = true;};
+	case "med_air_hs": {_ret = true;};
 	case "civ_car_1": {_ret = license_civ_driver;};
 	case "civ_car_2": {_ret = license_civ_driver;};
 	case "civ_car_3": {_ret = license_civ_driver;};
@@ -26,32 +28,23 @@ switch (life_veh_shop) do
 	case "civ_ship_3": {_ret = license_civ_boat;};
 	case "civ_air_1": {_ret = license_civ_air;};
 	case "civ_air_2": {_ret = license_civ_air;};
-	case "civ_air_3": {_ret = license_civ_air;};
 	case "cop_air_1": {_ret = license_cop_air;};
 	case "cop_air_2": {_ret = license_cop_air;};
 	case "donator_1": {_ret = true;};
 	case "donator_2": {_ret = true;};
-	case "donator_3": {_ret = true;};
-	case "donator_4": {_ret = true;};
 	case "civ_truck_1":	{_ret = license_civ_truck;};
 	case "civ_truck_2":	{_ret = license_civ_truck;};
 	case "civ_servt_1": {_ret = license_civ_driver;};
 	case "reb_v_1": {_ret = license_civ_rebel;};
 	case "reb_v_2": {_ret = license_civ_rebel;};
-	case "reb_v_3": {_ret = license_civ_rebel;};
-	case "reb_air_1": {_ret = license_civ_rebel;};
-	case "reb_air_2": {_ret = license_civ_rebel;};
-	case "reb_air_3": {_ret = license_civ_rebel;};
 	case "cop_car_1": {_ret = true;};
 	case "cop_car_2": {_ret = true;};
 	case "cop_car_3": {_ret = true;};
 	case "cop_car_5": {_ret = true;};
-	case "cop_car_6": {_ret = true;};
 	case "fed_car": {_ret = true;};
 	case "fed_air": {_ret = true;};
-	case "cop_ship_1": {_ret = true;}; 
+	case "cop_ship_1": 
 	{
-		hint format["%1", _veh];
 		if(_veh == "B_Boat_Armed_01_minigun_F") then
 		{
 			_ret = license_cop_cg;

@@ -19,19 +19,15 @@ switch (_filter) do
 	//Uniforms
 	case 0:
 	{
-		_ret set[count _ret,["U_Rangemaster","Recruit Uniform",1000]];
+		_ret set[count _ret,["U_Rangemaster","Cop Uniform",25]];
 		if(__GETC__(life_coplevel) > 1) then
 		{
-			_ret set[count _ret,["U_B_CombatUniform_mcam_vest","Officer Uniform",5000]];
-			_ret set[count _ret,["U_B_Wetsuit",nil,5000]];
+			_ret set[count _ret,["U_B_CombatUniform_mcam_tshirt",nil,350]];
+			_ret set[count _ret,["U_B_survival_uniform",nil,1250]];
 		};
-		if(__GETC__(life_coplevel) > 4) then
+		if(__GETC__(life_coplevel) > 2) then
 		{
-			_ret set[count _ret,["U_B_CombatUniform_mcam","Captain Uniform",10000]];
-		};
-		if(getPlayerUID player in (__GETC__(life_SWAT))) then
-		{
-			_ret set[count _ret,["U_B_SpecopsUniform_sgg","Donator Uniform",25000]];
+			_ret set[count _ret,["U_B_CombatUniform_mcam_worn",nil,550]];
 		};
 	};
 	
@@ -40,20 +36,13 @@ switch (_filter) do
 	{
 		if(__GETC__(life_coplevel) > 1) then
 		{
-			_ret set[count _ret,["H_Cap_blk",nil,500]];
-			_ret set[count _ret,["H_Watchcap_blk",nil,650]];
+			_ret set[count _ret,["H_HelmetB_plain_mcamo",nil,75]];
+			_ret set[count _ret,["H_Booniehat_mcamo",nil,120]];
 		};
-		if(__GETC__(life_coplevel) > 3) then
+		
+		if(__GETC__(life_coplevel) > 2) then
 		{
-			_ret set[count _ret,["H_Beret_blk_POLICE",nil,750]];
-		};
-		if(__GETC__(life_coplevel) > 4) then
-		{
-			_ret set[count _ret,["H_Beret_02",nil,1200]];
-		};		
-		if(__GETC__(life_coplevel) > 6) then
-		{
-			_ret set[count _ret,["H_Beret_Colonel",nil,1500]];
+			_ret set[count _ret,["H_MilCap_mcamo",nil,100]];
 		};
 	};
 	
@@ -81,17 +70,7 @@ switch (_filter) do
 		_ret set[count _ret,["V_Rangemaster_belt",nil,800]];
 		if(__GETC__(life_coplevel) > 1) then
 		{
-			_ret set[count _ret,["V_TacVest_blk_POLICE",nil,2000]];
-			_ret set[count _ret,["V_RebreatherB",nil,2000]];
-		};
-		if(__GETC__(life_coplevel) > 4) then
-		{
-			_ret set[count _ret,["V_BandollierB_blk",nil,4000]];
-		};
-		if(getPlayerUID player in (__GETC__(life_SWAT))) then {
-		
-			_ret set[count _ret,["V_PlateCarrier1_blk","SWAT Plate Carrier",8000]];
-			_ret set[count _ret,["V_TacVestIR_blk","SWAT TacVest",8000]];
+			_ret set[count _ret,["V_PlateCarrier2_rgr",nil,1500]];
 		};
 	};
 	

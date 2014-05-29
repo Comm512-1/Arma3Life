@@ -3,93 +3,51 @@
 	Author: Bryan "Tonic" Boardwine
 	
 	Description:
-	Master damage handling system for Stratis / Altis Life
+	Handles damage, specifically for handling the 'tazer' pistol and nothing else.
 */
-private["_unit","_damage","_source","_projectile","_sel","_curWep","_lowCoca"];
+private["_unit","_damage","_source","_projectile","_part","_curWep"];
 _unit = _this select 0;
-_sel = _this select 1;
+_part = _this select 1;
 _damage = _this select 2;
 _source = _this select 3;
 _projectile = _this select 4;
-_curWep = "";
-if(isPlayer _source && _source isKindOf "Man") then {_curWep = currentWeapon _source;};
 
-/*
-	This is obsolete
-
-if(_projectile == "DemoCharge_Remote_Ammo" && _source != player && !life_hit_explosive) then
-{
-	life_hit_explosive = true;
-	[] spawn
-	{
-		sleep 2;
-		life_hit_explosive = false;
-	};
-	serv_killed = [_source,"213"];
-	publicVariableServer "serv_killed";
+//Internal Debugging.
+if(!isNil "TON_Debug") then {
+	systemChat format["PART: %1 || DAMAGE: %2 || SOURCE: %3 || PROJECTILE: %4 || FRAME: %5",_part,_damage,_source,_projectile,diag_frameno];
 };
-*/
 
-if(_source != _unit && isPlayer _source && side _source == west && _curWep in ["hgun_P07_snds_F","arifle_SDAR_F"]) then
-{
-	if(_projectile in ["B_9x21_Ball","B_556x45_dual"]) then
-	{
-		_damage = false;
-		if(_curwep == "arifle_SDAR_F") then
-		{
-			if(!life_istazed && !(player getVariable["restrained",false]) && player distance _source < 100) then
-			{
-				_damage = (damage player);
-				if(typeOf (vehicle player) == "B_Quadbike_01_F") then
-				{
-					player action ["Eject",vehicle player];
-				};
+//Handle the tazer first (Top-Priority).
+if(!isNull _source) then {
+	if(_source != _unit) then {
+		_curWep = currentWeapon _source;
+		if(_projectile in ["B_9x21_Ball","B_556x45_dual"] && _curWep in ["hgun_P07_snds_F","arifle_SDAR_F"]) then {
+			if(side _source == west && playerSide != west) then {
+				private["_distance","_isVehicle","_isQuad"];
+				_distance = if(_projectile == "B_556x45_dual") then {100} else {35};
+				_isVehicle = if(vehicle player != player) then {true} else {false};
+				_isQuad = if(_isVehicle) then {if(typeOf (vehicle player) == "B_Quadbike_01_F") then {true} else {false}} else {false};
 				
-				if(vehicle player == player) then
-				{
-					[_unit,_source] spawn life_fnc_tazed;
+				_damage = false;
+				if(_unit distance _source < _distance) then {
+					if(!life_istazed && !(_unit getVariable["restrained",false])) then {
+						if(_isVehicle && _isQuad) then {
+							player action ["Eject",vehicle player];
+							[_unit,_source] spawn life_fnc_tazed;
+						} else {
+							[_unit,_source] spawn life_fnc_tazed;
+						};
+					};
 				};
 			};
-		}
-			else
-		{
-			if(!life_istazed && !(player getVariable["restrained",false]) && player distance _source < 100) then
-			{
-				_damage = (damage player);
-				if(typeOf (vehicle player) == "B_Quadbike_01_F") then
-				{
-					player action ["Eject",vehicle player];
-				};
-				
-				if(vehicle player == player) then
-				{
-					[_unit,_source] spawn life_fnc_tazed;
-				};
+			
+			//Temp fix for super tasers on cops.
+			if(playerSide == west && side _source == west) then {
+				_damage = false;
 			};
-		};
-	}
-		else
-	{
-		//player allowDamage true;
-		if(_projectile == "") then
-		{
-			_damage = 0;
 		};
 	};
 };
 
-if((player getVariable["restrained",false])) then
-{
-	_damage = (damage player);
-};
-
-// Lower Damage with Cocaine
-if(_projectile != "" && isPlayer _unit && _damage != 0 && life_drugged_cocaine > 0) then
-{
-	_lowCoca = life_drugged_cocaine * 10 * 1;
-	_damage = _damage - ((_damage * _lowCoca) / 100);
-};
-
-[] spawn life_fnc_hudUpdate;
-
-_damage
+[] call life_fnc_hudUpdate;
+_damage;
