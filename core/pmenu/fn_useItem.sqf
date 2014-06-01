@@ -51,7 +51,14 @@ switch (true) do
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
-			[] spawn fnc_drug_use;
+			[] spawn life_fnc_heroine;
+		};
+	};
+	case (_item == "cocainep"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			[] spawn life_fnc_heroin;
 		};
 	};
 	
@@ -65,7 +72,7 @@ switch (true) do
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then
 		{
-			[] spawn fnc_drugweed_use;
+			[] spawn life_fnc_weed;
 		};
 	};
 	
@@ -87,6 +94,39 @@ switch (true) do
 	case (_item == "pickaxe"):
 	{
 		[] spawn life_fnc_pickAxeUse;
+	};
+	
+    case (_item in ["storage1","storage2"]):
+    {
+        [_item] call life_fnc_placeStorage;
+    };
+	
+	case (_item == "moonshine"):
+    {
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			[] spawn life_fnc_moonshine;
+		};
+    };
+	case (_item == "beer"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			[] spawn life_fnc_beer;
+				life_redgull_effect = time;
+				titleText["You can run faster, right??!","PLAIN"];
+				player enableFatigue false;
+				waitUntil {!alive player or ((time - life_redgull_effect) > (15 * 60))};
+				player enableFatigue true;
+		};
+	};
+	
+	case (_item == "frogp"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			[] spawn life_fnc_LSD;
+		};
 	};
 	
 	default
