@@ -213,6 +213,7 @@ class Life_Client_Core
         class shopState {}; 
 		class updateCash {};
         class vehicleGarage {};
+		class gateAct {};
 	};
 		
     class Housing
