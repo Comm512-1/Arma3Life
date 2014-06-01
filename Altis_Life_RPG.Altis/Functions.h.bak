@@ -4,7 +4,6 @@ class Socket_Reciever
 	class SQL_Socket
 	{
 		file = "core\session";
-		class autoSave {};
 		class requestReceived {};
 		class dataQuery {};
 		class insertPlayerInfo {};
@@ -32,25 +31,10 @@ class Life_Client_Core
 	{
 		file = "core\admin";
 		class admininfo {};
-		class admininfo_Extended {};
 		class adminid {};
 		class admingetID {};
 		class adminMenu {};
 		class adminQuery {};
-		class adminKick {};
-		class adminBan {};
-		class adminMenu_Extended {};
-		class adminQuery_Extended {};
-		class adminGodMode {};
-		class adminAddMoney {};	
-		class adminSpawnVehicle {};
-		class adminInstaHealth {};
-		class adminTpTo {};
-		class adminTpHere {};
-		class adminRestrain {};
-		class adminUnrestrain {};
-		class adminAuthentificate {};
-		class adminCheckAuth {};
 	};
 	
 	class Medical_System
@@ -114,7 +98,6 @@ class Life_Client_Core
 		class storeVehicle {};
 		class robAction {};
 		class sellTurtle {};
-		class surrender {};
 		class gatherLithium {};
 		class gatherPhosphorous {};
 		class gatherEphedra {};
@@ -126,11 +109,11 @@ class Life_Client_Core
 		class gatherYeast {};
 		class gatherCorn {};
 		class gatherFrog {};
-		class suicideVest {};
-		class restrainciv {};
-		class restraincivAction {};
-		class unrestrainciv {};
-		class unrestraincivAction {};
+		//class suicideVest {};
+		//class restrainciv {};
+		//class restraincivAction {};
+		//class unrestrainciv {};
+		//lass unrestraincivAction {};
 	};
 	
 	class Config
@@ -153,8 +136,10 @@ class Life_Client_Core
 		class vehicleAnimate {};
 		class weaponShopCfg {};
 		class vehicleWeightCfg {};
-        class houseContainers {};
+		class houseContainers {};
         class housePrice {};
+		
+		//Clothing Store Configs
 		class clothing_cop {};
 		class clothing_bruce {};
 		class clothing_reb {};
@@ -187,12 +172,6 @@ class Life_Client_Core
 	class Functions
 	{
 		file = "core\functions";
-		class onPlayerDisconnect {};
-		class handleDowned {};
-		class CarAlarmSound {};
-		class handleFlashbang {};
-		class equipGear {};
-		class setUniform {};
 		class calWeightDiff {};
 		class fetchCfgDetails {};
 		class handleInv {};
@@ -226,15 +205,16 @@ class Life_Client_Core
 		class escInterupt {};
 		class onTakeItem {};
 		class fetchVehInfo {};
-        class updateCash {};
-        class vehicleGarage {};
 		class robBanks {};
         class robBanks2 {};
         class robShops {}; 
         class robShops2 {}; 
         class shopState {}; 
+		class updateCash {};
+        class vehicleGarage {};
 	};
-	    class Housing
+		
+    class Housing
     {
         file = "core\housing";
         class buyHouse {};
@@ -257,24 +237,7 @@ class Life_Client_Core
         class onTake {};
     };
 	
-	class Market
-	{
-		file = "core\market";
-		class openMarketView;
-		class refreshMarketView;
-		class marketShortView;
-		class marketBuy;
-		class marketSell;
-		class marketGetBuyPrice;
-		class marketGetSellPrice;
-		class marketconfiguration;
-		class marketReset;
-		class marketChange;
-		class marketGetRow;
-		class marketGetPriceRow;
-		class marketSetPriceRow;
-	};
-
+	
 	class Network
 	{
 		file = "core\functions\network";
@@ -340,6 +303,9 @@ class Life_Client_Core
 		class sirenLights {};
 		class licenseCheck {};
 		class licensesRead {};
+		class houseOwnerSearch {};
+        class houseInvSearch {};
+        class raidHouse {};
 	};
 	
 	class Gangs
@@ -388,6 +354,11 @@ class Life_Client_Core
 		class lockpick {};
 		class spikeStrip {};
 		class jerryRefuel {};
+		class moonshine {};
+		class weed {};
+		class heroine {};
+		class beer {};
+		class LSD {};
 	};
 	
 	class Dialog_Controls
@@ -407,6 +378,7 @@ class Life_Client_Core
 		class bankWithdraw {};
 		class bankTransfer {};
 		class garageLBChange {};
+		class houseMenu {};
 	};
 
 class Market

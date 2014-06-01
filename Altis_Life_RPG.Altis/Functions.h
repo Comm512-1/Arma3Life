@@ -192,6 +192,7 @@ class Life_Client_Core
 		class receiveItem {};
 		class giveDiff {};
 		class receiveMoney {};
+		class setUniformTexture {};
 		class playerTags {};
 		class clearVehicleAmmo {};
 		class pulloutVeh {};

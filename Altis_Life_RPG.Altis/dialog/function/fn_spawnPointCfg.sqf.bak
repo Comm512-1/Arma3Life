@@ -49,7 +49,7 @@ switch (_side) do
         };
 		
 		if(__GETC__(life_donator) >= __GETC__(HOUSING_DONATOR_LEVEL) && license_civ_home) then {		
-		
+			diag_log "JAPIE";
 			_houses = [
 				"Land_i_House_Small_01_V1_F",
 				"Land_i_House_Small_01_V2_F",
