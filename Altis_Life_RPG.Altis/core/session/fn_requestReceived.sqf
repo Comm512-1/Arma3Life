@@ -26,10 +26,8 @@ life_cash = parseNumber (_this select 2);
 life_atmcash = parseNumber (_this select 3);
 __CONST__(life_adminlevel,parseNumber(_this select 4));
 __CONST__(life_donator,parseNumber(_this select 5));
-diag_log "HOERENZOOI";
-diag_log format ["select 10 %1", _this select 10];
-diag_log format ["select 9 %1", _this select 9];
-diag_log format ["select 8 %1", _this select 8];
+
+
 //Loop through licenses
 if(count (_this select 6) > 0) then {
 	{
@@ -53,8 +51,8 @@ switch(playerSide) do {
 		[] spawn life_fnc_civLoadGear;
 		
 		// ff niet... wordt toch niets mee gedaan. column in db bestaat niet eens
-		diag_log format["_coords: %1 (%2)", (_this select 9), typeName (_this select 9)];
-		life_ses_last_pos = _this select 9;
+		//diag_log format["_coords: %1 (%2)", (_this select 9), typeName (_this select 9)];
+		//life_ses_last_pos = _this select 9;
 		
 		//life_houses = _this select 10;
 		life_houses = _this select 9;

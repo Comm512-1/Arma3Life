@@ -20,10 +20,7 @@ switch(playerSide) do
 {
 	case west: 
 	{
-		_handle = [] spawn life_fnc_loadGear;
-		waitUntil {scriptDone _handle};
-		sleep 5;
-		[_unit, uniform _unit] call life_fnc_setUniformTexture;
+		[] spawn life_fnc_loadGear;
 	};
 	
 	case civilian:
