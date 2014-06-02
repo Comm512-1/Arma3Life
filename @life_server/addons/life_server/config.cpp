@@ -145,6 +145,8 @@ class CfgFunctions
 			class chopShopSell {};
 			class silentSync {};
 			class clientDisconnect {};
+			class robShops {}; 
+            class shopState {}; 
 		};
 	};
 };

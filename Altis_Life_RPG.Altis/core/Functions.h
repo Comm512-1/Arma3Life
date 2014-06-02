@@ -1,17 +1,3 @@
-class Socket_Reciever
-{
-	tag = "SOCK";
-	class SQL_Socket
-	{
-		file = "core\session";
-		class requestReceived {};
-		class dataQuery {};
-		class insertPlayerInfo {};
-		class updateRequest {};
-		class syncData {};
-	};
-};
-
 class Life_Client_Core
 {
 	tag = "life";
@@ -20,10 +6,10 @@ class Life_Client_Core
 	{
 		file = "core";
 		class setupActions {};
+		class perfActions {};
 		class setupEVH {};
 		class initCiv {};
 		class initCop {};
-		class initMedic {};
 		class welcomeNotification {};
 	};
 	
@@ -35,21 +21,6 @@ class Life_Client_Core
 		class admingetID {};
 		class adminMenu {};
 		class adminQuery {};
-	};
-	
-	class Medical_System
-	{
-		file = "core\medical";
-		class onPlayerKilled {};
-		class onPlayerRespawn {};
-		class respawned {};
-		class revivePlayer {};
-		class revived {};
-		class medicMarkers {};
-		class requestMedic {};
-		class medicRequest {};
-		class deathScreen {};
-		class medicLoadout {};
 	};
 	
 	class Actions
@@ -88,6 +59,7 @@ class Life_Client_Core
 		class searchVehAction {};
 		class unrestrain {};
 		class pickupItem {};
+                class surrender {};
 		class pickupMoney {};
 		class ticketAction {};
 		class gatherPeaches {};
@@ -97,23 +69,8 @@ class Life_Client_Core
 		class robFederal {};
 		class storeVehicle {};
 		class robAction {};
-		class surrender {};
 		class sellTurtle {};
-		class gatherLithium {};
-		class gatherPhosphorous {};
-		class gatherEphedra {};
-		//class gatherHops {};
-		//class gatherBarley {};
-		class flipAction {};
-		class gatherSugar {};
-		class gatherYeast {};
-		class gatherCorn {};
-		class gatherFrog {};
-		//class suicideVest {};
-		//class restrainciv {};
-		//class restraincivAction {};
-		//class unrestrainciv {};
-		//lass unrestraincivAction {};
+
 	};
 	
 	class Config
@@ -123,6 +80,7 @@ class Life_Client_Core
 		class vehicleColorCfg {};
 		class vehicleColorStr {};
 		class vehicleListCfg {};
+		class vehicleWeight {};
 		class licenseType {};
 		class eatFood {};
 		class varHandle {};
@@ -135,15 +93,27 @@ class Life_Client_Core
 		class vehShopLicenses {};
 		class vehicleAnimate {};
 		class weaponShopCfg {};
-		class vehicleWeightCfg {};
-		class houseContainers {};
-        class housePrice {};
 		
 		//Clothing Store Configs
 		class clothing_cop {};
 		class clothing_bruce {};
 		class clothing_reb {};
 		class clothing_dive {};
+		
+		//Housing
+		class houseContainers {};
+        class housePrice {};
+	};
+	
+	class session
+	{
+		file = "core\session";
+		class sessionSetup {};
+		class sessionReceive {};
+		class sessionUpdate {};
+		class sessionCreate {};
+		class sessionHandle {};
+		class syncData {};
 	};
 
 	class Player_Menu
@@ -192,32 +162,26 @@ class Life_Client_Core
 		class receiveItem {};
 		class giveDiff {};
 		class receiveMoney {};
-		class setUniformTexture {};
+                class setUniformTexture {};
 		class playerTags {};
 		class clearVehicleAmmo {};
 		class pulloutVeh {};
 		class nearUnits {};
 		class fedSuccess {};
 		class actionKeyHandler {};
-		class playerCount {};
-		class fetchDeadGear {};
-		class loadDeadGear {};
-		class isnumeric {};
-		class escInterupt {};
-		class onTakeItem {};
-		class fetchVehInfo {};
-		class updateCash {};
-        class vehicleGarage {};
 		class gateAct {};
-		class robBanks {};
-		class robBanks2 {};
+                class robBanks {};
                 class robShops {};  
                 class robShops2 {}; 
                 class shopState {};
-		
+                class holsterHandgun {};
+
+		//Housing
+        class updateCash {};
+        class vehicleGarage {};
 	};
-		
-    class Housing
+	
+	class Housing
     {
         file = "core\housing";
         class buyHouse {};
@@ -240,7 +204,6 @@ class Life_Client_Core
         class onTake {};
     };
 	
-	
 	class Network
 	{
 		file = "core\functions\network";
@@ -248,8 +211,6 @@ class Life_Client_Core
 		class MP {};
 		class MPexec {};
 		class netSetVar {};
-		class corpse {};
-		class jumpFnc {};
 	};
 	
 	class Civilian
@@ -267,7 +228,7 @@ class Life_Client_Core
 		class robPerson {};
 		class removeLicenses {};
 		class zoneCreator {};
-		 
+
 	};
 	
 	class Vehicle
@@ -281,7 +242,6 @@ class Life_Client_Core
 		class vehTakeItem {};
 		class vehInventory {};
 		class vInteractionMenu {};
-		class vehicleWeight {};
 	};
 	
 	class Cop
@@ -307,6 +267,8 @@ class Life_Client_Core
 		class sirenLights {};
 		class licenseCheck {};
 		class licensesRead {};
+		
+		//Housing
 		class houseOwnerSearch {};
         class houseInvSearch {};
         class raidHouse {};
@@ -335,9 +297,10 @@ class Life_Client_Core
 		class changeClothes {};
 		class clothingMenu {};
 		class clothingFilter {};
-		class vehicleShopMenu {};
-		class vehicleShopLBChange {};
+		class vehicleShop {};
+		class vehicleColorList {};
 		class vehicleShopBuy {};
+		class vehicleShopBuySave {};
 		class weaponShopFilter {};
 		class weaponShopMenu {};
 		class weaponShopSelection {};
@@ -358,11 +321,7 @@ class Life_Client_Core
 		class lockpick {};
 		class spikeStrip {};
 		class jerryRefuel {};
-		class moonshine {};
-		class weed {};
-		class heroine {};
-		class beer {};
-		class LSD {};
+                class bankalarmsound {};
 	};
 	
 	class Dialog_Controls
@@ -378,29 +337,8 @@ class Life_Client_Core
 		class impoundMenu {};
 		class unimpound {};
 		class sellGarage {};
-		class bankDeposit {};
-		class bankWithdraw {};
-		class bankTransfer {};
-		class garageLBChange {};
+		
+		//Housing
 		class houseMenu {};
 	};
-
-class Market
-	{
-		file = "core\market";
-		
-		class openMarketView;
-		class refreshMarketView;
-		class marketShortView;
-		class marketBuy;
-		class marketSell;
-		class marketGetBuyPrice;
-		class marketGetSellPrice;
-		class marketconfiguration;
-		class marketReset;
-		class marketChange;
-		class marketGetRow;
-		class marketGetPriceRow;
-		class marketSetPriceRow;
-	};	
 };

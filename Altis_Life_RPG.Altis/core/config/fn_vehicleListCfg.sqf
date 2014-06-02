@@ -270,6 +270,7 @@ switch (_shop) do
 		
 	case "cop_car_1":
 	{
+		_return set[count _return, ["B_Quadbike_01_F",2500]];
 		_return set[count _return, ["C_Offroad_01_F",5000]];
 		if(__GETC__(life_coplevel) > 2) then
 		{			
@@ -289,6 +290,7 @@ switch (_shop) do
 	
 	case "cop_car_2":
 	{
+		_return set[count _return, ["B_Quadbike_01_F",2500]];
 		_return set[count _return, ["C_Offroad_01_F",5000]];
 		if(__GETC__(life_coplevel) > 2) then
 		{			
@@ -308,6 +310,7 @@ switch (_shop) do
 	
 	case "cop_car_3":
 	{
+		_return set[count _return, ["B_Quadbike_01_F",2500]];
 		_return set[count _return, ["C_Offroad_01_F",5000]];
 		if(__GETC__(life_coplevel) > 2) then
 		{			
@@ -327,6 +330,7 @@ switch (_shop) do
 	
 	case "cop_car_5":
 	{
+		_return set[count _return, ["B_Quadbike_01_F",2500]];
 		_return set[count _return, ["C_Offroad_01_F",5000]];
 		if(__GETC__(life_coplevel) > 2) then
 		{			
@@ -346,6 +350,7 @@ switch (_shop) do
 	
 	case "cop_car_6":
 	{
+		_return set[count _return, ["B_Quadbike_01_F",2500]];
 		_return set[count _return, ["C_Offroad_01_F",5000]];
 		if(__GETC__(life_coplevel) > 2) then
 		{			
@@ -491,6 +496,7 @@ switch (_shop) do
 	{
 		_return =
 		[
+			["C_Kart_01_F",250],
 			["B_Quadbike_01_F",500],
 			["C_Offroad_01_F",2500],
 			["C_Hatchback_01_sport_F",10000],
