@@ -15,7 +15,7 @@ switch(life_veh_shop) do
 	{
 		_sp = getMarkerPos "civ_car_1";
 		_dir = markerDir "civ_car_1";
-		if(count(nearestObjects[_sp,["Car","Ship","Air"],2]) > 0) then 
+		if(count(nearestObjects[_sp,["Car","Ship","Air","Tank","Support"],2]) > 0) then 
 		{
 			_sp = getMarkerPos "civ_car_1_1";
 			_dir = markerDir "civ_car_1_1";
@@ -26,7 +26,7 @@ switch(life_veh_shop) do
 	{
 		_sp = getMarkerPos "donator_1";
 		_dir = markerDir "donator_1";
-		if(count(nearestObjects[_sp,["Car","Ship","Air"],2]) > 0) then 
+		if(count(nearestObjects[_sp,["Car","Ship","Air","Tank","Support"],2]) > 0) then 
 		{
 			_sp = getMarkerPos "donator_1_1";
 			_dir = markerDir "donator_1_1";
@@ -37,7 +37,7 @@ switch(life_veh_shop) do
 	{
 		_sp = getMarkerPos "donator_2";
 		_dir = markerDir "donator_2";
-		if(count(nearestObjects[_sp,["Car","Ship","Air"],5]) > 0) then 
+		if(count(nearestObjects[_sp,["Car","Ship","Air","Tank","Support"],5]) > 0) then 
 		{
 			_sp = getMarkerPos "donator_2_1";
 			_dir = markerDir "donator_2_1";
@@ -48,7 +48,7 @@ switch(life_veh_shop) do
 	{
 		_sp = getMarkerPos "donator_All_vehicle_spawn";
 		_dir = markerDir "donator_All_vehicle_spawn";
-		if(count(nearestObjects[_sp,["Car","Ship","Air"],2]) > 0) then 
+		if(count(nearestObjects[_sp,["Car","Ship","Air","Tank","Support"],2]) > 0) then 
 		{
 			_sp = getMarkerPos "donator_All_vehicle_spawn";
 			_dir = markerDir "donator_All_vehicle_spawn";
@@ -59,7 +59,7 @@ switch(life_veh_shop) do
 	{
 		_sp = getMarkerPos "donator_4";
 		_dir = markerDir "donator_4";
-		if(count(nearestObjects[_sp,["Car","Ship","Air"],5]) > 0) then 
+		if(count(nearestObjects[_sp,["Car","Ship","Air","Tank","Support"],5]) > 0) then 
 		{
 			_sp = getMarkerPos "donator_4";
 			_dir = markerDir "donator_4";
@@ -124,14 +124,14 @@ switch(life_veh_shop) do
 	{
 		_sp = getMarkerPos "fed_car_1";
 		_dir = markerDir "fed_car_1";
-		if(count(nearestObjects[_sp,["Car","Ship","Air"],20]) > 0) exitWith {hint "There is a vehicle on the spawn point."};
+		if(count(nearestObjects[_sp,["Car","Ship","Air","Tank","Support"],20]) > 0) exitWith {hint "There is a vehicle on the spawn point."};
 	};
 	
 	case "fed_air":
 	{
 		_sp = getMarkerPos "fed_air_1";
 		_dir = markerDir "fed_air_1";
-		if(count(nearestObjects[_sp,["Car","Ship","Air"],20]) > 0) exitWith {hint "There is a vehicle on the spawn point."};
+		if(count(nearestObjects[_sp,["Car","Ship","Air","Tank","Support"],20]) > 0) exitWith {hint "There is a vehicle on the spawn point."};
 	};
 	
 	case "civ_ship_1":
@@ -158,7 +158,7 @@ switch(life_veh_shop) do
 		_sp = getMarkerPos "civ_air_1";
 		_dir = markerDir "civ_air_1";
 		
-		if(count(nearestObjects[_sp,["Car","Ship","Air"],2]) > 0) then 
+		if(count(nearestObjects[_sp,["Car","Ship","Air","Tank","Support"],2]) > 0) then 
 		{
 			_sp = getMarkerPos "civ_air_1_2";
 			_dir = markerDir "civ_air_1_2";
@@ -170,7 +170,7 @@ switch(life_veh_shop) do
 		_sp = getMarkerPos "civ_air_2";
 		_dir = markerDir "civ_air_2";
 		
-		if(count(nearestObjects[_sp,["Car","Ship","Air"],2]) > 0) then 
+		if(count(nearestObjects[_sp,["Car","Ship","Air","Tank","Support"],2]) > 0) then 
 		{
 			_sp = getMarkerPos "civ_car_2_2";
 			_dir = markerDir "civ_car_2_2";
@@ -182,7 +182,7 @@ switch(life_veh_shop) do
 		_sp = getMarkerPos "civ_air_3";
 		_dir = markerDir "civ_air_3";
 		
-		if(count(nearestObjects[_sp,["Car","Ship","Air"],2]) > 0) then 
+		if(count(nearestObjects[_sp,["Car","Ship","Air","Tank","Support"],2]) > 0) then 
 		{
 			_sp = getMarkerPos "civ_air_3_1";
 			_dir = markerDir "civ_air_3_1";
@@ -200,7 +200,7 @@ switch(life_veh_shop) do
 		_sp = getMarkerPos "civ_truck_2";
 		_dir = markerDir "civ_truck_2";
 		
-		if(count(nearestObjects[_sp,["Car","Ship","Air"],3]) > 0) then 
+		if(count(nearestObjects[_sp,["Car","Ship","Air","Tank","Support"],3]) > 0) then 
 		{
 			_sp = getMarkerPos "civ_truck_2_1";
 			_dir = markerDir "civ_truck_2_1";
@@ -285,7 +285,7 @@ if(life_cash < _price) exitWith {hint "You do not have enough money"};
 hint "This may take a second or two.";
 sleep floor(random 3);
 
-if(count(nearestObjects[_sp,["Car","Ship","Air"],4]) > 0) exitWith {hint "There is a vehicle on the spawn point."};
+if(count(nearestObjects[_sp,["Car","Ship","Air","Tank","Support"],4]) > 0) exitWith {hint "There is a vehicle on the spawn point."};
 
 _sv = false;
 

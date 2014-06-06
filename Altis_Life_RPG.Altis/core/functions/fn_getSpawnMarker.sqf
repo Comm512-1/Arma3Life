@@ -13,7 +13,7 @@ life_veh_sp = "";
 	_pos = markerPos _x;
 	_dist = (_npc) distance _pos;
 	if(_dist <= 100) then{
-		if(count(nearestObjects[(_pos),["Car","Ship","Air"],4]) == 0) then {
+		if(count(nearestObjects[(_pos),["Car","Ship","Air","Tank","Support"],4]) == 0) then {
 			if (life_veh_sp == "") then {
 				life_veh_sp = _x;
 			} else {

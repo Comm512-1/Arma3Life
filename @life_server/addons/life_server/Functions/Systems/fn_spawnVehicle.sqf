@@ -58,7 +58,7 @@ if((_vInfo select 6) == "True") exitWith
 	[[1,format["Sorry but %1 is already active somewhere in the map and cannot be spawned.",_vInfo select 2]],"life_fnc_broadcast",_unit,false] spawn life_fnc_MP;
 };
 
-_nearVehicles = nearestObjects[_sp,["Car","Air","Ship"],10];
+_nearVehicles = nearestObjects[_sp,["Car","Air","Ship","Tank","Support"],10];
 if(count _nearVehicles > 0) exitWith
 {
 	serv_sv_use = serv_sv_use - [_vid];

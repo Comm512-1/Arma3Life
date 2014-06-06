@@ -7,6 +7,7 @@
 */
 private["_mode","_spawnPoints","_className","_basePrice","_colorIndex","_spawnPoint","_vehicle"];
 _mode = _this select 0;
+diag_log format["VEHICLE _mode %1", _mode];
 if((lbCurSel 2302) == -1) exitWith {hint "You did not pick a vehicle!"};
 _className = lbData[2302,(lbCurSel 2302)];
 _vIndex = lbValue[2302,(lbCurSel 2302)];
@@ -28,9 +29,9 @@ if((life_veh_shop select 0) == "med_air_hs") then {
 	//Check if there is multiple spawn points and find a suitable spawnpoint.
 	if(typeName _spawnPoints == typeName []) then {
 		//Find an available spawn point.
-		{if(count(nearestObjects[(getMarkerPos _x),["Car","Ship","Air"],5]) == 0) exitWith {_spawnPoint = _x};} foreach _spawnPoints;
+		{if(count(nearestObjects[(getMarkerPos _x),["Car","Ship","Air","Tank","Support"],5]) == 0) exitWith {_spawnPoint = _x};} foreach _spawnPoints;
 	} else {
-		if(count(nearestObjects[(getMarkerPos _spawnPoints),["Car","Ship","Air"],5]) == 0) exitWith {_spawnPoint = _spawnPoints};
+		if(count(nearestObjects[(getMarkerPos _spawnPoints),["Car","Ship","Air","Tank","Support"],5]) == 0) exitWith {_spawnPoint = _spawnPoints};
 	};
 };
 
@@ -83,9 +84,8 @@ switch(playerSide) do {
 
 life_vehicles set[count life_vehicles,_vehicle]; //Add err to the chain.
 if(_mode) then {
-	if(!(_className in ["B_G_Offroad_01_armed_F","B_MRAP_01_hmg_F"])) then {
-		[[(getPlayerUID player),playerSide,_vehicle,_colorIndex],"TON_fnc_vehicleCreate",false,false] spawn life_fnc_MP;
-	};
+	diag_log "VehicleShopBuy aan het maken";
+	[[(getPlayerUID player),playerSide,_vehicle,_colorIndex],"TON_fnc_vehicleCreate",false,false] spawn life_fnc_MP;
 };
 
 [] call SOCK_fnc_updateRequest; //Sync silently because it's obviously silently..

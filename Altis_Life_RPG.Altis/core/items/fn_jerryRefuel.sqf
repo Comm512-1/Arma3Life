@@ -9,7 +9,7 @@ private["_vehicle","_displayName","_upp","_ui","_progress","_pgText","_cP","_pre
 _vehicle = cursorTarget;
 life_interrupted = false;
 if(isNull _vehicle) exitWith {hint "You need to look at the vehicle you want to refuel!"};
-if(!(_vehicle isKindOF "LandVehicle") && !(_vehicle isKindOf "Air") && !(_vehicle isKindOf "Ship")) exitWith {};
+if(!(_vehicle isKindOF "LandVehicle") && !(_vehicle isKindOf "Air") && !(_vehicle isKindOf "Ship") && !(_vehicle isKindOf "Tank") && !(_vehicle isKindOf "Support")) exitWith {};
 if(player distance _vehicle > 7.5) exitWith {hint "You need to be closer to the vehicle!"};
 
 if(!([false,"fuelF",1] call life_fnc_handleInv)) exitWith {};
@@ -83,6 +83,30 @@ switch (true) do
 			else
 		{
 			_vehicle setFuel ((Fuel _vehicle) + 0.35);
+		};
+	};
+	
+	case (_vehicle isKindOf "Tank"):
+	{
+		if(!local _vehicle) then
+		{
+			[[[_vehicle],{_this select 0 setFuel ((Fuel (_this select 0)) + 0.2);}],"BIS_fnc_spawn",_vehicle,false] spawn life_fnc_MP;
+		}
+			else
+		{
+			_vehicle setFuel ((Fuel _vehicle) + 0.2);
+		};
+	};
+	
+	case (_vehicle isKindOf "Support"):
+	{
+		if(!local _vehicle) then
+		{
+			[[[_vehicle],{_this select 0 setFuel ((Fuel (_this select 0)) + 0.2);}],"BIS_fnc_spawn",_vehicle,false] spawn life_fnc_MP;
+		}
+			else
+		{
+			_vehicle setFuel ((Fuel _vehicle) + 0.2);
 		};
 	};
 };

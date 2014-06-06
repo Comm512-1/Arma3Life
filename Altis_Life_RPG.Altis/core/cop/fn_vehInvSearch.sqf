@@ -9,7 +9,7 @@
 private["_vehicle","_vehicleInfo","_value"];
 _vehicle = cursorTarget;
 if(isNull _vehicle) exitWith {};
-if(!((_vehicle isKindOf "Air") OR (_vehicle isKindOf "Ship") OR (_vehicle isKindOf "LandVehicle"))) exitWith {};
+if(!((_vehicle isKindOf "Air") OR (_vehicle isKindOf "Ship") OR (_vehicle isKindOf "LandVehicle") OR (_vehicle isKindOf "Tank") OR (_vehicle isKindOf "Support"))) exitWith {};
 
 _vehicleInfo = _vehicle getVariable ["Trunk",[]];
 if(count _vehicleInfo == 0) exitWith {hint "This vehicle is empty"};

@@ -24,7 +24,7 @@ while{true} do
 
 // Vehicle Actions
 if(_count % 5 == 0) then {
-if(!isNull cursorTarget && (player distance cursorTarget) < 7 && speed cursorTarget < 5 && (cursorTarget isKindOf "Car" || cursorTarget isKindOf "Air" || cursorTarget isKindOf "Ship") && !life_action_inUse && vehicle player == player && Alive player) then {
+if(!isNull cursorTarget && (player distance cursorTarget) < 7 && speed cursorTarget < 5 && (cursorTarget isKindOf "Car" || cursorTarget isKindOf "Air" || cursorTarget isKindOf "Ship" || cursorTarget isKindOf "Tank" || cursorTarget isKindOf "Support") && !life_action_inUse && vehicle player == player && Alive player) then {
 if((count _vehActions) == 0) then {
 switch (playerSide) do
 {
@@ -33,33 +33,33 @@ switch (playerSide) do
 	{
 		//Impound Vehicle
 		_vehActions = _vehActions + [player addAction["Impound Vehicle",life_fnc_impoundAction,"",0,false,false,"",
-		' !isNull cursorTarget && (player distance cursorTarget) < 6 && speed cursorTarget < 2 && (cursorTarget isKindOf "Car" || cursorTarget isKindOf "Air" || cursorTarget isKindOf "Ship") && !life_action_inUse' ]];
+		' !isNull cursorTarget && (player distance cursorTarget) < 6 && speed cursorTarget < 2 && (cursorTarget isKindOf "Car" || cursorTarget isKindOf "Air" || cursorTarget isKindOf "Ship" || cursorTarget isKindOf "Tank" || cursorTarget isKindOf "Support") && !life_action_inUse' ]];
 		//Search Vehicle
 		_vehActions = _vehActions + [player addAction["Search Vehicle",life_fnc_searchVehAction,cursorTarget,0,false,false,"",
-		' !isNull cursorTarget && (player distance cursorTarget) < 5 && speed cursorTarget < 2 && (cursorTarget isKindOf "Car" || cursorTarget isKindOf "Air" || cursorTarget isKindOf "Ship") && !life_action_inUse']];
+		' !isNull cursorTarget && (player distance cursorTarget) < 5 && speed cursorTarget < 2 && (cursorTarget isKindOf "Car" || cursorTarget isKindOf "Air" || cursorTarget isKindOf "Ship" || cursorTarget isKindOf "Tank" || cursorTarget isKindOf "Support") && !life_action_inUse']];
 		// Search Trunk
 		_vehActions = _vehActions + [player addAction["Search Trunk",life_fnc_vehInvSearch,cursorTarget,0,false,false,"",
-		' !isNull cursorTarget && (player distance cursorTarget) < 6 && speed cursorTarget < 2 && (cursorTarget isKindOf "Car" || cursorTarget isKindOf "Air" || cursorTarget isKindOf "Ship") && !life_action_inUse']];
+		' !isNull cursorTarget && (player distance cursorTarget) < 6 && speed cursorTarget < 2 && (cursorTarget isKindOf "Car" || cursorTarget isKindOf "Air" || cursorTarget isKindOf "Ship" || cursorTarget isKindOf "Tank" || cursorTarget isKindOf "Support") && !life_action_inUse']];
 		// Force open car GARAGEbug
 		_vehActions = _vehActions + [player addAction["GARAGENBUG Open",{ [] spawn { player moveInDriver cursorTarget; sleep 2; (vehicle player) lock 0; sleep 1; moveOut player; }; },"",0,false,false,"",
-		' !isNull cursorTarget && (player distance cursorTarget) < 5 && speed cursorTarget < 2 && (cursorTarget isKindOf "Car" || cursorTarget isKindOf "Air" || cursorTarget isKindOf "Ship") && !life_action_inUse']];
+		' !isNull cursorTarget && (player distance cursorTarget) < 5 && speed cursorTarget < 2 && (cursorTarget isKindOf "Car" || cursorTarget isKindOf "Air" || cursorTarget isKindOf "Ship" || cursorTarget isKindOf "Tank" || cursorTarget isKindOf "Support") && !life_action_inUse']];
 		// Put in Vehicle
 		_vehActions = _vehActions + [player addAction["Put in Vehicle",life_fnc_putInCar,"",5,false,false,"",
-		' !isNull cursorTarget && (player distance cursorTarget) < 6 && speed cursorTarget < 2 && (cursorTarget isKindOf "Car" || cursorTarget isKindOf "Air" || cursorTarget isKindOf "Ship") && ((((position player) nearEntities [["Man"],5]) select 0) getVariable "Escorting")' ]];
+		' !isNull cursorTarget && (player distance cursorTarget) < 6 && speed cursorTarget < 2 && (cursorTarget isKindOf "Car" || cursorTarget isKindOf "Air" || cursorTarget isKindOf "Ship" || cursorTarget isKindOf "Tank" || cursorTarget isKindOf "Support") && ((((position player) nearEntities [["Man"],5]) select 0) getVariable "Escorting")' ]];
 		_vehActions = _vehActions + [player addAction["Pull out of vehicle",life_fnc_pulloutAction,cursorTarget,0,false,false,"",
-		' !isNull cursorTarget && (player distance cursorTarget) < 4 && (count crew cursorTarget) > 0 && speed cursorTarget < 2 && (cursorTarget isKindOf "Car" || cursorTarget isKindOf "Air" || cursorTarget isKindOf "Ship") && !life_action_inUse']];
+		' !isNull cursorTarget && (player distance cursorTarget) < 4 && (count crew cursorTarget) > 0 && speed cursorTarget < 2 && (cursorTarget isKindOf "Car" || cursorTarget isKindOf "Air" || cursorTarget isKindOf "Ship" || cursorTarget isKindOf "Tank" || cursorTarget isKindOf "Support") && !life_action_inUse']];
 	};
 	case civilian:
 	{
 		// Put in Vehicle
 		_vehActions = _vehActions + [player addAction["Put in Vehicle",life_fnc_putInCar,"",5,false,false,"",
-		' !isNull cursorTarget && (player distance cursorTarget) < 6 && speed cursorTarget < 2 && (cursorTarget isKindOf "Car" || cursorTarget isKindOf "Ship") && ((((position player) nearEntities [["Man"],5]) select 0) getVariable "Escorting")' ]];
+		' !isNull cursorTarget && (player distance cursorTarget) < 6 && speed cursorTarget < 2 && (cursorTarget isKindOf "Car" || cursorTarget isKindOf "Ship" || cursorTarget isKindOf "Tank" || cursorTarget isKindOf "Support") && ((((position player) nearEntities [["Man"],5]) select 0) getVariable "Escorting")' ]];
 	};
 };
 
 //Custom Repair
 _vehActions = _vehActions + [player addAction["<t color='#FF0000'>Repair Vehicle</t>",life_fnc_repairTruck,"",99,false,false,"", 
-' vehicle player == player && !isNull cursorTarget && ((cursorTarget isKindOf "Car") OR (cursorTarget isKindOf "Air") OR (cursorTarget isKindOf "Ship")) && (damage cursorTarget) > 0.001 && ("ToolKit" in (backpackItems player)) && (player distance cursorTarget < ((boundingBox cursorTarget select 1) select 0) + 2) ']];
+' vehicle player == player && !isNull cursorTarget && ((cursorTarget isKindOf "Car") OR (cursorTarget isKindOf "Air") OR (cursorTarget isKindOf "Ship") OR (cursorTarget isKindOf "Tank") OR (cursorTarget isKindOf "Support")) && (damage cursorTarget) > 0.001 && ("ToolKit" in (backpackItems player)) && (player distance cursorTarget < ((boundingBox cursorTarget select 1) select 0) + 2) ']];
 };
 } else {
 	if((count _vehActions) > 0) then {

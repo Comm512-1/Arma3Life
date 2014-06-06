@@ -17,7 +17,7 @@ _veh = life_vehicles select parseNumber(_veh);
 _price = _cars lbValue _sel;
 if(_veh distance impound_obj < 50) then
 {
-
+	diag_log "DIT MAG NIET IN DE LOGS KOMEN";
 	hint format["%1", life_impound_yard];
 	switch (life_impound_yard) do
 	{
@@ -28,6 +28,8 @@ if(_veh distance impound_obj < 50) then
 				case (_veh isKindOf "Car") : {_pos = getPos car_impound;};
 				case (_veh isKindOf "Air") : {_pos = getPos air_impound;};
 				case (_veh isKindOf "Ship") : {_pos = getPos boat_impound;};
+				case (_veh isKindOf "Tank") : {_pos = getPos armored_impound;};
+				case (_veh isKindOf "Support") : {_pos = getPos support_impound;};
 			};
 		};
 		
@@ -38,6 +40,8 @@ if(_veh distance impound_obj < 50) then
 				case (_veh isKindOf "Car") : {_pos = getPos cop_car_impound;};
 				case (_veh isKindOf "Air") : {_pos = getPos cop_air_impound;};
 				case (_veh isKindOf "Ship") : {_pos = getPos cop_boat_impound;};
+				case (_veh isKindOf "Tank") : {_pos = getPos cop_armored_impound;};
+				case (_veh isKindOf "Support") : {_pos = getPos cop_support_impound;};
 			};
 		};
 	};

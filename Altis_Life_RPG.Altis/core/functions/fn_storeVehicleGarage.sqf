@@ -9,7 +9,7 @@ private["_nearVehicle","_near","_uid"];
 _nearVehicle = objNull;
 if ((player distance cursorTarget) > 5) exitWith {hint"You are too far away to use this NPC."};
 if (vehicle player != player) exitWith {hint"You cannot use this npc while in a vehicle."};
-_near = nearestObjects[(getPos (_this select 0)),["Car","Ship","Air"],200];
+_near = nearestObjects[(getPos (_this select 0)),["Car","Ship","Air","Tank","Support"],200];
 {
 	_uid = _x getVariable["dbInfo",[""]] select 0;
 	if (_uid == getPlayerUID player) exitWith {_nearVehicle = _x;};

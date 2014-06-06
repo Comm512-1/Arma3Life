@@ -110,7 +110,7 @@ switch (_code) do
 			}
 				else
 			{
-				if((cursorTarget isKindOf "Car" OR cursorTarget isKindOf "Air" OR cursorTarget isKindOf "Ship") && player distance cursorTarget < 7 && vehicle player == player && alive cursorTarget) then
+				if((cursorTarget isKindOf "Car" OR cursorTarget isKindOf "Air" OR cursorTarget isKindOf "Ship" OR cursorTarget isKindOf "Tank" OR cursorTarget isKindOf "Support") && player distance cursorTarget < 7 && vehicle player == player && alive cursorTarget) then
 				{
 					if(cursorTarget in life_vehicles) then
 					{

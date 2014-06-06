@@ -7,7 +7,7 @@
 	*Needs to be revised for new system and flow*
 */
 private["_nearby"];
-_nearby = nearestObjects[(vehicle player),["Car","Ship","Air"],10];
+_nearby = nearestObjects[(vehicle player),["Car","Ship","Air","Tank","Support"],10];
 if(count (_nearby) > 1) then
 {
 	_vehicle = _nearby select 1;
