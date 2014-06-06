@@ -29,12 +29,13 @@ _itemInfo = switch (_type) do
 	case "cement": {[["rock"],"cement",350,"Mixing Cement",0]};
 	case "platinum": {[["platinum"],"platinumr",1550,"Processing Platinum",0]};
 	case "silver": {[["silver"],"silverr",1150,"Processing Silver",0]};
-	case "frog": {[["frog"],"frogp",1700,"Processing Frog LSD",0]};
 	case "methu": {[["lithium","phosphorous","ephedra"],"methu",500,"Processing Unprocessed Meth",0]};
 	case "crystalmeth": {[["methu"],"crystalmeth",2300,"Breaking up the Ice",0]};
-	//case "beer": {[["barley","hops"],"beer",1800,"Brewing Beer",0]};
+	case "beer": {[["barley","hops"],"beer",1800,"Brewing Beer",0]};
 	case "mashu": {[["sugar","yeast","corn"],"mashu",500,"Processing into Sour Mash",0]};
 	case "moonshine": {[["mashu"],"moonshine",2200,"Brewing Moonshine",0]};
+	case "frogleg": {["frog","frogleg",250,"Extracting Froglegs"]};
+	case "lsd": {["frog","lsd",1000,"Extracting LSD"]};
 	default {[]};
 };
 

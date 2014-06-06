@@ -5,20 +5,22 @@
 	Description:
 	Improved Manual Gathering for Hops
 */
-
-/*
 private["_sum"];
-_sum = ["hops",ceil(random 3),life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
+_sum = ["Hops",ceil(random 3),life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 
 if(_sum > 0) then
 {
 	life_action_inUse = true;
-	titleText["Gathering hops flowers ...","PLAIN"];
+	titleText["Gathering hops ...","PLAIN"];
 	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-	sleep 3;
+	sleep 2;
+	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
+	sleep 2;
+	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
+	sleep 1;
 	if(([true,"hops",_sum] call life_fnc_handleInv)) then
 	{
-		titleText[format["You have gathered %1 hops flower(s).",_sum],"PLAIN"];
+		titleText[format["You have gathered %1 hops",_sum],"PLAIN"];
 	};
 }
 	else
@@ -27,9 +29,3 @@ if(_sum > 0) then
 };
 
 life_action_inUse = false;
-
-
-*/
-
-
-

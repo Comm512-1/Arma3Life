@@ -38,6 +38,36 @@ switch (true) do
 		};
 	};
 	
+	// Changes by Mario
+	case (_item == "cocainep"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			[] spawn life_fnc_cocaineUse;
+		};
+	};
+	
+	case (_item == "marijuana"):
+	{
+		if(life_drugged_weed == 1) then {
+			hint "You already smoke some Weed";
+		} else {
+			if(([false,_item,1] call life_fnc_handleInv)) then
+			{
+				[] spawn life_fnc_weedUse;
+			};
+		};
+	};
+	
+	case (_item == "lsd"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			[] spawn life_fnc_lsdUse;
+		};
+	};
+	
+	
 	case (_item == "spikeStrip"):
 	{
 		if(!isNull life_spikestrip) exitWith {hint "You already have a Spike Strip active in deployment"};
@@ -54,13 +84,7 @@ switch (true) do
 			[] spawn life_fnc_heroine;
 		};
 	};
-	case (_item == "cocainep"):
-	{
-		if(([false,_item,1] call life_fnc_handleInv)) then
-		{
-			[] spawn life_fnc_heroin;
-		};
-	};
+	
 	
 	case (_item == "fuelF"):
 	{
@@ -89,6 +113,11 @@ switch (true) do
 	case "fishing":
 	{
 		[] spawn fnc_fishing;
+	};
+	
+	case (_item == "frognet"):
+	{
+		[] spawn life_fnc_frognetUse;
 	};
 	
 	case (_item == "pickaxe"):
@@ -121,13 +150,6 @@ switch (true) do
 		};
 	};
 	
-	case (_item == "frogp"):
-	{
-		if(([false,_item,1] call life_fnc_handleInv)) then
-		{
-			[] spawn life_fnc_LSD;
-		};
-	};
 	
 	default
 	{

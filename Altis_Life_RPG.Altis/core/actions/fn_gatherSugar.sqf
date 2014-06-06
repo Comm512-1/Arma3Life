@@ -6,17 +6,21 @@
 	Improved Manual Gathering for Sugar
 */
 private["_sum"];
-_sum = ["sugar",ceil(random 4),life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
+_sum = ["sugar",ceil(random 3),life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 
 if(_sum > 0) then
 {
 	life_action_inUse = true;
 	titleText["Gathering sugar ...","PLAIN"];
 	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-	sleep 4;
+	sleep 2;
+	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
+	sleep 2;
+	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
+	sleep 1;
 	if(([true,"sugar",_sum] call life_fnc_handleInv)) then
 	{
-		titleText[format["You have gathered %1 sugar.",_sum],"PLAIN"];
+		titleText[format["You have gathered %1 sugar",_sum],"PLAIN"];
 	};
 }
 	else
@@ -25,7 +29,3 @@ if(_sum > 0) then
 };
 
 life_action_inUse = false;
-
-
-
-

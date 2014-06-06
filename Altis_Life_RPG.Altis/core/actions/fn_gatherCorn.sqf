@@ -13,10 +13,14 @@ if(_sum > 0) then
 	life_action_inUse = true;
 	titleText["Gathering corn ...","PLAIN"];
 	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-	sleep 3;
+	sleep 2;
+	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
+	sleep 2;
+	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
+	sleep 1;
 	if(([true,"corn",_sum] call life_fnc_handleInv)) then
 	{
-		titleText[format["You have gathered %1 corn.",_sum],"PLAIN"];
+		titleText[format["You have gathered %1 corn",_sum],"PLAIN"];
 	};
 }
 	else
@@ -25,7 +29,3 @@ if(_sum > 0) then
 };
 
 life_action_inUse = false;
-
-
-
-

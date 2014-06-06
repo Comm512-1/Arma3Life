@@ -49,7 +49,7 @@ switch (_vehicle) do
 			case 8: {_color = "Blue Smile"};
 			case 9: {_color = "Grandpa"};
 			case 10: {_color = "Sunset"};
-			case 11: {_color = "Tuning"};
+			case 11: {_color = "Monster"};
 			case 12: {_color = "Wave"};
 		};
 	};
@@ -68,7 +68,7 @@ switch (_vehicle) do
 			case 7: {_color = "Blue Smile"};
 			case 8: {_color = "Grandpa"};
 			case 9: {_color = "Sunset"};
-			case 10: {_color = "Tuning"};
+			case 10: {_color = "Monster"};
 			case 11: {_color = "Wave"};
 		};
 	};
@@ -83,7 +83,7 @@ switch (_vehicle) do
 			case 3: {_color = "Orange";};
 			case 4: {_color = "Cop";};
 			case 5: {_color = "Bimbo Gurl";};
-			case 6: {_color = "Grandpa";};
+			case 6: {_color = "Monster";};
 			case 7: {_color = "Poison Green";};
 			case 8: {_color = "Oxygen";};
 			case 9: {_color = "Sunset";};
@@ -152,7 +152,7 @@ switch (_vehicle) do
 			case 11: {_color = "Vrana"};
 			case 12: {_color = "Waves Blue"};
 			case 13: {_color = "Rebel Digital"};
-			case 14: {_color = "EMS White"};
+			case 14: {_color = "Trauma Heli"};
 		};
 	};
 	

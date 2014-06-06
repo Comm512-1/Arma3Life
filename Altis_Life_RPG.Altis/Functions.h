@@ -88,32 +88,31 @@ class Life_Client_Core
 		class searchVehAction {};
 		class unrestrain {};
 		class pickupItem {};
+                class surrender {};
 		class pickupMoney {};
 		class ticketAction {};
 		class gatherPeaches {};
+		class gatherSilver {};
+		class gatherBarley {};
 		class gatherCocaine {};
+		class gatherCorn {};
+		class gatherEphedra {};
+		class gatherFrog {};
+		class gatherHops {};
+		class gatherLithium {};
+		class gatherPhosphorous {};
+		class gatherSalt {};
 		class pumpRepair {};
+		class gatherYeast {};
+		class gatherSugar {};
+		class gatherPlatinum {};
 		class packupSpikes {};
 		class robFederal {};
 		class storeVehicle {};
 		class robAction {};
-		class surrender {};
 		class sellTurtle {};
-		class gatherLithium {};
-		class gatherPhosphorous {};
-		class gatherEphedra {};
-		//class gatherHops {};
-		//class gatherBarley {};
-		class flipAction {};
-		class gatherSugar {};
-		class gatherYeast {};
-		class gatherCorn {};
-		class gatherFrog {};
-		//class suicideVest {};
-		//class restrainciv {};
-		//class restraincivAction {};
-		//class unrestrainciv {};
-		//lass unrestraincivAction {};
+		class extinguishJoint {};
+		class drugtestAction {};
 	};
 	
 	class Config
@@ -214,6 +213,8 @@ class Life_Client_Core
                 class robShops {};  
                 class robShops2 {}; 
                 class shopState {};
+				class weedSmoke {};
+				class weaknessEffects {};
 		
 	};
 		
@@ -359,10 +360,13 @@ class Life_Client_Core
 		class spikeStrip {};
 		class jerryRefuel {};
 		class moonshine {};
-		class weed {};
+		//class weed {};
 		class heroine {};
 		class beer {};
-		class LSD {};
+		class cocaineUse {};
+		class weedUse {};
+		class frognetUse {};
+		class lsdUse {};
 	};
 	
 	class Dialog_Controls

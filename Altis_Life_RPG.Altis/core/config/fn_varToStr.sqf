@@ -58,8 +58,6 @@ switch (_var) do
 	case "life_inv_goldbar": {"Gold Bar"};
     case "life_inv_storage1": {"House Storage"};
     case "life_inv_storage2": {"House Storage Large"};
-	case "life_inv_frog": {"Frog"};
-	case "life_inv_frogp": {"Frog LSD"};
 	case "life_inv_crystalmeth": {"Blue Crystal Meth"};
 	case "life_inv_methu": {"Unprocessed Meth"};
 	case "life_inv_phosphorous": {"Red Phosphorous"};
@@ -70,12 +68,19 @@ switch (_var) do
 	case "life_inv_corn": {"Corn"};
 	case "life_inv_sugar": {"Sugar"};
 	case "life_inv_yeast": {"Yeast"};
+	case "life_inv_hops": {"Hops"};
+	case "life_inv_barley": {"Barley"};
 	case "life_inv_platinum": {"Platinum Nugget"};
 	case "life_inv_platinumr": {"Platinum Bar"};
 	case "life_inv_silver": {"Silver Ore"};
 	case "life_inv_silverr": {"Silver Bar"};
-	case "life_inv_beer": {"Broweiser"};
+	case "life_inv_beer": {"Amstel Bier"};
 	case "life_inv_ziptie": {"Ziptie"};
+	//by MarioF
+	case "life_inv_frog": {"Frog"};
+	case "life_inv_frogleg": {"Frog Leg"};
+	case "life_inv_lsd": {"LSD"};
+	case "life_inv_frognet": {"Frog Net"};
 	
 	//License Block
 	case "license_civ_driver": {"Driver License"};
@@ -107,4 +112,8 @@ switch (_var) do
 	case "license_civ_mashu": {"Sour Mash Processing"};
 	case "license_civ_platinum": {"Platinum Processing"};
 	case "license_civ_silver": {"Silver Processing"};
+	case "license_civ_beer": {"Beer Brewing"};
+	// by MarioF
+	case "license_civ_lsd": {"LSD Extracting"};
+	case "license_civ_frogleg": {"Froglegging"};
 };

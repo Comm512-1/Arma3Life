@@ -51,8 +51,6 @@ switch (_item) do
 	case "rock": {6};
 	case "cement": {5};
 	case "goldbar": {12};
-	case "frog": {3};
-	case "frogp": {1};
 	case "crystalmeth": {1};
 	case "methu": {2};
 	case "phosphorous": {2};
@@ -68,5 +66,11 @@ switch (_item) do
 	case "silver": {4};
 	case "silverr": {2};
 	case "beer": {1};
+	case "hops": {1};
+	case "barley": {1};
+	case "frog": {4};
+	case "frogleg": {2};
+	case "lsd": {1};
+	case "frognet": {1};
 	default {1};
 };

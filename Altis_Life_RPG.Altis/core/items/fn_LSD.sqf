@@ -1,9 +1,13 @@
- //////////////////////////////////////////////////////////////////
+ 
+//////////////////////////////////////////////////////////////////
  //Developed by JackLags for STS
  //File: fn_drugeffect_mar.sqf
  //Description: Marijuana Drug Visual Effect
  //////////////////////////////////////////////////////////////////
  
+ //Little hint then wait a litle before starting drugs effects
+hint "You just used some LSD and feel fucked up because there are no real side effects!";
+sleep 3;
 _force = random 15;
 "colorCorrections" ppEffectAdjust [3, 3, 0, [0.0, 0.0, 3.0, 0.0], [0.8*5, 0.8*6, 0.0, 1.9], [0.9, 0.9, 1.9, 0.2]];
 "colorCorrections" ppEffectCommit 0;

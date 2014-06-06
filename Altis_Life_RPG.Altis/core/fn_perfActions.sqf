@@ -110,7 +110,7 @@ switch (playerSide) do
 		// Extinguish Joint
 		_persActions = _persActions + [player addAction["<t color='#FF0000'>Extinguish Joint</t>",life_fnc_extinguishJoint,"",6, false, true, "", 
 		' !isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && animationState cursorTarget == "AmovPercMstpSnonWnonDnon_Ease" && (cursorTarget getVariable "restrained") && (side cursorTarget == civilian) && player distance cursorTarget < 3.5 && (cursorTarget getVariable ["smoke_weed",false]) && (cursorTarget getVariable ["restrained",false]) ']];
-
+		
 	};
 	case civilian:
 	{
@@ -144,7 +144,7 @@ switch (playerSide) do
 
 // Gathering Actions
 if(_count % 28 == 0) then {
-if(vehicle player == player && Alive player && !life_action_in_use && ((player distance (getMarkerPos "heroin_1") < 150) || (player distance (getMarkerPos "apple_1") < 50) || (player distance (getMarkerPos "apple_2") < 50) || (player distance (getMarkerPos "peaches_1") < 50) || (player distance (getMarkerPos "peaches_2") < 50) || (player distance (getMarkerPos "peaches_3") < 50) || (player distance (getMarkerPos "apple_3") < 50) || (player distance (getMarkerPos "apple_4") < 50) || (player distance (getMarkerPos "oil_field_1") < 40) || (player distance (getMarkerPos "oil_field_2") < 20) || (player distance (getMarkerPos "turtle_1") < 350) || (player distance (getMarkerPos "turtle_2") < 350) || (player distance (getMarkerPos "turtle_3") < 350) || (player distance (getMarkerPos "weed_1") < 60) || (player distance (getMarkerPos "cocaine_1") < 150))) then {
+if(vehicle player == player && Alive player && !life_action_in_use && ((player distance (getMarkerPos "frog_4") < 150) ||(player distance (getMarkerPos "frog_3") < 150) ||(player distance (getMarkerPos "frog_2") < 150) ||(player distance (getMarkerPos "frog_1") < 150) ||(player distance (getMarkerPos "yeast_1") < 150) ||(player distance (getMarkerPos "corn_1") < 150) ||(player distance (getMarkerPos "sugar_1") < 150) ||(player distance (getMarkerPos "hops_1") < 150) ||(player distance (getMarkerPos "barley_1") < 150) ||(player distance (getMarkerPos "ephedra_1") < 150) ||(player distance (getMarkerPos "phosphorous_1") < 150) ||(player distance (getMarkerPos "lithium_1") < 150) ||(player distance (getMarkerPos "platinum_1") < 150) ||(player distance (getMarkerPos "silver_1") < 150) ||(player distance (getMarkerPos "heroin_1") < 150) || (player distance (getMarkerPos "apple_1") < 50) || (player distance (getMarkerPos "apple_2") < 50) || (player distance (getMarkerPos "peaches_1") < 50) || (player distance (getMarkerPos "peaches_2") < 50) || (player distance (getMarkerPos "peaches_3") < 50) || (player distance (getMarkerPos "apple_3") < 50) || (player distance (getMarkerPos "apple_4") < 50) || (player distance (getMarkerPos "oil_field_1") < 40) || (player distance (getMarkerPos "oil_field_2") < 20) || (player distance (getMarkerPos "turtle_1") < 350) || (player distance (getMarkerPos "turtle_2") < 350) || (player distance (getMarkerPos "turtle_3") < 350) || (player distance (getMarkerPos "weed_1") < 60) || (player distance (getMarkerPos "cocaine_1") < 150))) then {
 if((count _gatherActions) == 0) then {
 switch (playerSide) do
 {
@@ -154,10 +154,59 @@ switch (playerSide) do
 		
 	};
 	case civilian:
-	{
+	{   
+	    //Gather stuff you need to mine
+		_gatherActions = _gatherActions + [player addAction["Use Pickaxe",life_fnc_usePickaxe,"",5,false,false,"",'
+		!life_action_in_use && (player distance (getMarkerPos "salt_1") < 150) OR  (player distance (getMarkerPos "silver_1") < 150)) && (vehicle player == player) && (life_carryWeight + (["salt"] call life_fnc_itemWeight)) <= life_maxWeight ']];
+	
+	    //Gather Sugar
+		_gatherActions = _gatherActions + [player addAction["Gather Sugar",life_fnc_gatherSugar,"",5,false,false,"",'
+		!life_action_in_use && (player distance (getMarkerPos "sugar_1") < 150) && (vehicle player == player) && (life_carryWeight + (["sugar"] call life_fnc_itemWeight)) <= life_maxWeight ']];
+	
+	    //Gather Yeast
+		_gatherActions = _gatherActions + [player addAction["Gather Yeast",life_fnc_gatherYeast,"",5,false,false,"",'
+		!life_action_in_use && (player distance (getMarkerPos "yeast_1") < 150) && (vehicle player == player) && (life_carryWeight + (["yeast"] call life_fnc_itemWeight)) <= life_maxWeight ']];
+	   
+	   //Gather Phosphorous
+		_gatherActions = _gatherActions + [player addAction["Gather Phosphorous",life_fnc_gatherPhosphorous,"",5,false,false,"",'
+		!life_action_in_use && (player distance (getMarkerPos "phosphorous_1") < 150) && (vehicle player == player) && (life_carryWeight + (["phosphorous"] call life_fnc_itemWeight)) <= life_maxWeight ']];
+	    
+		//Gather Ephedra
+		_gatherActions = _gatherActions + [player addAction["Gather Ephedra",life_fnc_gatherEphedra,"",5,false,false,"",'
+		!life_action_in_use && (player distance (getMarkerPos "ephedra_1") < 150) && (vehicle player == player) && (life_carryWeight + (["ephedra"] call life_fnc_itemWeight)) <= life_maxWeight ']];
+		
+		//Gather Corn
+		_gatherActions = _gatherActions + [player addAction["Gather Corn",life_fnc_gatherCorn,"",5,false,false,"",'
+		!life_action_in_use && (player distance (getMarkerPos "corn_1") < 150) && (vehicle player == player) && (life_carryWeight + (["corn"] call life_fnc_itemWeight)) <= life_maxWeight ']];
+	    
+		//Gather Barley
+		_gatherActions = _gatherActions + [player addAction["Gather Barley",life_fnc_gatherBarley,"",5,false,false,"",'
+		!life_action_in_use && (player distance (getMarkerPos "barley_1") < 150) && (vehicle player == player) && (life_carryWeight + (["barley"] call life_fnc_itemWeight)) <= life_maxWeight ']];
+	    
+		//Gather Cocaine
+		_gatherActions = _gatherActions + [player addAction["Gather Cocaine",life_fnc_gatherCocaine,"",5,false,false,"",'
+		!life_action_in_use && (player distance (getMarkerPos "cocaine_1") < 150) && (vehicle player == player) && (life_carryWeight + (["cocaine"] call life_fnc_itemWeight)) <= life_maxWeight ']];
+	    
+		//Gather Hops
+		_gatherActions = _gatherActions + [player addAction["Gather Hops",life_fnc_gatherHops,"",5,false,false,"",'
+		!life_action_in_use && (player distance (getMarkerPos "hops_1") < 150) && (vehicle player == player) && (life_carryWeight + (["hops"] call life_fnc_itemWeight)) <= life_maxWeight ']];
+	    
+		//Gather Lithium
+		_gatherActions = _gatherActions + [player addAction["Gather Lithium",life_fnc_gatherLithium,"",5,false,false,"",'
+		!life_action_in_use && (player distance (getMarkerPos "lithium_1") < 150) && (vehicle player == player) && (life_carryWeight + (["lithium"] call life_fnc_itemWeight)) <= life_maxWeight ']];
+	    
+		//Gather Platinum
+		_gatherActions = _gatherActions + [player addAction["Gather Platinum",life_fnc_gatherPlatinum,"",5,false,false,"",'
+		!life_action_in_use && (player distance (getMarkerPos "platinum_1") < 150) && (vehicle player == player) && (life_carryWeight + (["platinumr"] call life_fnc_itemWeight)) <= life_maxWeight ']];
+	    
+		//Gather Silver
+		_gatherActions = _gatherActions + [player addAction["Gather Silver",life_fnc_gatherSilver,"",5,false,false,"",'
+		!life_action_in_use && (player distance (getMarkerPos "silver_1") < 150) && (vehicle player == player) && (life_carryWeight + (["silverr"] call life_fnc_itemWeight)) <= life_maxWeight ']];
+		
 		//Gather Heroin
 		_gatherActions = _gatherActions + [player addAction["Gather Heroin",life_fnc_gatherHeroin,"",5,false,false,"",'
 		!life_action_in_use && (player distance (getMarkerPos "heroin_1") < 150) && (vehicle player == player) && (life_carryWeight + (["heroinu"] call life_fnc_itemWeight)) <= life_maxWeight ']];
+		
 		//Pick Apples, fields 1 and 2
 		_gatherActions = _gatherActions + [player addAction["Pick Apples",life_fnc_gatherApples,"",5,false,false,"",'
 		!life_action_in_use && ((player distance (getMarkerPos "apple_1") < 50) OR (player distance (getMarkerPos "apple_2") < 50)) && (vehicle player == player) ']];
@@ -165,15 +214,23 @@ switch (playerSide) do
 		!life_action_in_use && ((player distance (getMarkerPos "peaches_1") < 50) OR (player distance (getMarkerPos "peaches_2") < 50)) && (vehicle player == player) ']];
 		_gatherActions = _gatherActions + [player addAction["Pick Peaches",life_fnc_gatherPeaches,"",5,false,false,"",'
 		!life_action_in_use && (player distance (getMarkerPos "peaches_3") < 50) && (vehicle player == player) ']];
+		
 		//Pick Apples, fields 3 and 4
 		_gatherActions = _gatherActions + [player addAction["Pick Apples",life_fnc_gatherApples,"",5,false,false,"",'
 		!life_action_in_use && ((player distance (getMarkerPos "apple_3") < 50) OR (player distance (getMarkerPos "apple_4") < 50)) && (vehicle player == player) ']];
+		
 		//Collect Oil
 		_gatherActions = _gatherActions + [player addAction["Collect Oil",life_fnc_gatherOil,"",5,false,false,"",'
 		!life_action_in_use && ((player distance (getMarkerPos "oil_field_1") < 40) OR (player distance (getMarkerPos "oil_field_2") < 20)) && (vehicle player == player) && (life_carryWeight + (["oilu"] call life_fnc_itemWeight)) <= life_maxWeight ']];
+		
 		//Grab turtle
 		_gatherActions = _gatherActions + [player addAction["Grab Turtle",life_fnc_catchTurtle,"",5,false,false,"",'
 		!isNull cursorTarget && (typeOf cursorTarget) == "Turtle_F" && ((player distance (getMarkerPos "turtle_1") < 350) OR (player distance (getMarkerPos "turtle_2") < 350) OR (player distance (getMarkerPos "turtle_3") < 350)) && !alive cursorTarget && (life_carryWeight + (["turtle"] call life_fnc_itemWeight)) <= life_maxWeight']];
+		
+		//gather frogs, swamp 1 and 2
+		_gatherActions = _gatherActions + [player addAction["Catch frogs",life_fnc_frog,"",5,false,false,"",'
+		!life_action_in_use && ((player distance (getMarkerPos "frog_1") < 350) OR (player distance (getMarkerPos "frog_2") < 350)) && (vehicle player == player) ']];
+		
 		//Gather Cannabis
 		_gatherActions = _gatherActions + [player addAction["Gather Cannabis",life_fnc_gatherCannabis,"",5,false,false,"",'
 		!life_action_in_use && (player distance (getMarkerPos "weed_1") < 60) && (vehicle player == player) && (life_carryWeight + (["cannabis"] call life_fnc_itemWeight)) <= life_maxWeight ']];
@@ -425,6 +482,21 @@ if((count _itemActions) == 0) then {
 	' !isNull cursorTarget && (typeOf cursorTarget) == "Land_Suitcase_F" && ((cursorTarget getVariable "item") select 0) == "cocaine" && (player distance cursorTarget) < 3 && (life_carryWeight + (["cocaine"] call life_fnc_itemWeight)) <= life_maxWeight ']];
 	[player addAction["Pickup Processed Cocaine",life_fnc_pickupItem,false,5,false,false,"",
 	' !isNull cursorTarget && (typeOf cursorTarget) == "Land_Suitcase_F" && ((cursorTarget getVariable "item") select 0) == "cocainep" && (player distance cursorTarget) < 3 && (life_carryWeight + (["cocainep"] call life_fnc_itemWeight)) <= life_maxWeight ']];
+    [player addAction["Pickup Frogs",life_fnc_pickupItem,false,5,false,false,"",
+	' !isNull cursorTarget && (typeOf cursorTarget) == "Land_Suitcase_F" && ((cursorTarget getVariable "item") select 0) == "frog" && (player distance cursorTarget) < 3 && (life_carryWeight + (["frog"] call life_fnc_itemWeight)) <= life_maxWeight ']];
+	_itemActions = _itemActions +
+	[player addAction["Pickup Froglegs",life_fnc_pickupItem,false,5,false,false,"",
+	' !isNull cursorTarget && (typeOf cursorTarget) == "Land_Suitcase_F" && ((cursorTarget getVariable "item") select 0) == "frogleg" && (player distance cursorTarget) < 3 && (life_carryWeight + (["frogleg"] call life_fnc_itemWeight)) <= life_maxWeight ']];
+	_itemActions = _itemActions +
+	[player addAction["Pickup LSD",life_fnc_pickupItem,false,5,false,false,"",
+	' !isNull cursorTarget && (typeOf cursorTarget) == "Land_Suitcase_F" && ((cursorTarget getVariable "item") select 0) == "lsd" && (player distance cursorTarget) < 3 && (life_carryWeight + (["lsd"] call life_fnc_itemWeight)) <= life_maxWeight ']];
+	_itemActions = _itemActions +
+	[player addAction["Pickup Frog Net",life_fnc_pickupItem,false,5,false,false,"",
+	' !isNull cursorTarget && (typeOf cursorTarget) == "Land_Suitcase_F" && ((cursorTarget getVariable "item") select 0) == "frognet" && (player distance cursorTarget) < 3 && (life_carryWeight + (["frognet"] call life_fnc_itemWeight)) <= life_maxWeight ']];
+	[player addAction["Pickup Moonshine",life_fnc_pickupItem,false,5,false,false,"",
+	' !isNull cursorTarget && (typeOf cursorTarget) == "Land_Suitcase_F" && ((cursorTarget getVariable "item") select 0) == "moonshine" && (player distance cursorTarget) < 3 && (life_carryWeight + (["moonshine"] call life_fnc_itemWeight)) <= life_maxWeight ']];
+	_itemActions = _itemActions +
+	
 };	
 } else {
 	if((count _itemActions) > 0) then {

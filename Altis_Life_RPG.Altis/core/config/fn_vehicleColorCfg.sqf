@@ -83,7 +83,7 @@ switch (_vehicle) do
 			["textures\civ_car\hb\bluesmile.paa","civ","textures\cop_car\policeHB.paa"],
 			["textures\civ_car\hb\grandpa.paa","civ","textures\cop_car\cop_suv.paa"],
 			["textures\civ_car\hb\sunset.paa","civ","textures\cop_car\cop_suv.paa"],
-			["textures\civ_car\hb\tuning.paa","civ","textures\cop_car\cop_suv.paa"],
+			["textures\civ_car\hb\monsterh.paa","civ","textures\cop_car\cop_suv.paa"],
 			["textures\civ_car\hb\wave.paa","civ","textures\cop_car\cop_suv.paa"]
 		];
 	};
@@ -98,7 +98,7 @@ switch (_vehicle) do
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa","civ","textures\cop_car\cop_suv.paa"],
 			["textures\cop_car\cop_suv.paa","cop","textures\cop_car\cop_suv.paa"],
 			["textures\civ_car\suv\bimbo.paa","civ","textures\cop_car\cop_suv.paa"],
-			["textures\civ_car\suv\grandpa.paa","civ","textures\cop_car\cop_suv.paa"],
+			["textures\civ_car\suv\monsters.paa","civ","textures\cop_car\cop_suv.paa"],
 			["textures\civ_car\suv\green.paa","civ","textures\cop_car\cop_suv.paa"],
 			["textures\civ_car\suv\oxygen.paa","civ","textures\cop_car\cop_suv.paa"],
 			["textures\civ_car\suv\sunset.paa","civ","textures\cop_car\cop_suv.paa"],
@@ -157,7 +157,8 @@ switch (_vehicle) do
 			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_vrana_co.paa","civ"],
 			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_wave_co.paa","civ"],
 			["\a3\air_f\Heli_Light_01\Data\Skins\heli_light_01_ext_digital_co.paa","reb"],
-			["#(argb,8,8,3)color(1,1,1,0.8)","med"]
+			["textures\heli_light_ambulance.paa","med"]
+			//["#(argb,8,8,3)color(1,1,1,0.8)","med"]
 		];
 	};
 	

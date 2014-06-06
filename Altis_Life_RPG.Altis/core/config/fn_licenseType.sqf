@@ -46,6 +46,9 @@ switch (_mode) do
 			case "mashu": {_var = "license_civ_mashu"};
 			case "platinum": {_var = "license_civ_platinum"};
 			case "silver": {_var = "license_civ_silver"};
+			case "beer": {_var = "license_civ_beer"};
+			case "lsd": {_var = "license_civ_lsd"};
+			case "frogleg": {_var = "license_civ_frogleg"};
 			default {_var = ""};
 		};
 	};
@@ -84,6 +87,9 @@ switch (_mode) do
 			case "license_civ_mashu": {_var = "mashu"};
 			case "license_civ_platinum": {_var = "platinum"};
 			case "license_civ_silver": {_var = "silver"};
+			case "license_civ_beer": {_var = "beer"};
+			case "license_civ_lsd": {_var = "lsd"};
+			case "license_civ_frogleg": {_var = "frogleg"};
 			default {_var = ""};
 		};
 	};

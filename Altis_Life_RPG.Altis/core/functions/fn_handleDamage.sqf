@@ -49,5 +49,13 @@ if(!isNull _source) then {
 	};
 };
 
+// Lower Damage with Cocaine
+if(_projectile != "" && isPlayer _unit && _damage != 0 && life_drugged_cocaine > 0) then
+{
+	_lowCoca = life_drugged_cocaine * 10 * 1;
+	_damage = _damage - ((_damage * _lowCoca) / 100);
+};
+
+
 [] call life_fnc_hudUpdate;
 _damage;

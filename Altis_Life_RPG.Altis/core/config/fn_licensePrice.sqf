@@ -34,11 +34,13 @@ switch (_type) do
 	case "copper": {8000};
 	case "cement": {6500};
     case "home": {100000};
-	case "frog": {24000};
 	case "crystalmeth": {55000};
 	case "methu": {30000};
 	case "moonshine": {54000};
 	case "mashu": {29000};
 	case "platinum": {10000};
 	case "silver": {9000};
+	case "beer": {20000};
+	case "lsd": {35000};
+	case "frogleg": {5000};
 };

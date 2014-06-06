@@ -91,6 +91,12 @@ __CONST__(life_impound_air,850);
 life_istazed = false;
 life_my_gang = ObjNull;
 
+// Drugs by Mario 
+life_drugged_cocaine = -1;
+life_drugged_cocaine_duration = 10; // In Minutes
+life_drugged_weed = -1;
+life_drugged_weed_duration = 3;
+
 life_vehicles = [];
 bank_robber = [];
 switch (playerSide) do
@@ -159,11 +165,9 @@ life_inv_items =
 	"life_inv_spikeStrip",
 	"life_inv_rock",
 	"life_inv_cement",
-	"life_inv_goldbar",
+	//"life_inv_goldbar",
     "life_inv_storage1",
     "life_inv_storage2",
-	"life_inv_frog",
-	"life_inv_frogp",
 	"life_inv_crystalmeth",
 	"life_inv_methu",
 	"life_inv_phosphorous",
@@ -179,7 +183,13 @@ life_inv_items =
 	"life_inv_silver",
 	"life_inv_silverr",
 	"life_inv_beer",
-	"life_inv_ziptie"
+	"life_inv_barley",
+	"life_inv_hops",
+	"life_inv_ziptie",
+	"life_inv_frog",
+	"life_inv_frogleg",
+	"life_inv_lsd",
+	"life_inv_frognet"
 ];
 
 //Setup variable inv vars.
@@ -210,12 +220,14 @@ life_licenses =
 	["license_civ_cement","civ"],
 	["license_med_air","med"],
     ["license_civ_home", "civ"],
-	["license_civ_frog", "civ"],
+	["license_civ_frogleg","civ"],
+	["license_civ_lsd","civ"],
 	["license_civ_crystalmeth", "civ"],
 	["license_civ_methu", "civ"],
 	["license_civ_moonshine", "civ"],
 	["license_civ_mashu", "civ"],
 	["license_civ_platinum","civ"],
+	["license_civ_beer","civ"],
 	["license_civ_silver","civ"]
 ];
 
@@ -224,7 +236,7 @@ life_licenses =
 
 life_dp_points = ["dp_1","dp_2","dp_3","dp_4","dp_5","dp_6","dp_7","dp_8","dp_9","dp_10","dp_11","dp_12","dp_13","dp_14","dp_15","dp_15","dp_16","dp_17","dp_18","dp_19","dp_20","dp_21","dp_22","dp_23","dp_24","dp_25"];
 //[shortVar,reward]
-life_illegal_items = [["heroinu",1200],["heroinp",2500],["cocaine",1500],["cocainep",3500],["marijuana",2000],["turtle",3000],["frog",2100],["frogp",800],["crystalmeth",4100],["methu",2800],["moonshine",4000],["mashu",2700]];
+life_illegal_items = [["heroinu",1200],["heroinp",2500],["cocaine",1500],["cocainep",3500],["marijuana",2000],["turtle",3000],["frog",2100],["crystalmeth",4100],["methu",2800],["moonshine",4000],["mashu",2700],["lsd",2800]];
 
 
 /*
@@ -265,8 +277,6 @@ sell_array =
 	["fuelF",500],
 	["spikeStrip",1200],
 	["cement",1950],
-	["frog",1450],
-	["frogp",2150],
 	["crystalmeth",3500],
 	["methu",2200],
 	["moonshine",3400],
@@ -274,9 +284,13 @@ sell_array =
 	["corn",500],
 	["sugar",500],
 	["yeast",500],
+	["barley",500],
+	["hops",500],
 	["platinumr",1700],
 	["silverr",1600],
-	["beer",1000]
+	["beer",2000],
+	["frognet",2000],
+	["lsd",10000]
 ];
 __CONST__(sell_array,sell_array);
 
@@ -305,6 +319,11 @@ buy_array =
     ["storage1",50000],
     ["storage2",250000],
 	["beer",2000],
+	["frognet",2000],
+	["lsd",10000],
+	["heroinp",7500],
+	["marijuana",10000],
+	["cocainep",15000],
 	["ziptie",500]
 ];
 __CONST__(buy_array,buy_array);

@@ -62,8 +62,6 @@ switch (_mode) do
 			case "goldbar": {"life_inv_goldbar"};
             case "storage1": {"life_inv_storage1"};
             case "storage2": {"life_inv_storage2"};
-			case "frog": {"life_inv_frog"};
-			case "frogp": {"life_inv_frogp"};
 			case "crystalmeth": {"life_inv_crystalmeth"};
 			case "methu": {"life_inv_methu"};
 			case "phosphorous": {"life_inv_phosphorous"};
@@ -79,7 +77,13 @@ switch (_mode) do
 			case "silver": {"life_inv_silver"};
 			case "silverr": {"life_inv_silverr"};
 			case "beer": {"life_inv_beer"};
+			case "barley": {"life_inv_barley"};
+			case "hops": {"life_inv_hops"};
 			case "ziptie": {"life_inv_ziptie"};
+			case "frog": {"life_inv_frog"};
+			case "frogleg": {"life_inv_frogleg"};
+			case "lsd": {"life_inv_lsd"};
+			case "frognet": {"life_inv_frognet"};
 		};
 	};
 	
@@ -133,8 +137,6 @@ switch (_mode) do
 			case "life_inv_goldbar": {"goldbar"};
             case "life_inv_storage1": {"storage1"};
             case "life_inv_storage2": {"storage2"};
-			case "life_inv_frog": {"frog"};
-			case "life_inv_frogp": {"frogp"};
 			case "life_inv_crystalmeth": {"crystalmeth"};
 			case "life_inv_methu": {"methu"};
 			case "life_inv_phosphorous": {"phosphorous"};
@@ -150,7 +152,13 @@ switch (_mode) do
 			case "life_inv_silver": {"silver"};
 			case "life_inv_silverr": {"silverr"};
 			case "life_inv_beer": {"beer"};
+			case "life_inv_barley": {"barley"};
+			case "life_inv_hops": {"hops"};
 			case "life_inv_ziptie": {"ziptie"};
+			case "life_inv_frog": {"frog"};
+			case "life_inv_frogleg": {"frogleg"};
+			case "life_inv_lsd": {"lsd"};
+			case "life_inv_frognet": {"frognet"};
 		};
 	};
 };

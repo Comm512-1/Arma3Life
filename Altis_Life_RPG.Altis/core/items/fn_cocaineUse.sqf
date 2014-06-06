@@ -6,7 +6,9 @@
 	Cocaine disables the Fatigue System for 10 Minutes but u get an addiction effect when the stacks of cocaine run out.
 	Also it can give an overdose.
 */
-
+//Little hint then wait a litle before starting drugs effects
+hint "You just snorred some cocaine, you feel invincible!!";
+sleep 3;
 private["_dmg","_count"];
 
 if(life_drugged_cocaine < 1) then { life_drugged_cocaine = 1; } else {life_drugged_cocaine = life_drugged_cocaine + 1;};
@@ -19,7 +21,7 @@ if ( life_drugged_cocaine > 2) then
 	
 	if (_dmg < 1.0) then
 	{
-		hint "You have suffer damage because of an Overdose!";
+		hint "You have suffered damage because of an Overdose!";
 		["shortWeak"] spawn life_fnc_weaknessEffects;
 		player setFatigue 1;
 		player setDamage _dmg;

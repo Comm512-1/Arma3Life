@@ -5,20 +5,22 @@
 	Description:
 	Improved Manual Gathering for Barley
 */
-
-/*
 private["_sum"];
-_sum = ["barley",ceil(random 3),life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
+_sum = ["Barley",ceil(random 3),life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 
 if(_sum > 0) then
 {
 	life_action_inUse = true;
-	titleText["Gathering barley seeds ...","PLAIN"];
+	titleText["Gathering barley ...","PLAIN"];
 	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-	sleep 3;
+	sleep 2;
+	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
+	sleep 2;
+	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
+	sleep 1;
 	if(([true,"barley",_sum] call life_fnc_handleInv)) then
 	{
-		titleText[format["You have gathered %1 barley seed(s).",_sum],"PLAIN"];
+		titleText[format["You have gathered %1 barley",_sum],"PLAIN"];
 	};
 }
 	else
@@ -27,9 +29,3 @@ if(_sum > 0) then
 };
 
 life_action_inUse = false;
-
-*/
-
-
-
-

@@ -6,14 +6,19 @@
 	Improved Manual Gathering for Frog
 */
 private["_sum"];
-_sum = ["frog",ceil(random 4),life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
+if (life_inv_frognet < 1) exitWith { hint "u need a frognet."};                <------------------ Here it asks for the pickaxe anything else is like gathering apples :p
+_sum = ["frog",ceil(random 3),life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 
 if(_sum > 0) then
 {
 	life_action_inUse = true;
 	titleText["Gathering frogs ...","PLAIN"];
 	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
-	sleep 4;
+	sleep 2;
+	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
+	sleep 2;
+	player playMove "AinvPercMstpSnonWnonDnon_Putdown_AmovPercMstpSnonWnonDnon";
+	sleep 1;
 	if(([true,"frog",_sum] call life_fnc_handleInv)) then
 	{
 		titleText[format["You have gathered %1 frog(s)",_sum],"PLAIN"];
