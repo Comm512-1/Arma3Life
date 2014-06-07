@@ -34,7 +34,7 @@ _frogZones = ["frog_1","frog_2","frog_3","frog_4","frog_5"];
 	_zone = createTrigger ["EmptyDetector",(getMarkerPos _x)];
 	_zone setTriggerArea[25,25,0,false];
 	_zone setTriggerActivation["CIV","PRESENT",true];
-	_zone setTriggerStatements["player in thislist","LIFE_Action_Frog = player addAction['Pick Frogs',life_fnc_gatherFrog,'',0,false,false,'','!life_action_inUse'];","player removeAction LIFE_Action_Frog;"];
+	_zone setTriggerStatements["player in thislist","LIFE_Action_Frog = player addAction['Catch frogs',life_fnc_frognetUse,'',0,false,false,'','!life_action_inUse'];","player removeAction LIFE_Action_Frog;"];
 } foreach _frogZones;
 
 //Create yeast zones

@@ -7,7 +7,6 @@
 */
 private["_mode","_spawnPoints","_className","_basePrice","_colorIndex","_spawnPoint","_vehicle"];
 _mode = _this select 0;
-diag_log format["VEHICLE _mode %1", _mode];
 if((lbCurSel 2302) == -1) exitWith {hint "You did not pick a vehicle!"};
 _className = lbData[2302,(lbCurSel 2302)];
 _vIndex = lbValue[2302,(lbCurSel 2302)];
@@ -84,7 +83,6 @@ switch(playerSide) do {
 
 life_vehicles set[count life_vehicles,_vehicle]; //Add err to the chain.
 if(_mode) then {
-	diag_log "VehicleShopBuy aan het maken";
 	[[(getPlayerUID player),playerSide,_vehicle,_colorIndex],"TON_fnc_vehicleCreate",false,false] spawn life_fnc_MP;
 };
 

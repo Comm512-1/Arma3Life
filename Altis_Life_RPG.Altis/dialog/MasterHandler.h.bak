@@ -25,3 +25,5 @@
 #include "vehicleShop.h"
 #include "common_EditorWrapper.hpp"
 #include "market.hpp"
+#include "trunkHouse.hpp"
+#include "house.hpp"

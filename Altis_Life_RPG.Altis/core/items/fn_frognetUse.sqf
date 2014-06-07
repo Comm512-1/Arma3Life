@@ -10,7 +10,8 @@ closeDialog 0;
 private["_mine","_itemWeight","_diff","_itemName","_val"];
 switch (true) do
 {
-	case (player distance (getMarkerPos "frogswamp_1") < 300): {_mine = "frog"; _val = 2;};
+	case (player distance (getMarkerPos "frog_1") < 300): {_mine = "frog"; _val = 2;};
+	case (player distance (getMarkerPos "frog_2") < 300): {_mine = "frog"; _val = 2;};
 	default {_mine = "";};
 };
 //Mine check
@@ -30,7 +31,7 @@ for "_i" from 0 to 2 do
 if(([true,_mine,_diff] call life_fnc_handleInv)) then
 {
 	_itemName = [([_mine,0] call life_fnc_varHandle)] call life_fnc_varToStr;
-	titleText[format["You have catched %2 %1",_itemName,_diff],"PLAIN"];
+	titleText[format["You used your net with skill and got %2 %1",_itemName,_diff],"PLAIN"];
 };
 
 life_action_inUse = false;

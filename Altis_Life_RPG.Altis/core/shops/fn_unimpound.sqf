@@ -17,7 +17,7 @@ _veh = life_vehicles select parseNumber(_veh);
 _price = _cars lbValue _sel;
 if(_veh distance impound_obj < 50) then
 {
-	diag_log "DIT MAG NIET IN DE LOGS KOMEN";
+
 	hint format["%1", life_impound_yard];
 	switch (life_impound_yard) do
 	{
