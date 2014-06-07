@@ -11,8 +11,6 @@ _side = [_this,1,sideUnknown,[west]] call BIS_fnc_param;
 _vehicle = [_this,2,ObjNull,[ObjNull]] call BIS_fnc_param;
 _color = [_this,3,-1,[0]] call BIS_fnc_param;
 
-diag_log format["VehicleCreate side: %1, vehicle: %2, alive: %3", _side, _vehicle, alive _vehicle];
-
 //Error checks
 if(_uid == "" OR _side == sideUnknown OR isNull _vehicle) exitWith {};
 if(!alive _vehicle) exitWith {};
@@ -25,7 +23,6 @@ _type = switch(true) do
 	case (_vehicle isKindOf "Tank"): {"Tank"};
 	case (_vehicle isKindOf "Support"): {"Support"};
 };
-diag_log format["VehicleCreate INSERTING Type: %1, className: %2, color: %3", _type, _className, _color];
 
 _side = switch(_side) do
 {
