@@ -207,7 +207,7 @@ switch (_vehicle) do
 	{
 		switch (_index) do
 		{
-			case 0: {_color = "Black"};
+			case 0: {_color = "fed"};
 		};
 	};
 	
@@ -225,6 +225,14 @@ switch (_vehicle) do
 		switch (_index) do
 		{
 			case 0: {_color = "Black"};
+		};
+	};
+	
+	case "B_Heli_Attack_01_F":
+	{
+		switch (_index) do
+		{
+			case 0: {_color = "Cop"};
 		};
 	};
 };

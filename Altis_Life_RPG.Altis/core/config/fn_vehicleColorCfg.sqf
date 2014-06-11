@@ -178,7 +178,7 @@ switch (_vehicle) do
 	{
 		_ret = 
 		[
-			["\A3\Soft_F\MRAP_01\Data\mrap_01_base_co.paa","cop"],
+			["textures\cop_car\copHunter.paa","cop","textures\cop_car\copHunter2.paa"],
 			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","fed"]
 		];
 	};
@@ -214,6 +214,14 @@ switch (_vehicle) do
 		_ret = 
 		[
 			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","fed"]
+		];
+	};
+	
+	case "B_Heli_Attack_01_F":
+	{
+		_ret = 
+		[
+			["textures\cop_air\Blackfoot.paa","cop"]
 		];
 	};
 };
