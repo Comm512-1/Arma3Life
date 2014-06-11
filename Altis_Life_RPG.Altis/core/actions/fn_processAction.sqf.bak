@@ -34,8 +34,8 @@ _itemInfo = switch (_type) do
 	case "beer": {[["barley","hops"],"beer",1800,"Brewing Beer",0]};
 	case "mashu": {[["sugar","yeast","corn"],"mashu",500,"Processing into Sour Mash",0]};
 	case "moonshine": {[["mashu"],"moonshine",2200,"Brewing Moonshine",0]};
-	case "frogleg": {[["frog"],"frogleg",250,"Extracting Froglegs",0]};
-	case "lsd": {[["frogleg"],"lsd",1000,"Extracting LSD",0]};
+	case "frogleg": {["frog","frogleg",250,"Extracting Froglegs"]};
+	case "lsd": {["frog","lsd",1000,"Extracting LSD"]};
 	default {[]};
 };
 
