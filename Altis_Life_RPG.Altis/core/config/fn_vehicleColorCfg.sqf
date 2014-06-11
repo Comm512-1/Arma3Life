@@ -37,7 +37,7 @@ switch (_vehicle) do
 			["textures\civ_car\hb\bluesmile.paa","civ"],
 			["textures\civ_car\hb\grandpa.paa","civ"],
 			["textures\civ_car\hb\sunset.paa","civ"],
-			["textures\civ_car\hb\tuning.paa","civ"],
+			["textures\civ_car\hb\monsterh.paa","civ"],
 			["textures\civ_car\hb\wave.paa","civ"],
 			["#(ai,64,64,1)Fresnel(1.3,7)","cop"]
 		];
