@@ -178,7 +178,7 @@ switch (_vehicle) do
 	{
 		_ret = 
 		[
-			["textures\cop_car\copHunter.paa","cop","textures\cop_car\copHunter2.paa"],
+			["textures\cop_car\copHunter2.paa","cop","textures\cop_car\copHunter.paa"],
 			["#(argb,8,8,3)color(0.05,0.05,0.05,1)","fed"]
 		];
 	};
