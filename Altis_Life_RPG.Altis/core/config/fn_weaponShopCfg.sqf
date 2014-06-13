@@ -83,7 +83,6 @@ switch(_shop) do
 						["arifle_TRG20_F",nil,35000],
 						["arifle_Mk20_F",nil,35000],
 						["launch_RPG32_F",nil,250000],
-						//["RPG32_AA_F",nil,2500],
 						["RPG32_F",nil,1000],
 						["MineDetector",nil,1000],
 						["SmokeShell",nil,2000],
