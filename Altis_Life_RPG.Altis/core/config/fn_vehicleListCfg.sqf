@@ -85,16 +85,17 @@ switch (_shop) do
 	{
 		_return = 
 		[
-			["B_Quadbike_01_F",2500],
+			["O_G_Quadbike_01_F",2500],
 			["C_Kart_01_F",1000],
 			["B_G_Offroad_01_F",15000],
-            ["O_Heli_Attack_02_F",1500000],
-            ["I_Plane_Fighter_03_AA_F",2500000],
+			["I_G_Offroad_01_armed_F", 25000],
+			["O_Truck_03_device_F"]
 			["O_MRAP_02_F",150000],
-            ["B_APC_Tracked_01_AA_F",1200000],
+            ["O_MBT_02_cannon_F",1200000],
 			["B_Heli_Light_01_F",325000],
 			["I_Heli_Transport_02_F", 250000],
-			["I_G_Offroad_01_armed_F", 25000]
+            ["O_Heli_Attack_02_F",1500000],
+            ["I_Plane_Fighter_03_AA_F",2500000],
 		];
 	};
 	
@@ -102,16 +103,17 @@ switch (_shop) do
 	{
 		_return = 
 		[
-			["B_Quadbike_01_F",2500],
+			["O_G_Quadbike_01_F",2500],
 			["C_Kart_01_F",1000],
 			["B_G_Offroad_01_F",15000],
-            ["O_Heli_Attack_02_F",1500000],
-            ["I_Plane_Fighter_03_AA_F",2500000],
+			["I_G_Offroad_01_armed_F", 25000],
+			["O_Truck_03_device_F"]
 			["O_MRAP_02_F",150000],
-            ["B_APC_Tracked_01_AA_F",1200000],
+            ["O_MBT_02_cannon_F",1200000],
 			["B_Heli_Light_01_F",325000],
 			["I_Heli_Transport_02_F", 250000],
-			["I_G_Offroad_01_armed_F", 25000]
+            ["O_Heli_Attack_02_F",1500000],
+            ["I_Plane_Fighter_03_AA_F",2500000],
 		];
 	}; 
 	
@@ -119,16 +121,17 @@ switch (_shop) do
 	{
 		_return = 
 		[
-			["B_Quadbike_01_F",2500],
+			["O_G_Quadbike_01_F",2500],
 			["C_Kart_01_F",1000],
 			["B_G_Offroad_01_F",15000],
-            ["O_Heli_Attack_02_F",1500000],
-            ["I_Plane_Fighter_03_AA_F",2500000],
+			["I_G_Offroad_01_armed_F", 25000],
+			["O_Truck_03_device_F"]
 			["O_MRAP_02_F",150000],
-            ["B_APC_Tracked_01_AA_F",1200000],
+            ["O_MBT_02_cannon_F",1200000],
 			["B_Heli_Light_01_F",325000],
 			["I_Heli_Transport_02_F", 250000],
-			["I_G_Offroad_01_armed_F", 25000]
+            ["O_Heli_Attack_02_F",1500000],
+            ["I_Plane_Fighter_03_AA_F",2500000],
 		];
 	}; 
 	
@@ -226,46 +229,57 @@ switch (_shop) do
 	
 	case "reb_car2":
 	{
-		_return set[count _return,
-		["B_Quadbike_01_F",2500]];
-		_return set[count _return,
-		["C_Kart_01_F",1000]];
-		_return set[count _return,
-		["C_Offroad_01_F",9000]];
-		_return set[count _return,
-		["O_MRAP_02_F",150000]];
+		_return = 
+		[
+			["B_Quadbike_01_F",2500],
+			["C_Kart_01_F",1000],
+			["C_Offroad_01_F",9000],
+			["O_MRAP_02_F",150000]
+		];
 	};
 	
 	case "reb_air":
 	{
-		_return set[count _return, ["B_Heli_Light_01_F",275000]];
-		_return set[count _return, ["O_Heli_Attack_02_F",1500000]];
-		_return set[count _return, ["B_Plane_CAS_01_F",2500000]];
-		_return set[count _return, ["O_Heli_Light_02_unarmed_F",350000]];
+		_return
+		[
+			["B_Heli_Light_01_F",275000],
+			["O_Heli_Attack_02_F",1500000],
+			["B_Plane_CAS_01_F",2500000],
+			["O_Heli_Light_02_F",350000]
+		];
 	};
 	
 	case "reb_air_1":
 	{
-		_return set[count _return, ["B_Heli_Light_01_F",275000]];
-		_return set[count _return, ["O_Heli_Attack_02_F",1500000]];
-		_return set[count _return, ["B_Plane_CAS_01_F",2500000]];
-		_return set[count _return, ["O_Heli_Light_02_unarmed_F",350000]];
+		_return
+		[
+			["B_Heli_Light_01_F",275000],
+			["O_Heli_Attack_02_F",1500000],
+			["B_Plane_CAS_01_F",2500000],
+			["O_Heli_Light_02_F",350000]
+		];
 	};
 	
 	case "reb_air_2":
 	{
-		_return set[count _return, ["B_Heli_Light_01_F",275000]];
-		_return set[count _return, ["O_Heli_Attack_02_F",1500000]];
-		_return set[count _return, ["B_Plane_CAS_01_F",2500000]];
-		_return set[count _return, ["O_Heli_Light_02_unarmed_F",350000]];
+		_return
+		[
+			["B_Heli_Light_01_F",275000],
+			["O_Heli_Attack_02_F",1500000],
+			["B_Plane_CAS_01_F",2500000],
+			["O_Heli_Light_02_F",350000]
+		];
 	};
 		
 	case "reb_air_3":
 	{
-		_return set[count _return, ["B_Heli_Light_01_F",275000]];
-		_return set[count _return, ["O_Heli_Attack_02_F",1500000]];
-		_return set[count _return, ["B_Plane_CAS_01_F",2500000]];
-		_return set[count _return, ["O_Heli_Light_02_unarmed_F",350000]];
+		_return
+		[
+			["B_Heli_Light_01_F",275000],
+			["O_Heli_Attack_02_F",1500000],
+			["B_Plane_CAS_01_F",2500000],
+			["O_Heli_Light_02_F",350000]
+		];
 	};
 		
 	case "cop_car_1":
