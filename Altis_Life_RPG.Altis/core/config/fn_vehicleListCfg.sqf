@@ -278,13 +278,14 @@ switch (_shop) do
 		};
 		if(__GETC__(life_coplevel) > 3) then
 		{
-			_return set[count _return, ["B_MRAP_01_F",30000]];
+			_return set[count _return, ["B_MRAP_01_gmg_F",30000]];
 		};
 		if(__GETC__(life_coplevel) > 4) then
 		{
 			_return set[count _return, ["C_Hatchback_01_sport_F",50000]];
-			_return set[count _return, ["B_MBT_01_cannon_F",500000]];
-			_return set[count _return, ["I_APC_Wheeled_03_cannon_F",500000]];			
+			_return set[count _return, ["B_APC_Tracked_01_rcws_F",500000]];
+			_return set[count _return, ["B_APC_Tracked_01_AA_F",500000]];
+			_return set[count _return, ["B_MBT_01_arty_F",500000]];			
 		};
 	};
 	
@@ -298,13 +299,14 @@ switch (_shop) do
 		};
 		if(__GETC__(life_coplevel) > 3) then
 		{
-			_return set[count _return, ["B_MRAP_01_F",30000]];
+			_return set[count _return, ["B_MRAP_01_gmg_F",30000]];
 		};
 		if(__GETC__(life_coplevel) > 4) then
 		{
 			_return set[count _return, ["C_Hatchback_01_sport_F",50000]];
-			_return set[count _return, ["B_MBT_01_cannon_F",500000]];
-			_return set[count _return, ["I_APC_Wheeled_03_cannon_F",500000]];			
+			_return set[count _return, ["B_APC_Tracked_01_rcws_F",500000]];
+			_return set[count _return, ["B_APC_Tracked_01_AA_F",500000]];
+			_return set[count _return, ["B_MBT_01_arty_F",500000]];		
 		};
 	};
 	
@@ -318,13 +320,14 @@ switch (_shop) do
 		};
 		if(__GETC__(life_coplevel) > 3) then
 		{
-			_return set[count _return, ["B_MRAP_01_F",30000]];
+			_return set[count _return, ["B_MRAP_01_gmg_F",30000]];
 		};
 		if(__GETC__(life_coplevel) > 4) then
 		{
 			_return set[count _return, ["C_Hatchback_01_sport_F",50000]];
-			_return set[count _return, ["B_MBT_01_cannon_F",500000]];
-			_return set[count _return, ["B_UGV_01_rcws_F",500000]];			
+			_return set[count _return, ["B_APC_Tracked_01_rcws_F",500000]];
+			_return set[count _return, ["B_APC_Tracked_01_AA_F",500000]];
+			_return set[count _return, ["B_MBT_01_arty_F",500000]];		
 		};
 	};
 	
@@ -338,13 +341,14 @@ switch (_shop) do
 		};
 		if(__GETC__(life_coplevel) > 3) then
 		{
-			_return set[count _return, ["B_MRAP_01_F",30000]];
+			_return set[count _return, ["B_MRAP_01_gmg_F",30000]];
 		};
 		if(__GETC__(life_coplevel) > 4) then
 		{
 			_return set[count _return, ["C_Hatchback_01_sport_F",50000]];
-			_return set[count _return, ["B_MBT_01_cannon_F",500000]];
-			_return set[count _return, ["B_UGV_01_rcws_F",500000]];			
+			_return set[count _return, ["B_APC_Tracked_01_rcws_F",500000]];
+			_return set[count _return, ["B_APC_Tracked_01_AA_F",500000]];
+			_return set[count _return, ["B_MBT_01_arty_F",500000]];	
 		};
 	};
 	
@@ -358,13 +362,14 @@ switch (_shop) do
 		};
 		if(__GETC__(life_coplevel) > 3) then
 		{
-			_return set[count _return, ["B_MRAP_01_F",30000]];
+			_return set[count _return, ["B_MRAP_01_gmg_F",30000]];
 		};
 		if(__GETC__(life_coplevel) > 4) then
 		{
 			_return set[count _return, ["C_Hatchback_01_sport_F",50000]];
-			_return set[count _return, ["B_MBT_01_cannon_F",500000]];
-			_return set[count _return, ["B_UGV_01_rcws_F",500000]];			
+			_return set[count _return, ["B_APC_Tracked_01_rcws_F",500000]];
+			_return set[count _return, ["B_APC_Tracked_01_AA_F",500000]];
+			_return set[count _return, ["B_MBT_01_arty_F",500000]];		
 		};
 	};
 	
@@ -426,6 +431,7 @@ switch (_shop) do
 			_return set[count _return, ["B_Heli_Light_01_armed_F",150000]];
 			_return set[count _return, ["B_Heli_Transport_01_F",200000]];
 		    _return set[count _return, ["B_Heli_Attack_01_F",250000]];
+			_return set[count _return, ["I_Heli_light_03_F",250000]];
 		};
 	};
 	
@@ -439,6 +445,7 @@ switch (_shop) do
 		    _return set[count _return, ["B_Heli_Attack_01_F",250000]];
 			_return set[count _return, ["B_Plane_CAS_01_F",1500000]];
 			_return set[count _return, ["B_MRAP_01_hmg_F",750000]];
+			_return set[count _return, ["I_Heli_light_03_F",250000]];
 		};
 	}; 
 	
