@@ -187,7 +187,7 @@ switch (_shop) do
 	
 	case "reb_air":
 	{
-		_return
+		_return =
 		[
 			["B_Heli_Light_01_F",275000],
 			["O_Heli_Attack_02_F",1500000],
@@ -199,7 +199,7 @@ switch (_shop) do
 	
 	case "reb_air_1":
 	{
-		_return
+		_return =
 		[
 			["B_Heli_Light_01_F",275000],
 			["O_Heli_Attack_02_F",1500000],
@@ -211,7 +211,7 @@ switch (_shop) do
 	
 	case "reb_air_2":
 	{
-		_return
+		_return =
 		[
 			["B_Heli_Light_01_F",275000],
 			["O_Heli_Attack_02_F",1500000],
@@ -223,7 +223,7 @@ switch (_shop) do
 		
 	case "reb_air_3":
 	{
-		_return
+		_return =
 		[
 			["B_Heli_Light_01_F",275000],
 			["O_Heli_Attack_02_F",1500000],
@@ -241,7 +241,7 @@ switch (_shop) do
 			["C_Kart_01_F",1000],
 			["B_G_Offroad_01_F",15000],
 			["I_G_Offroad_01_armed_F", 25000],
-			["O_Truck_03_device_F"]
+			["O_Truck_03_device_F",150000],
 			["O_MRAP_02_F",150000],
             ["O_MBT_02_cannon_F",1200000],
 			["B_Heli_Light_01_F",325000],
@@ -260,7 +260,7 @@ switch (_shop) do
 			["C_Kart_01_F",1000],
 			["B_G_Offroad_01_F",15000],
 			["I_G_Offroad_01_armed_F", 25000],
-			["O_Truck_03_device_F"]
+			["O_Truck_03_device_F",150000],
 			["O_MRAP_02_F",150000],
             ["O_MBT_02_cannon_F",1200000],
 			["B_Heli_Light_01_F",325000],
@@ -279,7 +279,7 @@ switch (_shop) do
 			["C_Kart_01_F",1000],
 			["B_G_Offroad_01_F",15000],
 			["I_G_Offroad_01_armed_F", 25000],
-			["O_Truck_03_device_F"]
+			["O_Truck_03_device_F",150000],
 			["O_MRAP_02_F",150000],
             ["O_MBT_02_cannon_F",1200000],
 			["B_Heli_Light_01_F",325000],
