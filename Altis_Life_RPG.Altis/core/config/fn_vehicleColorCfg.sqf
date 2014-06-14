@@ -174,7 +174,7 @@ switch (_vehicle) do
 		];
 	};
 	
-	case "B_MRAP_01_F":
+	case "B_MRAP_01_gmg_F":
 	{
 		_ret = 
 		[
