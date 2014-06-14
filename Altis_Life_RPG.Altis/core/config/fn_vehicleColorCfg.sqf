@@ -99,7 +99,7 @@ switch (_vehicle) do
 			["textures\cop_car\cop_suv.paa","cop","textures\cop_car\cop_suv.paa"],
 			["textures\civ_car\suv\suv_weed.paa","civ","textures\cop_car\cop_suv.paa"],
 			["textures\civ_car\suv\monsters.paa","civ","textures\cop_car\cop_suv.paa"],
-			["textures\civ_car\suv\green.paa","civ","textures\cop_car\cop_suv.paa"],
+			["textures\civ_car\suv\suv_tiger.paa","civ","textures\cop_car\cop_suv.paa"],
 			["textures\civ_car\suv\oxygen.paa","civ","textures\cop_car\cop_suv.paa"],
 			["textures\civ_car\suv\sunset.paa","civ","textures\cop_car\cop_suv.paa"],
 			["#(ai,64,64,1)Fresnel(1.3,7)","cop"]			

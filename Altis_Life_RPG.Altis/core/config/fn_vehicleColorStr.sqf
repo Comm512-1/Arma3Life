@@ -84,7 +84,7 @@ switch (_vehicle) do
 			case 4: {_color = "Cop";};
 			case 5: {_color = "Weed";};
 			case 6: {_color = "Monster";};
-			case 7: {_color = "Poison Green";};
+			case 7: {_color = "Tiger";};
 			case 8: {_color = "Oxygen";};
 			case 9: {_color = "Sunset";};
 		};
