@@ -3635,7 +3635,7 @@ class Mission
 					leader=1;
 					skill=0.60000002;
 					text="reb_1_3_2";
-					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; life_garage_type = ""Car"";   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""rebcar_g_1_1"";  }];  this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];  this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""reb_v_2"",civilian,""reb_v_3"",""reb_v_3_1"",""Rebel Motorpool - Air HQ""],0,false,false,"""",'license_civ_rebel'];";
+					init="removeallWeapons this;  this enableSimulation false;  this allowDamage false; this addAction[""Vehicle Garage"",  {   [[getPlayerUID player,playerSide,""Car"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP; life_garage_type = ""Car"";   createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""reb_v_3"",""reb_v_3_1"";  }];  this addAction[""Store vehicle in Garage"",life_fnc_storeVehicle,"""",0,false,false,"""",'!life_garage_store'];  this addAction[""Vehicle Shop"",life_fnc_vehicleShopMenu,[""reb_v_2"",civilian,""reb_v_3"",""reb_v_3_1"",""Rebel Motorpool - Air HQ""],0,false,false,"""",'license_civ_rebel'];";
 				};
 				class Item1
 				{
@@ -24669,7 +24669,7 @@ class Mission
 		};
 		class Item238
 		{
-			position[]={6753.5669,16.152979,11102.83};
+			position[]={7329.2563,12.258324,11451.867};
 			name="silver_1";
 			text="Silver Mine";
 			type="mil_triangle";
@@ -25041,7 +25041,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=33;
+		items=34;
 		class Item0
 		{
 			position[]={3624.5066,10.089293,13113.257};
@@ -25613,6 +25613,25 @@ class Mission
 			age="UNKNOWN";
 			expCond="(""LandVehicle"" countType thislist  > 0) && ((getpos (thislist select 0)) select 2 < 1)";
 			expActiv="_xhandle= (thislist select 0) execVM ""x_reload.sqf""; hint ""Your vehicle is being serviced, free of charge""";
+			class Effects
+			{
+			};
+		};
+		class Item33
+		{
+			position[]={3186.4829,2.1762264,12912.23};
+			a=60;
+			b=120;
+			angle=55;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			type="SWITCH";
+			age="UNKNOWN";
+			text="Service vehicle";
+			name="reload_4";
+			expCond="(getPos ((list reload_4) select 0) select 2) <= 1";
+			expActiv="_xhandle= (thislist select 0) execVM ""x_reload.sqf"";";
 			class Effects
 			{
 			};
