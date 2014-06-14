@@ -170,7 +170,15 @@ switch (_shop) do
 		[
 			["B_Quadbike_01_F",2500],
 			["C_Kart_01_F",1000],
-			["B_G_Offroad_01_F",13000]
+			["B_G_Offroad_01_F",13000],
+			["O_MRAP_02_F",150000],
+			["O_Truck_03_transport_F", 150000],
+			["O_Truck_03_covered_F", 150000],
+			["O_Truck_03_repair_F", 150000],
+			["O_Truck_03_ammo_F", 150000],
+			["O_Truck_03_fuel_F", 150000],
+			["O_Truck_03_medical_F", 150000],
+			["O_Truck_03_device_F", 150000]
 		];
 	};
 	
@@ -181,7 +189,15 @@ switch (_shop) do
 			["B_Quadbike_01_F",2500],
 			["C_Kart_01_F",1000],
 			["C_Offroad_01_F",9000],
-			["O_MRAP_02_F",150000]
+			["O_MRAP_02_F",150000],
+			["O_Truck_03_transport_F", 150000],
+			["O_Truck_03_covered_F", 150000],
+			["O_Truck_03_repair_F", 150000],
+			["O_Truck_03_ammo_F", 150000],
+			["O_Truck_03_fuel_F", 150000],
+			["O_Truck_03_medical_F", 150000],
+			["O_Truck_03_device_F", 150000]
+
 		];
 	};
 	
@@ -241,14 +257,20 @@ switch (_shop) do
 			["C_Kart_01_F",1000],
 			["B_G_Offroad_01_F",15000],
 			["I_G_Offroad_01_armed_F", 25000],
-			["O_Truck_03_device_F",150000],
 			["O_MRAP_02_F",150000],
             ["O_MBT_02_cannon_F",1200000],
 			["B_Heli_Light_01_F",325000],
 			["I_Heli_Transport_02_F", 250000],
             ["O_Heli_Attack_02_F",1500000],
             ["I_Plane_Fighter_03_AA_F",2500000],
-			["O_MRAP_02_gmg_F", 1200000]
+			["O_MRAP_02_gmg_F", 1200000],
+			["O_Truck_03_transport_F", 150000],
+			["O_Truck_03_covered_F", 150000],
+			["O_Truck_03_repair_F", 150000],
+			["O_Truck_03_ammo_F", 150000],
+			["O_Truck_03_fuel_F", 150000],
+			["O_Truck_03_medical_F", 150000],
+			["O_Truck_03_device_F", 150000]
 		];
 	};
 	
@@ -260,14 +282,20 @@ switch (_shop) do
 			["C_Kart_01_F",1000],
 			["B_G_Offroad_01_F",15000],
 			["I_G_Offroad_01_armed_F", 25000],
-			["O_Truck_03_device_F",150000],
 			["O_MRAP_02_F",150000],
             ["O_MBT_02_cannon_F",1200000],
 			["B_Heli_Light_01_F",325000],
 			["I_Heli_Transport_02_F", 250000],
             ["O_Heli_Attack_02_F",1500000],
             ["I_Plane_Fighter_03_AA_F",2500000],
-			["O_MRAP_02_gmg_F", 1200000]
+			["O_MRAP_02_gmg_F", 1200000],
+			["O_Truck_03_transport_F", 150000],
+			["O_Truck_03_covered_F", 150000],
+			["O_Truck_03_repair_F", 150000],
+			["O_Truck_03_ammo_F", 150000],
+			["O_Truck_03_fuel_F", 150000],
+			["O_Truck_03_medical_F", 150000],
+			["O_Truck_03_device_F", 150000]
 		];
 	}; 
 	
@@ -279,14 +307,20 @@ switch (_shop) do
 			["C_Kart_01_F",1000],
 			["B_G_Offroad_01_F",15000],
 			["I_G_Offroad_01_armed_F", 25000],
-			["O_Truck_03_device_F",150000],
 			["O_MRAP_02_F",150000],
             ["O_MBT_02_cannon_F",1200000],
 			["B_Heli_Light_01_F",325000],
 			["I_Heli_Transport_02_F", 250000],
             ["O_Heli_Attack_02_F",1500000],
             ["I_Plane_Fighter_03_AA_F",2500000],
-			["O_MRAP_02_gmg_F", 1200000]
+			["O_MRAP_02_gmg_F", 1200000],
+			["O_Truck_03_transport_F", 150000],
+			["O_Truck_03_covered_F", 150000],
+			["O_Truck_03_repair_F", 150000],
+			["O_Truck_03_ammo_F", 150000],
+			["O_Truck_03_fuel_F", 150000],
+			["O_Truck_03_medical_F", 150000],
+			["O_Truck_03_device_F", 150000]
 		];
 	}; 
 	
