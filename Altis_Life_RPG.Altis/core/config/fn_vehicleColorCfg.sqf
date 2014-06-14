@@ -97,7 +97,7 @@ switch (_vehicle) do
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_03_co.paa","civ","textures\cop_car\cop_suv.paa"],
 			["\a3\soft_f_gamma\SUV_01\Data\suv_01_ext_04_co.paa","civ","textures\cop_car\cop_suv.paa"],
 			["textures\cop_car\cop_suv.paa","cop","textures\cop_car\cop_suv.paa"],
-			["textures\civ_car\suv\bimbo.paa","civ","textures\cop_car\cop_suv.paa"],
+			["textures\civ_car\suv\suv_weed.paa","civ","textures\cop_car\cop_suv.paa"],
 			["textures\civ_car\suv\monsters.paa","civ","textures\cop_car\cop_suv.paa"],
 			["textures\civ_car\suv\green.paa","civ","textures\cop_car\cop_suv.paa"],
 			["textures\civ_car\suv\oxygen.paa","civ","textures\cop_car\cop_suv.paa"],

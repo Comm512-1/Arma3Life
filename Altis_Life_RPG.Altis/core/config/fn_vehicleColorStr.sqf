@@ -82,7 +82,7 @@ switch (_vehicle) do
 			case 2: {_color = "Silver";};
 			case 3: {_color = "Orange";};
 			case 4: {_color = "Cop";};
-			case 5: {_color = "Bimbo Gurl";};
+			case 5: {_color = "Weed";};
 			case 6: {_color = "Monster";};
 			case 7: {_color = "Poison Green";};
 			case 8: {_color = "Oxygen";};

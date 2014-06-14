@@ -305,10 +305,8 @@ switch (_shop) do
 		if(__GETC__(life_coplevel) > 4) then
 		{
 			_return set[count _return, ["C_Hatchback_01_sport_F",50000]];
-			_return set[count _return, ["B_APC_Tracked_01_rcws_F",500000]];
 			_return set[count _return, ["B_APC_Tracked_01_AA_F",500000]];
 			_return set[count _return, ["I_MRAP_03_gmg_F",500000]];
-			_return set[count _return, ["B_APC_Tracked_01_AA_F",500000]];
 			_return set[count _return, ["B_MBT_01_arty_F",500000]];			
 		};
 	};
@@ -328,10 +326,8 @@ switch (_shop) do
 		if(__GETC__(life_coplevel) > 4) then
 		{
 			_return set[count _return, ["C_Hatchback_01_sport_F",50000]];
-			_return set[count _return, ["B_APC_Tracked_01_rcws_F",500000]];
 			_return set[count _return, ["B_APC_Tracked_01_AA_F",500000]];
 			_return set[count _return, ["I_MRAP_03_gmg_F",500000]];
-			_return set[count _return, ["B_APC_Tracked_01_AA_F",500000]];
 			_return set[count _return, ["B_MBT_01_arty_F",500000]];		
 		};
 	};
@@ -351,10 +347,8 @@ switch (_shop) do
 		if(__GETC__(life_coplevel) > 4) then
 		{
 			_return set[count _return, ["C_Hatchback_01_sport_F",50000]];
-			_return set[count _return, ["B_APC_Tracked_01_rcws_F",500000]];
 			_return set[count _return, ["B_APC_Tracked_01_AA_F",500000]];
 			_return set[count _return, ["I_MRAP_03_gmg_F",500000]];
-			_return set[count _return, ["B_APC_Tracked_01_AA_F",500000]];
 			_return set[count _return, ["B_MBT_01_arty_F",500000]];		
 		};
 	};
@@ -374,10 +368,8 @@ switch (_shop) do
 		if(__GETC__(life_coplevel) > 4) then
 		{
 			_return set[count _return, ["C_Hatchback_01_sport_F",50000]];
-			_return set[count _return, ["B_APC_Tracked_01_rcws_F",500000]];
 			_return set[count _return, ["B_APC_Tracked_01_AA_F",500000]];
 			_return set[count _return, ["I_MRAP_03_gmg_F",500000]];
-			_return set[count _return, ["B_APC_Tracked_01_AA_F",500000]];
 			_return set[count _return, ["B_MBT_01_arty_F",500000]];	
 		};
 	};
@@ -397,10 +389,8 @@ switch (_shop) do
 		if(__GETC__(life_coplevel) > 4) then
 		{
 			_return set[count _return, ["C_Hatchback_01_sport_F",50000]];
-			_return set[count _return, ["B_APC_Tracked_01_rcws_F",500000]];
 			_return set[count _return, ["B_APC_Tracked_01_AA_F",500000]];
 			_return set[count _return, ["I_MRAP_03_gmg_F",500000]];
-			_return set[count _return, ["B_APC_Tracked_01_AA_F",500000]];
 			_return set[count _return, ["B_MBT_01_arty_F",500000]];		
 		};
 	};
