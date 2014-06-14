@@ -13,10 +13,26 @@ CUP_checkLift =
   _speed = (sqrt ((_velocity select 0)^2 + (_velocity select 1)^2))*3.6;
   _position = position vehicle player;
   
-  if ((vehicle player isKindOf "Helicopter") && ((_position select 2) > 10) && (count (nearestObjects [vehicle player, ["Car", "Tank", "Ship"], 15]) > 0) && (_speed < 10) && (driver vehicle player == player) && !(vehicle player in CUP_heloBlacklist) && !(typeOf vehicle player in CUP_heloBlacklist)) then 
+  if ((vehicle player isKindOf "Helicopter") && (count (nearestObjects [vehicle player, ["Car", "Tank", "Ship"], 20]) > 0) && (_speed < 10) && (driver vehicle player == player) && !(vehicle player in CUP_heloBlacklist) && !(typeOf vehicle player in CUP_heloBlacklist)) then 
   {
-	_liftableVehicle = (nearestObjects [vehicle player, ["Car", "Tank", "Ship"], 15]) select 1;
-	_return = true;
+	_liftableVehicle = (nearestObjects [vehicle player, ["Car", "Tank", "Ship"], 20]) select 1;
+
+	if ((_position select 2) >= 4 && (_position select 2) <= 15) then
+	{
+		hintSilent format["Pick up %1", typeOf _liftableVehicle];
+		_return = true;
+	}
+	else
+	{
+		if ((_position select 2) < 4) then
+		{
+			hintSilent format["Too low to pick up %1", typeOf _liftableVehicle];
+		};
+		if ((_position select 2) > 15) then
+		{
+			hintSilent format["Too high to pick up %1", typeOf _liftableVehicle];
+		};
+	};
   };
   if !(isNil {vehicle player getVariable "CUP_attached"}) then
   {
