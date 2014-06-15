@@ -8895,6 +8895,7 @@ class Mission
 			side="EMPTY";
 			vehicle="Land_BarGate_F";
 			skill=0.60000002;
+			text="schrankeKavHQ";
 			init="this allowDamage false;";
 		};
 		class Item459
@@ -25041,7 +25042,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=34;
+		items=35;
 		class Item0
 		{
 			position[]={3624.5066,10.089293,13113.257};
@@ -25299,7 +25300,7 @@ class Mission
 		};
 		class Item14
 		{
-			position[]={5054.6494,16.731483,14445.287};
+			position[]={5052.3594,16.742098,14444.885};
 			a=5;
 			b=5;
 			angle=158.903;
@@ -25308,8 +25309,8 @@ class Mission
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
-			expCond="(""LandVehicle"" countType thislist  > 0) && ((getpos (thislist select 0)) select 2 < 1)";
-			expActiv="_xhandle= (thislist select 0) execVM ""x_reload.sqf""; hint ""Your vehicle is being serviced, free of charge""";
+			name="repair_1";
+			expActiv="vehicle player setDamage 0;";
 			class Effects
 			{
 			};
@@ -25325,8 +25326,8 @@ class Mission
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
-			expCond="(""LandVehicle"" countType thislist  > 0) && ((getpos (thislist select 0)) select 2 < 1)";
-			expActiv="_xhandle= (thislist select 0) execVM ""x_reload.sqf""; hint ""Your vehicle is being serviced, free of charge""";
+			name="repair_2";
+			expActiv="vehicle player setDamage 0;";
 			class Effects
 			{
 			};
@@ -25342,30 +25343,13 @@ class Mission
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
-			expCond="(""LandVehicle"" countType thislist  > 0) && ((getpos (thislist select 0)) select 2 < 1)";
-			expActiv="_xhandle= (thislist select 0) execVM ""x_reload.sqf""; hint ""Your vehicle is being serviced, free of charge""";
+			name="repair_3";
+			expActiv="vehicle player setDamage 0;";
 			class Effects
 			{
 			};
 		};
 		class Item17
-		{
-			position[]={9033.6963,111.68478,15717.714};
-			a=5;
-			b=5;
-			angle=168.64;
-			rectangular=1;
-			activationBy="ANY";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="(""LandVehicle"" countType thislist  > 0) && ((getpos (thislist select 0)) select 2 < 1)";
-			expActiv="_xhandle= (thislist select 0) execVM ""x_reload.sqf""; hint ""Your vehicle is being serviced, free of charge""";
-			class Effects
-			{
-			};
-		};
-		class Item18
 		{
 			position[]={8490.7227,177.5795,18271.23};
 			a=5;
@@ -25381,142 +25365,23 @@ class Mission
 			{
 			};
 		};
-		class Item19
-		{
-			position[]={3754.0437,11.626513,13462.834};
-			a=5;
-			b=5;
-			angle=1.7007101;
-			rectangular=1;
-			activationBy="ANY";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="(""LandVehicle"" countType thislist  > 0) && ((getpos (thislist select 0)) select 2 < 1)";
-			expActiv="_xhandle= (thislist select 0) execVM ""vehiclerepair.sqf""; hint ""Your vehicle is being serviced, free of charge"";";
-			class Effects
-			{
-			};
-		};
-		class Item20
+		class Item18
 		{
 			position[]={4020.6792,25.734205,12589.627};
 			a=5;
 			b=5;
-			angle=217.70131;
+			angle=217.701;
 			rectangular=1;
 			activationBy="ANY";
 			interruptable=1;
 			age="UNKNOWN";
-			expCond="(getPos ((list reload_4) select 0) select 2) <= 1";
-			expActiv="_xhandle= (thislist select 0) execVM ""x_reload.sqf""; hint ""Your vehicle is being serviced, free of charge""";
+			name="repair_20";
+			expActiv="vehicle player setDamage 0;";
 			class Effects
 			{
 			};
 		};
-		class Item21
-		{
-			position[]={12036.124,27.628107,15816.08};
-			a=5;
-			b=5;
-			angle=270.22;
-			rectangular=1;
-			activationBy="ANY";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="(""LandVehicle"" countType thislist  > 0) && ((getpos (thislist select 0)) select 2 < 1)";
-			expActiv="_xhandle= (thislist select 0) execVM ""x_reload.sqf""; hint ""Your vehicle is being serviced, free of charge""";
-			class Effects
-			{
-			};
-		};
-		class Item22
-		{
-			position[]={14164.685,16.557467,16525.256};
-			a=5;
-			b=5;
-			angle=317.04199;
-			rectangular=1;
-			activationBy="ANY";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="(""LandVehicle"" countType thislist  > 0) && ((getpos (thislist select 0)) select 2 < 1)";
-			expActiv="_xhandle= (thislist select 0) execVM ""x_reload.sqf""; hint ""Your vehicle is being serviced, free of charge""";
-			class Effects
-			{
-			};
-		};
-		class Item23
-		{
-			position[]={15315.708,16.58285,17589.338};
-			a=5;
-			b=5;
-			angle=271.263;
-			rectangular=1;
-			activationBy="ANY";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="(""LandVehicle"" countType thislist  > 0) && ((getpos (thislist select 0)) select 2 < 1)";
-			expActiv="_xhandle= (thislist select 0) execVM ""x_reload.sqf""; hint ""Your vehicle is being serviced, free of charge""";
-			class Effects
-			{
-			};
-		};
-		class Item24
-		{
-			position[]={15792.661,14.378977,17463.803};
-			a=5;
-			b=5;
-			angle=122.321;
-			rectangular=1;
-			activationBy="ANY";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="(""LandVehicle"" countType thislist  > 0) && ((getpos (thislist select 0)) select 2 < 1)";
-			expActiv="_xhandle= (thislist select 0) execVM ""x_reload.sqf""; hint ""Your vehicle is being serviced, free of charge""";
-			class Effects
-			{
-			};
-		};
-		class Item25
-		{
-			position[]={20768.309,36.774315,16664.189};
-			a=5;
-			b=5;
-			angle=218.50999;
-			rectangular=1;
-			activationBy="ANY";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="(""LandVehicle"" countType thislist  > 0) && ((getpos (thislist select 0)) select 2 < 1)";
-			expActiv="_xhandle= (thislist select 0) execVM ""x_reload.sqf""; hint ""Your vehicle is being serviced, free of charge""";
-			class Effects
-			{
-			};
-		};
-		class Item26
-		{
-			position[]={23361.926,12.916238,19806.367};
-			a=5;
-			b=5;
-			angle=51.117298;
-			rectangular=1;
-			activationBy="ANY";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="(""LandVehicle"" countType thislist  > 0) && ((getpos (thislist select 0)) select 2 < 1)";
-			expActiv="_xhandle= (thislist select 0) execVM ""x_reload.sqf""; hint ""Your vehicle is being serviced, free of charge""";
-			class Effects
-			{
-			};
-		};
-		class Item27
+		class Item19
 		{
 			position[]={3351.0947,2.1197684,12965.043};
 			a=8;
@@ -25534,90 +25399,7 @@ class Mission
 			{
 			};
 		};
-		class Item28
-		{
-			position[]={19963.74,59.85384,11432.919};
-			a=5;
-			b=5;
-			angle=51.117298;
-			rectangular=1;
-			activationBy="ANY";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="(""LandVehicle"" countType thislist  > 0) && ((getpos (thislist select 0)) select 2 < 1)";
-			expActiv="_xhandle= (thislist select 0) execVM ""x_reload.sqf""; hint ""Your vehicle is being serviced, free of charge""";
-			class Effects
-			{
-			};
-		};
-		class Item29
-		{
-			position[]={16759.287,12.46,12503.914};
-			a=5;
-			b=5;
-			angle=51.117298;
-			rectangular=1;
-			activationBy="ANY";
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="(""LandVehicle"" countType thislist  > 0) && ((getpos (thislist select 0)) select 2 < 1)";
-			expActiv="_xhandle= (thislist select 0) execVM ""x_reload.sqf""; hint ""Your vehicle is being serviced, free of charge""";
-			class Effects
-			{
-			};
-		};
-		class Item30
-		{
-			position[]={17428.74,5.54,13942.149};
-			a=5;
-			b=5;
-			angle=-92.306458;
-			rectangular=1;
-			activationBy="ANY";
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="(""LandVehicle"" countType thislist  > 0) && ((getpos (thislist select 0)) select 2 < 1)";
-			expActiv="_xhandle= (thislist select 0) execVM ""x_reload.sqf""; hint ""Your vehicle is being serviced, free of charge""";
-			class Effects
-			{
-			};
-		};
-		class Item31
-		{
-			position[]={16836.51,11.967617,15471.046};
-			a=5;
-			b=5;
-			angle=-25.009501;
-			rectangular=1;
-			activationBy="ANY";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="(""LandVehicle"" countType thislist  > 0) && ((getpos (thislist select 0)) select 2 < 1)";
-			expActiv="_xhandle= (thislist select 0) execVM ""x_reload.sqf""; hint ""Your vehicle is being serviced, free of charge""";
-			class Effects
-			{
-			};
-		};
-		class Item32
-		{
-			position[]={5771.3442,222.31479,20086.098};
-			a=5;
-			b=5;
-			angle=51.117298;
-			rectangular=1;
-			activationBy="ANY";
-			repeating=1;
-			interruptable=1;
-			age="UNKNOWN";
-			expCond="(""LandVehicle"" countType thislist  > 0) && ((getpos (thislist select 0)) select 2 < 1)";
-			expActiv="_xhandle= (thislist select 0) execVM ""x_reload.sqf""; hint ""Your vehicle is being serviced, free of charge""";
-			class Effects
-			{
-			};
-		};
-		class Item33
+		class Item20
 		{
 			position[]={3186.4829,2.1762264,12912.23};
 			a=60;
@@ -25632,6 +25414,244 @@ class Mission
 			name="reload_4";
 			expCond="(getPos ((list reload_4) select 0) select 2) <= 1";
 			expActiv="_xhandle= (thislist select 0) execVM ""x_reload.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item21
+		{
+			position[]={9032.5371,111.68015,15719.473};
+			a=5;
+			b=5;
+			angle=78.562431;
+			rectangular=1;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="repair_3_1";
+			expActiv="vehicle player setDamage 0;";
+			class Effects
+			{
+			};
+		};
+		class Item22
+		{
+			position[]={12036.632,27.629215,15816.911};
+			a=5;
+			b=5;
+			angle=179.716;
+			rectangular=1;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="repair_3_2";
+			expActiv="vehicle player setDamage 0;";
+			class Effects
+			{
+			};
+		};
+		class Item23
+		{
+			position[]={14164.023,16.507931,16526.484};
+			a=5;
+			b=5;
+			angle=222.85623;
+			rectangular=1;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="repair_3_3";
+			expActiv="vehicle player setDamage 0;";
+			class Effects
+			{
+			};
+		};
+		class Item24
+		{
+			position[]={20766.443,36.816525,16666.389};
+			a=5;
+			b=5;
+			angle=124.78706;
+			rectangular=1;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="repair_3_6";
+			expActiv="vehicle player setDamage 0;";
+			class Effects
+			{
+			};
+		};
+		class Item25
+		{
+			position[]={23361.596,12.91875,19806.885};
+			a=5;
+			b=10;
+			angle=142.048;
+			rectangular=1;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="repair_3_7";
+			expActiv="vehicle player setDamage 0;";
+			class Effects
+			{
+			};
+		};
+		class Item26
+		{
+			position[]={25690.998,20.787058,21383.459};
+			a=5;
+			b=5;
+			angle=227.24132;
+			rectangular=1;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="repair_3_8";
+			expActiv="vehicle player setDamage 0;";
+			class Effects
+			{
+			};
+		};
+		class Item27
+		{
+			position[]={19966.039,59.949062,11434.988};
+			a=5;
+			b=5;
+			angle=142.53833;
+			rectangular=1;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="repair_3_9";
+			expActiv="vehicle player setDamage 0;";
+			class Effects
+			{
+			};
+		};
+		class Item28
+		{
+			position[]={16759.848,12.46,12502.998};
+			a=5;
+			b=5;
+			angle=49.040352;
+			rectangular=1;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="repair_3_10";
+			expActiv="vehicle player setDamage 0;";
+			class Effects
+			{
+			};
+		};
+		class Item29
+		{
+			position[]={17426.596,5.54,13942.716};
+			a=5;
+			b=5;
+			angle=179.716;
+			rectangular=1;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="repair_3_11";
+			expActiv="vehicle player setDamage 0;";
+			class Effects
+			{
+			};
+		};
+		class Item30
+		{
+			position[]={16833.209,11.487763,15469.08};
+			a=5;
+			b=5;
+			angle=68.020065;
+			rectangular=1;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="repair_3_12";
+			expActiv="vehicle player setDamage 0;";
+			class Effects
+			{
+			};
+		};
+		class Item31
+		{
+			position[]={15790.678,14.378736,17465.064};
+			a=5;
+			b=5;
+			angle=300.17099;
+			rectangular=1;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="repair_3_5";
+			expActiv="vehicle player setDamage 0;";
+			class Effects
+			{
+			};
+		};
+		class Item32
+		{
+			position[]={15315.501,16.496553,17594.004};
+			a=5;
+			b=5;
+			angle=361.22116;
+			rectangular=1;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="repair_3_4";
+			expActiv="vehicle player setDamage 0;";
+			class Effects
+			{
+			};
+		};
+		class Item33
+		{
+			position[]={5770.3926,222.24043,20087.266};
+			a=5;
+			b=5;
+			angle=179.716;
+			rectangular=1;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="repair_3_13";
+			expActiv="vehicle player setDamage 0;";
+			class Effects
+			{
+			};
+		};
+		class Item34
+		{
+			position[]={3752.937,11.614575,13466.254};
+			a=5;
+			b=5;
+			angle=272.10199;
+			rectangular=1;
+			activationBy="ANY";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			name="repair_3_14";
+			expActiv="vehicle player setDamage 0;";
 			class Effects
 			{
 			};
