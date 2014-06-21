@@ -26,6 +26,8 @@ if(X_Client) then
 };
 */
 [] execVM "briefing.sqf"; //Load Briefing
+[] execvm "Turbo.sqf"; //Karts test
+[] call compile preProcessFile "vehInitFunctions.sqf"; //Karts test
 [] execVM "KRON_Strings.sqf";
 [["blacklisted ground/sea vehicles"],["blacklisted helicopters"]] execVM "scripts\lift_init.sqf";
 
