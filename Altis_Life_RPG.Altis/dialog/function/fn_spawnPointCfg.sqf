@@ -18,6 +18,7 @@ switch (_side) do
 			["cop_spawn_4","Air HQ","\a3\ui_f\data\map\Markers\NATO\b_air.paa"],
 			["cop_spawn_5","HW Patrol","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
 			["cop_spawn_6","HW Checkpoint","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
+			["cop_spawn_6_1","Coast Guard","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
 			["training","Training Grounds","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]
 		];
 	};
@@ -38,7 +39,8 @@ switch (_side) do
 			["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 			["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
 			["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["civ_kart_spawn","Karts!","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+			["civ_kart_spawn","Karts!","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+			["sky_race_spawn","Sky Karts!","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 		];
 		
 		if(license_civ_rebel && playerSide == civilian) then {
