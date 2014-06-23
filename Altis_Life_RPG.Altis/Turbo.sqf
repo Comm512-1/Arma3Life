@@ -1,3 +1,4 @@
+//this addaction [("<t color=""#0074E8"">" + ("Activate Turbo!") +"</t>"),"Turbo.sqf","",5,false,true,"",""];
 if (isNull player) exitwith {} ;
 
 fn_Turbo =

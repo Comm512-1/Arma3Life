@@ -67,7 +67,7 @@ switch(_shop) do
 			};
 		};
 	};
-
+	
 	case "cop_patrol":
 	{
 		switch(true) do
@@ -307,4 +307,23 @@ switch(_shop) do
 			]
 		];
 	};
+	
+	case "skystore":
+	{
+		["Altis General Store",
+			[
+				["B_FieldPack_ocamo",nil,3000],
+				["Binocular",nil,150],
+				["ItemGPS",nil,100],
+				["ToolKit",nil,250],
+				["FirstAidKit",nil,150],
+				["NVGoggles",nil,2000],
+				//["Steerable_Parachute_F",nil,1000],
+				["Chemlight_red",nil,300],
+				["Chemlight_yellow",nil,300],
+				["Chemlight_green",nil,300],
+				["Chemlight_blue",nil,300]
+			]
+		];
+	};	
 };
